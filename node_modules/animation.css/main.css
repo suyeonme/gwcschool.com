@@ -1,0 +1,10 @@
+.animation-reverse { -webkit-animation-direction: reverse; animation-direction: reverse }
+.animation-alternate { -webkit-animation-direction: alternate; animation-direction: alternate }
+
+.animation-seed { -webkit-animation-fill-mode: backwards; animation-fill-mode: backwards }
+.animation-stay { -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards }
+.animation-fill { -webkit-animation-fill-mode: both; animation-fill-mode: both }
+
+.animation-paused { -webkit-animation-play-state: paused; animation-play-state: paused }
+.animation-infinite { -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite }
+.animation-none { -webkit-animation-name: none; animation-name: none }

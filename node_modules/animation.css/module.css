@@ -1,0 +1,10 @@
+.animation-reverse { animation-direction: reverse }
+.animation-alternate { animation-direction: alternate }
+
+.animation-seed { animation-fill-mode: backwards }
+.animation-stay { animation-fill-mode: forwards }
+.animation-fill { animation-fill-mode: both }
+
+.animation-paused { animation-play-state: paused }
+.animation-infinite { animation-iteration-count: infinite }
+.animation-none { animation-name: none }
