@@ -1,0 +1,136 @@
+.header {
+    width: 100%;
+    height: 130vh;
+    background-image: url(../images/header-1.jpg);
+    background-size: cover;
+    position: relative;
+
+    &__text {
+        font-family: $font-secondary-ko;
+        color: $color-white;
+        writing-mode: vertical-rl;
+        position: absolute;
+        
+        &--1 {
+            font-size: 4em;
+            letter-spacing: 2px;
+            left: 17rem;
+            top: 43rem;
+        }
+
+        &--2 {
+            font-size: 8.5rem;
+            left: 23rem;
+            top: 23rem;
+            letter-spacing: 10px;
+        }
+    }
+}
+
+.navbar {
+    z-index: 300;
+    position: relative;
+    top: 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-white;
+    width: 100%;
+    padding: 2rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &__icon {
+        font-size: 1.8rem;
+        margin-left: auto;
+        margin-right: 4rem;
+
+        span {
+            font-family: $font-primary-en;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            margin-left: 1rem;
+        }
+    }
+
+    &__logo-container {
+        width: 13rem;
+    }
+    
+    &__logo {
+        width: 100%;
+    }
+
+    // MENU TOGGLE FUNCTIONALITY
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked + &__menu &__menu-container  &__menu-icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__menu &__menu-container  &__menu-icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__menu &__menu-container  &__menu-icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    &__menu {
+        position: relative;
+        right: 2.5rem;
+        border-radius: 50%;
+        border: 1.5px solid $color-beige-1;
+        transition: $transition-1;
+
+        &:hover { border: 1.5px solid $color-green-4; }
+
+        &:hover &-container &-icon,
+        &:hover &-container &-icon::before,
+        &:hover &-container &-icon::after {
+            background-color: $color-green-4;
+        }
+
+        &-container {
+            @include flex-col-center;
+            width: 6rem;
+            height: 6rem;
+            cursor: pointer;
+        }
+
+        &-icon {
+            &,
+            &::before,
+            &::after {
+                position: absolute;
+                display: inline-block;
+                left: 1.2rem;
+                width: 3.5rem;
+                height: .4rem;
+                background-color: $color-beige-1;
+                border-radius: 3rem;
+                transition: $transition-1;
+            }
+
+            &::before,
+            &::after { content: ""; }
+    
+            &::before {
+                top: -1.2rem;
+                left: 0;
+            }
+    
+            &::after {
+                top: 1.2rem;
+                left: 0;
+            }
+        }
+    }
+}

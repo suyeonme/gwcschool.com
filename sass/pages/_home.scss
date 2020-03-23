@@ -1,0 +1,86 @@
+.activity {
+    width: 100%;    
+
+    &-left,
+    &-right {
+        position: relative;
+        margin-top: 30rem;
+    }
+
+        &__textBox {
+            width: 45rem;
+            height: 45rem;
+            background-color: #fff;
+            padding: 5rem;
+            position: absolute;
+            z-index: 300;
+
+            &--left {
+                top: 7rem;
+                right: 10rem;
+            }
+
+            &--right {
+                top: 7rem;
+                left: 10rem;
+            }
+        }
+    
+        &__text {
+
+            h3 {
+                font-size: 3.5rem;
+                text-transform: uppercase;
+    
+                span {
+                    font-size: 2rem;
+                    font-weight: $font-weight-ko-1;
+                    margin-left: 2rem;
+                }
+            }
+    
+            p {
+                font-weight: $font-weight-ko-1;
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                line-height: 2;
+            }
+        }
+
+    &__image-container {
+        width: 70%;
+        position: relative;
+        z-index: 200;
+
+        &--right {
+            margin-left: auto;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__gradient {
+        width: 60%;
+        height: 40rem;
+        position: absolute;
+
+        &--left {
+            right: 38rem;
+            bottom: -4rem;
+            background-image: linear-gradient(to right bottom, #4343bd, $color-beige, $color-beige-2);
+        }
+
+        &--right {
+            left: 38rem;
+            bottom: -4rem;
+            background-image: linear-gradient(to right bottom, $color-pink, $color-beige, $color-beige-2);
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        margin-top: 5rem;
+    }
+}

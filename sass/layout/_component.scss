@@ -1,0 +1,23 @@
+
+// BUTTON
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        color: $color-green-2;
+        border: 1px solid $color-green-2;
+        padding: 2rem 5rem;
+
+        font-size: 1.4rem;
+        font-weight: $font-weight-ko-2;
+        letter-spacing: 1px;
+    }
+
+    &:hover {
+        background-color: $color-green-2;
+        color: $color-white;
+        transition: $transition-1;
+    }
+}

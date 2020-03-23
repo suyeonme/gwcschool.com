@@ -1,22 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google font
+        DELETE useless font!  -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900|Noto+Sans+KR:100,300,500,900|Song+Myung&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
     <title>곡성 목공예&커피체험관</title>
 </head>
+
 <body>
-    
-<h1>Hello world!</h1>
+    <header class="header">
+        <div class="navbar">
+            <div class="navbar__logo-container">
+                <a href="index.html"><img src="images/main-logo.png" alt="곡성 목공예커피체험관 로고" class="navbar__logo"></a>
+            </div>
+
+            <input type="checkbox" class="navbar__checkbox" id="navi-toggler">
+            <label for="navi-toggler" class="navbar__menu">
+                <div class="navbar__menu-container" onclick="show()">
+                    <span class="navbar__menu-icon">&nbsp;</span>
+                </div>
+            </label>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+            <div class="navigation__container">
+                <div class="navigation__image-container"></div>
+                <div class="navigation__item-container">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">홈</li>
+                        <li class="navigation__item">소개</li>
+                        <li class="navigation__item">커피수업</li>
+                        <li class="navigation__item">목공예수업</li>
+                        <li class="navigation__item">편의시설</li>
+                        <li class="navigation__item">오시는길</li>
+                    </ul>
+                    <div class="navigation__contact">
+                        <h4>TALK</h4>
+                        <p>061 362 0778</p>
+                        <h4>MEET</h4>
+                        <p>전남 곡성군 죽곡면 오죽로 407-8(봉정리 264)</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="header__text header__text--1">삶.숨.쉼.이 있는</h1>
+        <h1 class="header__text header__text--2">느림의 미학</h1>
+    </header>
+
+    <main>
+
+<div class="activity">
+    <div class="activity__wrapper activity-left">
+        <div class="activity__textBox activity__textBox--left">
+            <div class="activity__text">
+                <h3>Woodcraft<span>목공예<span></h3>
+                <p>
+                    디지털의 홍수 속에서살아가는 우리의 감성이 점점 매말라갑니다. 편리한 플라스틱이 집안을 점령하고 있는 요즘,
+                    목공예를 통해 아날로그적인 사고와 함께  자연친화적 예술가가 되어보세요.
+                </p>
+                <a href="#" class="btn activity__btn">더 알아보기</a>
+            </div>
+        </div>
+        <div class="activity__image-container">
+            <img src="images/woodcraft.jpg" alt="목공예" class="activity__img">
+        </div>
+        <div class="activity__gradient activity__gradient--left"></div>
+    </div>
+
+    <div class="activity__wrapper activity-right">
+        <div class="activity__textBox activity__textBox--right">
+            <div class="activity__text">
+                <h3>Coffee<span>커피<span></h3>
+                <p>
+                    디지털의 홍수 속에서살아가는 우리의 감성이 점점 매말라갑니다. 편리한 플라스틱이 집안을 점령하고 있는 요즘,
+                    목공예를 통해 아날로그적인 사고와 함께  자연친화적 예술가가 되어보세요.
+                </p>
+                <a href="#" class="btn activity__btn">더 알아보기</a>
+            </div>
+        </div>
+        <div class="activity__image-container activity__image-container--right">
+            <img src="images/test.jpg" alt="목공예" class="activity__img">
+        </div>
+        <div class="activity__gradient activity__gradient--right"></div>
+    </div>
+</div>
 
 
 
 
+    </main>
 
-    <script href="js/index.js"></script>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/c379705f96.js" crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/index.js"></script>
 </body>
+
 </html>
