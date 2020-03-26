@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google font
-        DELETE useless font!  -->
+        ***** DELETE useless font!  *****-->
     <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900|Noto+Sans+KR:100,300,500,900|Song+Myung&display=swap"
+        href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900|Noto+Sans+KR:100,300,500,700,900|Song+Myung&display=swap"
         rel="stylesheet">
 
     <!-- Favicon -->
@@ -21,15 +21,15 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header-home">
         <div class="navbar">
             <div class="navbar__logo-container">
                 <a href="index.html"><img src="images/main-logo.png" alt="곡성 목공예커피체험관 로고" class="navbar__logo"></a>
             </div>
 
             <input type="checkbox" class="navbar__checkbox" id="navi-toggler">
-            <label for="navi-toggler" class="navbar__menu">
-                <div class="navbar__menu-container" onclick="show()">
+            <label for="navi-toggler" class="navbar__menu" onclick="show()">
+                <div class="navbar__menu-container">
                     <span class="navbar__menu-icon">&nbsp;</span>
                 </div>
             </label>
@@ -41,10 +41,10 @@
                 <div class="navigation__image-container"></div>
                 <div class="navigation__item-container">
                     <ul class="navigation__list">
-                        <li class="navigation__item">홈</li>
-                        <li class="navigation__item">소개</li>
-                        <li class="navigation__item">커피수업</li>
-                        <li class="navigation__item">목공예수업</li>
+                        <li class="navigation__item"><a href="index.html" class="navigation__link">홈</a></li>
+                        <li class="navigation__item"><a href="about.html" class="navigation__link">소개</a></li>
+                        <li class="navigation__item">바리스타</li>
+                        <li class="navigation__item">목공예</li>
                         <li class="navigation__item">편의시설</li>
                         <li class="navigation__item">오시는길</li>
                     </ul>
@@ -58,57 +58,139 @@
             </div>
         </nav>
 
-        <h1 class="header__text header__text--1">삶.숨.쉼.이 있는</h1>
-        <h1 class="header__text header__text--2">느림의 미학</h1>
+        <h1 class="header-home__text header-home__text--1">삶.숨.쉼.이 있는</h1>
+        <h1 class="header-home__text header-home__text--2">느림의 미학</h1>
     </header>
 
     <main>
-
-<div class="activity">
-    <div class="activity__wrapper activity-left">
-        <div class="activity__textBox activity__textBox--left">
-            <div class="activity__text">
-                <h3>Woodcraft<span>목공예<span></h3>
+        <section class="about-school">
+            <div class="about-school__textBox">
+                <h3>박사골 오감만족관은,</h3>
                 <p>
-                    디지털의 홍수 속에서살아가는 우리의 감성이 점점 매말라갑니다. 편리한 플라스틱이 집안을 점령하고 있는 요즘,
-                    목공예를 통해 아날로그적인 사고와 함께  자연친화적 예술가가 되어보세요.
+                    죽곡면 봉정마을은 박사골로 불릴 정도로 많은 인재를 배출하였습니다.하지만 이 마을도 농촌 인구 감소와 저출산 여파는 비켜가지 않았습니다.<br>
+                    이 마을이 배출한 박사님들이 다녔을 봉정 초등학교도 학생 수가 급격히 감소하면서 폐교의 아픔을 받아들일 수밖에 없었지요.<br>
+                    폐교로 오랫동안 방치되어 있던 옛 봉정 초등학교가 박사골 오감만족관으로 새롭게 문을 열었습니다.
                 </p>
-                <a href="#" class="btn activity__btn">더 알아보기</a>
+                <p>가공되지 않은 자연그대로를 느낄 수 있는 박사골 오감만족관에서 잠시 쉬어가세요.</p>
             </div>
-        </div>
-        <div class="activity__image-container">
-            <img src="images/woodcraft.jpg" alt="목공예" class="activity__img">
-        </div>
-        <div class="activity__gradient activity__gradient--left"></div>
-    </div>
+        </section>
 
-    <div class="activity__wrapper activity-right">
-        <div class="activity__textBox activity__textBox--right">
-            <div class="activity__text">
-                <h3>Coffee<span>커피<span></h3>
-                <p>
-                    디지털의 홍수 속에서살아가는 우리의 감성이 점점 매말라갑니다. 편리한 플라스틱이 집안을 점령하고 있는 요즘,
-                    목공예를 통해 아날로그적인 사고와 함께  자연친화적 예술가가 되어보세요.
-                </p>
-                <a href="#" class="btn activity__btn">더 알아보기</a>
+
+        <section class="activity">
+            <div class="activity__wrapper activity-left mt">
+                <div class="activity__textBox activity__textBox--left">
+                    <div class="activity__text">
+                        <h2>Woodcraft<span>목공예<span></h2>
+                        <p>
+                            디지털의 홍수 속에서살아가는 우리의 감성이 점점 매말라갑니다. 편리한 플라스틱이 집안을 점령하고 있는 요즘,
+                            목공예를 통해 <span class="font-bold">아날로그적, 자연친화적 예술가</span>가 되어보세요.
+                        </p>
+                        <a href="#" class="btn activity__btn">더 알아보기</a>
+                    </div>
+                </div>
+                <div class="activity__image-container">
+                    <h3 class="h3-category"><span class="font-bold">목공예&바리스타</span> 체험 및 자격증</h3>
+
+                    <img src="images/woodcraft.jpg" alt="목공예" class="activity__img">
+                </div>
+                <div class="activity__gradient activity__gradient--left"></div>
             </div>
-        </div>
-        <div class="activity__image-container activity__image-container--right">
-            <img src="images/test.jpg" alt="목공예" class="activity__img">
-        </div>
-        <div class="activity__gradient activity__gradient--right"></div>
-    </div>
-</div>
+
+            <div class="activity__wrapper activity-right mt mb">
+                <div class="activity__textBox activity__textBox--right">
+                    <div class="activity__text">
+                        <h2>Barista<span>바리스타<span></h2>
+                        <p>
+                            커피는 오늘날 '커피전문점'의 이름으로 우리 생활 속에 깊숙히 자리잡고 있습니다.
+                            커피의 대중화에도 불구하고 <span class="font-bold">제대로 맛있는 커피</span>를 맛보기가 힘든 것은 사실입니다.
+                            나에게 맞는, 나만의 커피를 만들고 심도있게 커피를 즐겨보세요.
+                        </p>
+                        <a href="#" class="btn activity__btn">더 알아보기</a>
+                    </div>
+                </div>
+                <div class="activity__image-container activity__image-container--right">
+                    <img src="images/test.jpg" alt="목공예" class="activity__img">
+                </div>
+                <div class="activity__gradient activity__gradient--right"></div>
+            </div>
+        </section>
+
+
+        <section class="school-video mb">
+
+
+            <!-- Video content -->
 
 
 
+        </section>
+
+
+        <section id="gallery">
+            <div class="gallery__container gallery__container--1 mb">
+                <div class="gallery__image-container gallery__image-container--1">
+                    <h3 class="h3-category">GALLERY</h3>
+
+                    <img src="images/gallery-6.jpg" alt="" class="gallery__img">
+                </div>
+                <div class="gallery__image-container gallery__image-container--2">
+                    <img src="images/gallery-2.jpg" alt="" class="gallery__img">
+                </div>
+            </div>
+
+            <div class="gallery__container gallery__container--2 mb">
+                <div class="gallery__image-container gallery__image-container--3">
+                    <img src="images/gallery-4.jpg" alt="" class="gallery__img">
+                </div>
+                <div class="gallery__image-container gallery__image-container--4">
+                    <img src="images/gallery-5.jpg" alt="" class="gallery__img">
+                </div>
+            </div>
+
+
+
+
+
+        </section>
 
     </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer__logo-container">
+                <a href="index.html"><img src="images/cat.png" alt="곡성 목공예커피체험관 로고" class="footer__logo"></a>
+            </div>
+
+            <div class="footer__text-container">
+                <div class="footer__text-wrapper">
+                    <h4 class="footer__text-primary">OPEN</h4>
+                    <p class="footer__text-secondary">EVERYDAY<br>9AM - 7PM<br>예약필수</p>
+                </div>
+                <div class="footer__text-wrapper">
+                    <h4 class="footer__text-primary">TEL</h4>
+                    <p class="footer__text-secondary footer__tel">061 362 0778<br>010 4173 3062</p>
+                </div>
+                <div class="footer__text-wrapper">
+                    <h4 class="footer__text-primary">MEET</h4>
+                    <p class="footer__text-secondary">전남 곡성군 죽곡면 오죽로<br>407-8(봉정리 264)</p>
+                </div>
+                <div class="footer__text-wrapper">
+                    <h4 class="footer__text-primary">CONTACT</h4>
+                    <p class="footer__text-secondary"><a href="mailto:gwangsu3062@daum.net"
+                            class="footer__text-secondary footer__email"><span class="font-bold">Email:</span>
+                            gwangsu3062@daum.net</a><br><span class="font-bold">Account:</span> 351-0585-2223-01 (농협,
+                        김광수)</p>
+                </div>
+            </div>
+            <p class="footer__copyright">COPYRIGHT &copy; 2020 곡성 목공예커피체험관. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
 
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/c379705f96.js" crossorigin="anonymous"></script>
 
-    <!-- Jquery -->
+    <!-- Jquery 
+         **** if uselsess delete! **** -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- Javascript -->

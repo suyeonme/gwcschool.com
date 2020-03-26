@@ -1,3 +1,15 @@
+.font-bold {
+  font-weight: 700; }
+
+.font-bold-extra {
+  font-weight: 900; }
+
+.mb {
+  margin-bottom: 20rem; }
+
+.mt {
+  margin-top: 20rem; }
+
 *,
 *::before,
 *::after {
@@ -15,7 +27,24 @@ body {
 body {
   font-family: "Montserrat", "Noto Sans KR", sans-serif, "sans-serif"; }
 
+h2 {
+  font-size: 3.5rem;
+  text-transform: uppercase; }
+
+p {
+  font-weight: 100;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  line-height: 2; }
+
+.h3-category {
+  color: #352825;
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0 0 1rem .5rem; }
+
 .btn, .btn:link, .btn:visited {
+  display: inline-block;
   text-decoration: none;
   color: #394744;
   border: 1px solid #394744;
@@ -29,30 +58,77 @@ body {
   color: #fff;
   transition: all 0.3s; }
 
+.footer {
+  height: 75vh;
+  padding-bottom: 1.5rem;
+  background-color: #aa9995;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__logo-container {
+    width: 10%;
+    padding-top: 13rem; }
+  .footer__logo {
+    width: 100%; }
+  .footer__text-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto; }
+  .footer__text-wrapper {
+    color: #352825; }
+    .footer__text-wrapper:not(:last-child) {
+      margin-right: 10rem; }
+  .footer__text-primary {
+    font-size: 2.5rem;
+    font-weight: 900; }
+  .footer__text-secondary {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 1rem; }
+  .footer__tel {
+    letter-spacing: 1px;
+    word-spacing: 3px; }
+  .footer__email, .footer__email:visited, .footer__email:link {
+    color: currentColor;
+    text-decoration: none; }
+  .footer__copyright {
+    font-size: 1rem;
+    color: #352825; }
+
 .header {
-  width: 100%;
-  height: 130vh;
-  background-image: url(../images/header-1.jpg);
-  background-size: cover;
-  position: relative; }
-  .header__text {
-    font-family: "Song Myung", serif;
-    color: #fff;
-    writing-mode: vertical-rl;
-    position: absolute; }
-    .header__text--1 {
-      font-size: 4em;
-      letter-spacing: 2px;
-      left: 17rem;
-      top: 43rem; }
-    .header__text--2 {
-      font-size: 8.5rem;
-      left: 23rem;
-      top: 23rem;
-      letter-spacing: 10px; }
+  width: 100%; }
+  .header-home {
+    height: 130vh;
+    background-image: url(../images/header-1.jpg);
+    background-size: cover;
+    position: relative; }
+    .header-home__text {
+      font-family: "Song Myung", serif;
+      color: #fff;
+      writing-mode: vertical-rl;
+      position: absolute; }
+      .header-home__text--1 {
+        font-size: 4em;
+        letter-spacing: 2px;
+        left: 17rem;
+        top: 41rem; }
+      .header-home__text--2 {
+        font-size: 8.5rem;
+        left: 23rem;
+        top: 23rem;
+        letter-spacing: 10px; }
+  .header-about {
+    height: 100vh;
+    background-color: #352825; }
 
 .navbar {
-  z-index: 300;
+  z-index: 500;
   position: relative;
   top: 0;
   display: flex;
@@ -91,7 +167,8 @@ body {
     position: relative;
     right: 2.5rem;
     border-radius: 50%;
-    border: 1.5px solid #c9baa7;
+    border: 1.5px solid #aa9995;
+    cursor: pointer;
     transition: all 0.3s; }
     .navbar__menu:hover {
       border: 1.5px solid #1e464a; }
@@ -104,15 +181,14 @@ body {
       flex-direction: column;
       justify-content: center;
       width: 6rem;
-      height: 6rem;
-      cursor: pointer; }
+      height: 6rem; }
     .navbar__menu-icon, .navbar__menu-icon::before, .navbar__menu-icon::after {
       position: absolute;
       display: inline-block;
       left: 1.2rem;
       width: 3.5rem;
       height: .4rem;
-      background-color: #c9baa7;
+      background-color: #aa9995;
       border-radius: 3rem;
       transition: all 0.3s; }
     .navbar__menu-icon::before, .navbar__menu-icon::after {
@@ -126,20 +202,20 @@ body {
 
 .navigation {
   position: fixed;
-  z-index: 200;
+  z-index: 400;
   width: 100%;
   height: 100vh;
   overflow: hidden;
   background-color: #efebe6;
   color: #1e464a;
   right: -200rem;
-  transition: .8s; }
+  transition: .5s; }
   .navigation__container {
     display: flex; }
   .navigation__image-container {
     width: 60%;
     height: 100vh;
-    background-image: linear-gradient(rgba(170, 153, 149, 0.7), rgba(170, 153, 149, 0.7)), url(../images/sidebar.jpg);
+    background-image: linear-gradient(rgba(170, 153, 149, 0.3), rgba(170, 153, 149, 0.3)), url(../images/sidebar.jpg);
     background-size: cover; }
   .navigation__item-container {
     font-family: "Song Myung", serif;
@@ -150,19 +226,22 @@ body {
     justify-content: space-between; }
   .navigation__list {
     margin-left: 5rem;
-    margin-top: 15rem; }
+    margin-top: 10rem; }
   .navigation__item {
     display: block;
     list-style: none; }
     .navigation__item:not(:last-child) {
-      margin-bottom: 2rem; }
+      margin-bottom: 3rem; }
     .navigation__item:hover {
-      color: #c9baa7;
+      color: #aa9995;
       transition: all 0.3s; }
+  .navigation__link, .navigation__link:visited, .navigation__link:link {
+    color: currentColor;
+    text-decoration: none; }
   .navigation.active {
     right: 0; }
   .navigation__contact {
-    border-top: 1px solid #c9baa7;
+    border-top: 1px solid #aa9995;
     padding: 3rem 5rem; }
     .navigation__contact h4 {
       font-family: "Montserrat";
@@ -177,40 +256,67 @@ body {
       .navigation__contact p:not(:last-child) {
         margin-bottom: 2.5rem; }
 
+.about-school {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  background-image: linear-gradient(rgba(50, 61, 59, 0.9), rgba(50, 61, 59, 0.9)), url(../images/school.jpg);
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .about-school h3 {
+    font-family: "Song Myung", serif;
+    font-weight: 500;
+    font-size: 3.2rem;
+    color: #aa9995;
+    margin-bottom: 3rem; }
+    .about-school h3::before {
+      content: "\201C";
+      position: absolute;
+      top: 4rem;
+      left: 8rem;
+      transform: rotate(5deg);
+      font-size: 35rem;
+      color: rgba(164, 168, 154, 0.2); }
+  .about-school p:last-child {
+    font-size: 2rem;
+    font-family: "Song Myung", serif;
+    color: #aa9995; }
+
 .activity {
   width: 100%; }
   .activity-left, .activity-right {
-    position: relative;
-    margin-top: 30rem; }
+    position: relative; }
   .activity__textBox {
     width: 45rem;
     height: 45rem;
-    background-color: #fff;
     padding: 5rem;
     position: absolute;
-    z-index: 300; }
+    z-index: 300;
+    color: #394744;
+    background-color: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
     .activity__textBox--left {
       top: 7rem;
       right: 10rem; }
     .activity__textBox--right {
       top: 7rem;
       left: 10rem; }
-  .activity__text h3 {
-    font-size: 3.5rem;
-    text-transform: uppercase; }
-    .activity__text h3 span {
-      font-size: 2rem;
-      font-weight: 100;
-      margin-left: 2rem; }
-  .activity__text p {
-    font-weight: 100;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    line-height: 2; }
+  .activity__text h2 span {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-left: 2rem; }
   .activity__image-container {
     width: 70%;
     position: relative;
-    z-index: 200; }
+    z-index: 200;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2rem;
+    font-weight: 100; }
     .activity__image-container--right {
       margin-left: auto; }
   .activity__img {
@@ -226,7 +332,41 @@ body {
     .activity__gradient--right {
       left: 38rem;
       bottom: -4rem;
-      background-image: linear-gradient(to right bottom, #f5bab1, #efebe6, #aa9995); }
+      background-image: linear-gradient(to right bottom, #efebe6, #aa9995, rgba(245, 186, 177, 0.5)); }
   .activity__btn {
-    display: inline-block;
     margin-top: 5rem; }
+
+.school-video {
+  width: 100%;
+  height: 80vh;
+  background-color: #a4a89a; }
+
+.gallery__container--1 {
+  display: flex;
+  justify-content: center; }
+
+.gallery__container--2 {
+  position: relative; }
+
+.gallery__image-container--1 {
+  width: 35%;
+  margin-right: 10rem; }
+
+.gallery__image-container--2 {
+  width: 45%;
+  align-self: flex-end; }
+
+.gallery__image-container--3 {
+  width: 65%;
+  margin-left: 9rem; }
+
+.gallery__image-container--4 {
+  width: 25%;
+  position: absolute;
+  bottom: -5rem;
+  right: 18rem; }
+
+.gallery__img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }

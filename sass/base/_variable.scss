@@ -3,14 +3,14 @@ $color-black: #000;
 $color-white: #fff;
 
 $color-pink: #f5bab1;
+$color-brown: #352825;
+
 $color-beige: #efebe6;
-$color-beige-1: #c9baa7;
-$color-beige-2: #aa9995;
+$color-beige-1: #aa9995;
 
 $color-green-1: #a4a89a;
 $color-green-2: #394744;
 $color-green-3: #323d3b;
-//$color-green-4: #222c2b;
 $color-green-4: #1e464a;
 
 // FONT
@@ -18,12 +18,6 @@ $font-primary-en: 'Montserrat';
 $font-primary-ko: 'Noto Sans KR', sans-serif;
 $font-secondary-ko: 'Song Myung', serif;
 
-$font-weight-ko-1: 100;
-$font-weight-ko-2: 300;
-$font-weight-ko-3: 500;
-$font-weight-ko-4: 900;
-
-// letter-spacing
-// margin helper class
-
 $transition-1: all .3s; 
+$shadow-1:  0px 3px 15px rgba(0,0,0,0.2);
+        
