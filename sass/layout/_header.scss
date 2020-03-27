@@ -32,43 +32,36 @@
 
     // ABOUT
     &-about {
-        height: 100vh;
-        background-color: $color-brown;
+        position: relative;
+        height: 75vh;
+        background-image: url(../images/about-header.jpg);
+        background-size: cover;
+        background-position: center;
 
+        &__text {
+            position: absolute;
+            top: 27rem;
+            left: 5rem;
+            line-height: 1.5;
 
-
-
+            span {
+                color: $color-green-1;
+            }
+        }
     }
 }
 
 .navbar {
-    z-index: 500;
-    position: relative;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    padding: 2rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: $color-white;
-    width: 100%;
-    padding: 2rem;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    &__icon {
-        font-size: 1.8rem;
-        margin-left: auto;
-        margin-right: 4rem;
-
-        span {
-            font-family: $font-primary-en;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            margin-left: 1rem;
-        }
-    }
 
     &__logo-container {
         width: 13rem;

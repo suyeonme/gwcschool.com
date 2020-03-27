@@ -4,11 +4,23 @@
 .font-bold-extra {
   font-weight: 900; }
 
-.mb {
+.mt-medium {
+  margin-top: 10rem; }
+
+.mt-huge {
+  margin-top: 20rem; }
+
+.mb-medium {
+  margin-bottom: 10rem; }
+
+.mb-huge {
   margin-bottom: 20rem; }
 
-.mt {
-  margin-top: 20rem; }
+.pt-medium {
+  padding-top: 10rem; }
+
+.pb-medium {
+  padding-bottom: 10rem; }
 
 *,
 *::before,
@@ -36,6 +48,11 @@ p {
   font-size: 1.8rem;
   margin-top: 2rem;
   line-height: 2; }
+
+.h1-subHeader {
+  font-family: "Song Myung", serif;
+  font-size: 5rem;
+  color: #efebe6; }
 
 .h3-category {
   color: #352825;
@@ -124,31 +141,29 @@ p {
         top: 23rem;
         letter-spacing: 10px; }
   .header-about {
-    height: 100vh;
-    background-color: #352825; }
+    position: relative;
+    height: 75vh;
+    background-image: url(../images/about-header.jpg);
+    background-size: cover;
+    background-position: center; }
+    .header-about__text {
+      position: absolute;
+      top: 27rem;
+      left: 5rem;
+      line-height: 1.5; }
+      .header-about__text span {
+        color: #a4a89a; }
 
 .navbar {
-  z-index: 500;
-  position: relative;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  width: 100%;
-  padding: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0; }
-  .navbar__icon {
-    font-size: 1.8rem;
-    margin-left: auto;
-    margin-right: 4rem; }
-    .navbar__icon span {
-      font-family: "Montserrat";
-      font-weight: 500;
-      letter-spacing: 1.5px;
-      margin-left: 1rem; }
+  align-items: center; }
   .navbar__logo-container {
     width: 13rem; }
   .navbar__logo {
@@ -226,7 +241,7 @@ p {
     justify-content: space-between; }
   .navigation__list {
     margin-left: 5rem;
-    margin-top: 10rem; }
+    margin-top: 12rem; }
   .navigation__item {
     display: block;
     list-style: none; }
@@ -242,19 +257,69 @@ p {
     right: 0; }
   .navigation__contact {
     border-top: 1px solid #aa9995;
-    padding: 3rem 5rem; }
-    .navigation__contact h4 {
-      font-family: "Montserrat";
-      font-weight: 300;
-      font-size: 1.8rem;
-      margin-bottom: .5rem; }
+    padding: 4rem 5rem;
+    color: #aa9995; }
+    .navigation__contact-icon {
+      margin-right: 1.5rem;
+      font-size: 1.8rem; }
     .navigation__contact p {
       font-family: "Noto Sans KR", sans-serif;
       font-size: 1.3rem;
-      font-weight: 100;
-      letter-spacing: 2px; }
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-top: 0; }
       .navigation__contact p:not(:last-child) {
         margin-bottom: 2.5rem; }
+
+.message {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  .message__image-container {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    z-index: 200; }
+  .message__img {
+    width: 100%; }
+  .message__textBox {
+    background-image: linear-gradient(rgba(239, 235, 230, 0.7), rgba(239, 235, 230, 0.7)), url(../images/profile-background.jpg);
+    background-size: cover;
+    width: 80%;
+    height: 90vh;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%); }
+  .message__text {
+    width: 60%;
+    margin-left: auto;
+    padding: 10rem; }
+    .message__text h2 {
+      font-weight: 500;
+      font-size: 3rem;
+      color: #352825; }
+    .message__text span {
+      font-size: 2rem; }
+    .message__text p {
+      line-height: 2.5;
+      padding-top: 2rem; }
+    .message__text-category {
+      font-size: 5rem;
+      color: #394744;
+      font-family: "Noto Sans KR", sans-serif; }
+
+.about-quote__image-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/about-quote-1.jpg);
+  background-size: cover; }
+
+.about-quote__textBox {
+  width: 100%;
+  height: 70vh;
+  background-color: #111111; }
 
 .about-school {
   position: relative;

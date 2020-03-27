@@ -17,9 +17,17 @@ p {
     line-height: 2;
 }
 
+.h1-subHeader {
+    font-family: $font-secondary-ko;
+    font-size: 5rem;
+    color: $color-beige;
+}
+
 .h3-category {
     color: $color-brown;
     font-weight: 300;
     font-size: 2rem;
     margin: 0 0 1rem .5rem;
 }
+
+

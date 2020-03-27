@@ -1,5 +1,11 @@
 .font-bold { font-weight: 700; }
 .font-bold-extra { font-weight: 900 }
 
-.mb { margin-bottom: 20rem; }
-.mt { margin-top: 20rem; }
+.mt-medium { margin-top: 10rem; }
+.mt-huge { margin-top: 20rem; }
+
+.mb-medium { margin-bottom: 10rem; }
+.mb-huge { margin-bottom: 20rem; }
+
+.pt-medium { padding-top: 10rem; }
+.pb-medium { padding-bottom: 10rem; }
