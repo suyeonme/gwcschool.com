@@ -54,11 +54,25 @@ p {
   font-size: 5rem;
   color: #efebe6; }
 
+.h1-subHeader-en {
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: #efebe6; }
+
+.p-subHeader-ko {
+  color: #efebe6;
+  font-family: "Song Myung", serif; }
+
 .h3-category {
   color: #352825;
   font-weight: 300;
   font-size: 2rem;
   margin: 0 0 1rem .5rem; }
+
+.h2-category {
+  font-size: 5rem;
+  color: #394744;
+  font-family: "Noto Sans KR", sans-serif; }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;
@@ -141,9 +155,9 @@ p {
         top: 23rem;
         letter-spacing: 10px; }
   .header-about {
+    background-image: url(../images/about-header.jpg);
     position: relative;
     height: 75vh;
-    background-image: url(../images/about-header.jpg);
     background-size: cover;
     background-position: center; }
     .header-about__text {
@@ -153,6 +167,23 @@ p {
       line-height: 1.5; }
       .header-about__text span {
         color: #a4a89a; }
+  .header-barista {
+    position: relative;
+    height: 75vh;
+    background-image: url(../images/barista-header.jpg);
+    background-size: cover;
+    background-position: center; }
+    .header-barista__text--en {
+      font-size: 11rem;
+      position: absolute;
+      top: 20rem;
+      left: 10rem; }
+    .header-barista__text--ko {
+      font-size: 5rem;
+      position: absolute;
+      top: 32rem;
+      left: 10rem;
+      line-height: 1.5; }
 
 .navbar {
   position: fixed;
@@ -305,10 +336,21 @@ p {
     .message__text p {
       line-height: 2.5;
       padding-top: 2rem; }
-    .message__text-category {
-      font-size: 5rem;
-      color: #394744;
-      font-family: "Noto Sans KR", sans-serif; }
+  .message__cats {
+    width: 35%;
+    margin-left: auto;
+    margin-right: 10rem; }
+    .message__cats-wrapper {
+      display: flex;
+      justify-content: space-between; }
+    .message__cats-container {
+      width: 25%; }
+      .message__cats-container figcaption {
+        text-align: center;
+        font-size: 1.5rem; }
+    .message__cats-img {
+      width: 100%;
+      border-radius: 50%; }
 
 .about-quote__image-container {
   width: 100%;
@@ -319,7 +361,41 @@ p {
 .about-quote__textBox {
   width: 100%;
   height: 70vh;
-  background-color: #111111; }
+  background-color: #111111;
+  color: #adadad;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .about-quote__textBox p {
+    font-size: 2.5rem; }
+    .about-quote__textBox p span {
+      display: block;
+      font-size: 1.6rem;
+      margin-top: 2rem; }
+
+.barista-description {
+  position: relative;
+  text-align: center;
+  padding: 20rem; }
+  .barista-description__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/barista-description.jpg);
+    background-size: cover;
+    opacity: .2; }
+  .barista-description p {
+    font-weight: 300;
+    font-size: 2rem; }
+
+.barista-course {
+  width: 100%;
+  height: auto;
+  display: flex; }
+  .barista-course__img {
+    width: 100%; }
 
 .about-school {
   position: relative;

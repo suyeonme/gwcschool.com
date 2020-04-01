@@ -17,12 +17,25 @@ p {
     line-height: 2;
 }
 
+// SUBHEADER
 .h1-subHeader {
     font-family: $font-secondary-ko;
     font-size: 5rem;
     color: $color-beige;
 }
 
+.h1-subHeader-en {
+    font-family: $font-primary-en;
+    font-weight: 800;
+    color: $color-beige;
+}
+
+.p-subHeader-ko {
+    color: $color-beige;
+    font-family: $font-secondary-ko;
+}
+
+// CATEGORY
 .h3-category {
     color: $color-brown;
     font-weight: 300;
@@ -30,4 +43,8 @@ p {
     margin: 0 0 1rem .5rem;
 }
 
-
+.h2-category {
+    font-size: 5rem;
+    color: $color-green-2;
+    font-family: $font-primary-ko;
+}

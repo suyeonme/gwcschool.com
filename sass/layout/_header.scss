@@ -32,9 +32,9 @@
 
     // ABOUT
     &-about {
+        background-image: url(../images/about-header.jpg);
         position: relative;
         height: 75vh;
-        background-image: url(../images/about-header.jpg);
         background-size: cover;
         background-position: center;
 
@@ -49,7 +49,34 @@
             }
         }
     }
+
+    &-barista {
+        position: relative;
+        height: 75vh;
+        background-image: url(../images/barista-header.jpg);
+        background-size: cover;
+        background-position: center;
+
+        &__text {
+
+            &--en {
+                font-size: 11rem;
+                position: absolute;
+                top: 20rem;
+                left: 10rem;
+            }
+
+            &--ko {
+                font-size: 5rem;
+                position: absolute;
+                top: 32rem;
+                left: 10rem;
+                line-height: 1.5;
+            }
+        }
+    }
 }
+
 
 .navbar {
     position: fixed;
