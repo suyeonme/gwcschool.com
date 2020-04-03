@@ -21,4 +21,14 @@
         color: $color-white;
         transition: $transition-1;
     }
+
+    &--beige {
+        color: $color-beige-1 !important;
+        border: 1px solid $color-beige-1 !important;
+
+        &:hover {
+            background-color: $color-beige-1 !important;
+            color: $color-white !important;
+        }
+    }
 }

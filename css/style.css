@@ -4,11 +4,23 @@
 .font-bold-extra {
   font-weight: 900; }
 
+.font-bg {
+  background-color: #352825;
+  color: #fff;
+  font-weight: 500;
+  padding: .5rem; }
+
+.mt-small {
+  margin-top: 3rem; }
+
 .mt-medium {
   margin-top: 10rem; }
 
 .mt-huge {
   margin-top: 20rem; }
+
+.mb-small {
+  margin-bottom: 3rem; }
 
 .mb-medium {
   margin-bottom: 10rem; }
@@ -89,6 +101,13 @@ p {
   color: #fff;
   transition: all 0.3s; }
 
+.btn--beige {
+  color: #aa9995 !important;
+  border: 1px solid #aa9995 !important; }
+  .btn--beige:hover {
+    background-color: #aa9995 !important;
+    color: #fff !important; }
+
 .footer {
   height: 75vh;
   padding-bottom: 1.5rem;
@@ -157,7 +176,7 @@ p {
   .header-about {
     background-image: url(../images/about-header.jpg);
     position: relative;
-    height: 75vh;
+    height: 80vh;
     background-size: cover;
     background-position: center; }
     .header-about__text {
@@ -168,9 +187,9 @@ p {
       .header-about__text span {
         color: #a4a89a; }
   .header-barista {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/barista.jpg);
     position: relative;
-    height: 75vh;
-    background-image: url(../images/barista-header.jpg);
+    height: 80vh;
     background-size: cover;
     background-position: center; }
     .header-barista__text--en {
@@ -359,13 +378,13 @@ p {
   background-size: cover; }
 
 .about-quote__textBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 70vh;
   background-color: #111111;
-  color: #adadad;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  color: #adadad; }
   .about-quote__textBox p {
     font-size: 2.5rem; }
     .about-quote__textBox p span {
@@ -390,12 +409,167 @@ p {
     font-weight: 300;
     font-size: 2rem; }
 
-.barista-course {
+.course {
+  display: flex; }
+  .course__itemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #efebe6;
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-size: 100%;
+    transition: all 0.7s; }
+    .course__itemContainer:hover {
+      background-size: 110%; }
+    .course__itemContainer--1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/1.jpg); }
+      .course__itemContainer--1:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/1.jpg); }
+    .course__itemContainer--2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/2.jpg); }
+      .course__itemContainer--2:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/2.jpg); }
+  .course__text {
+    padding: 0 10rem;
+    text-align: center; }
+    .course__text h2 {
+      font-family: "Song Myung", serif;
+      font-size: 5rem; }
+
+.certification {
+  width: 100%;
+  height: auto; }
+  .certification__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 13rem; }
+    .certification__description p {
+      font-size: 2rem;
+      font-weight: 500; }
+  .certification__logo {
+    position: absolute;
+    top: 8rem;
+    left: 20rem;
+    width: 15%;
+    opacity: .5;
+    z-index: -1; }
+  .certification__process {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .certification__process-item {
+      background-color: #fff;
+      width: 20%;
+      text-align: center;
+      padding: 4rem;
+      margin-right: 3rem;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
+      .certification__process-item h3 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-top: 1.3rem; }
+      .certification__process-item p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-top: 1rem; }
+  .certification__icon {
+    font-size: 4rem;
+    color: #aa9995; }
+
+.hand-drip__container {
   width: 100%;
   height: auto;
+  display: flex;
+  padding: 0 7rem; }
+
+.hand-drip__item {
+  width: 100%;
+  height: 100%;
+  margin: 0 5rem; }
+
+.hand-drip__img {
+  width: 100%; }
+
+.hand-drip__info {
+  margin-left: 2rem;
+  font-weight: 100;
+  line-height: 2;
+  font-size: 1.5rem; }
+
+.hand-drip__recommendation {
+  font-size: 1.5rem;
+  list-style: none; }
+  .hand-drip__recommendation-icon {
+    margin-right: 1rem;
+    margin-bottom: 1rem; }
+  .hand-drip__recommendation li {
+    font-weight: 100; }
+
+.hand-drip__textBox p {
+  writing-mode: vertical-rl;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 7rem; }
+
+.hand-drip__textBox h2 {
+  font-weight: 100;
+  font-size: 5rem;
+  margin-bottom: 7rem; }
+
+.timetable__container {
+  width: 100%;
+  height: auto;
+  padding: 0 12rem;
   display: flex; }
-  .barista-course__img {
-    width: 100%; }
+
+.timetable__table {
+  width: 100%;
+  height: 100%; }
+
+.timetable table {
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+  word-break: break-all; }
+
+.timetable td, .timetable th {
+  border: 1px solid #a4a89a;
+  text-align: center; }
+
+.timetable td {
+  width: 25%;
+  padding: 3rem 1rem; }
+
+.timetable th {
+  background-color: #394744;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 8px; }
+
+.timetable h5 {
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+.timetable p {
+  font-size: 1.3rem; }
+
+.timetable__textBox {
+  width: 50%;
+  height: 100%;
+  text-align: center; }
+  .timetable__textBox h2 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: #1e464a; }
+  .timetable__textBox h3 {
+    font-size: 3rem;
+    font-weight: 300; }
 
 .about-school {
   position: relative;

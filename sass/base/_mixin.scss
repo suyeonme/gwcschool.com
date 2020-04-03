@@ -3,3 +3,16 @@
     flex-direction: column;
     justify-content: center;
 }
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin subHeader {
+    position: relative;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}

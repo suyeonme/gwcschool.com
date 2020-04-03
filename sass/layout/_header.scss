@@ -33,10 +33,7 @@
     // ABOUT
     &-about {
         background-image: url(../images/about-header.jpg);
-        position: relative;
-        height: 75vh;
-        background-size: cover;
-        background-position: center;
+        @include subHeader;
 
         &__text {
             position: absolute;
@@ -51,11 +48,8 @@
     }
 
     &-barista {
-        position: relative;
-        height: 75vh;
-        background-image: url(../images/barista-header.jpg);
-        background-size: cover;
-        background-position: center;
+        background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../images/barista.jpg);
+        @include subHeader;
 
         &__text {
 

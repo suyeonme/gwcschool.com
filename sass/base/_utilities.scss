@@ -1,9 +1,17 @@
 .font-bold { font-weight: 700; }
 .font-bold-extra { font-weight: 900 }
+.font-bg {
+    background-color: $color-brown;
+    color: $color-white;
+    font-weight: 500;
+    padding: .5rem;
+}
 
+.mt-small { margin-top: 3rem; }
 .mt-medium { margin-top: 10rem; }
 .mt-huge { margin-top: 20rem; }
 
+.mb-small { margin-bottom: 3rem; }
 .mb-medium { margin-bottom: 10rem; }
 .mb-huge { margin-bottom: 20rem; }
 

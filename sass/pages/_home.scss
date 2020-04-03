@@ -6,10 +6,7 @@
     background-size: cover;
     color: $color-white;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex-col-center;
     align-items: center;
 
     h3 {
