@@ -1,14 +1,17 @@
-.font-bold {
-  font-weight: 700; }
-
-.font-bold-extra {
-  font-weight: 900; }
-
 .font-bg {
   background-color: #352825;
   color: #fff;
   font-weight: 500;
   padding: .5rem; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.margin-left {
+  margin-left: auto; }
 
 .mt-small {
   margin-top: 3rem; }
@@ -43,7 +46,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   background-color: #efebe6; }
@@ -409,6 +413,13 @@ p {
     font-weight: 300;
     font-size: 2rem; }
 
+.barista-image {
+  width: 100%;
+  height: auto; }
+
+.barista__img {
+  width: 100%; }
+
 .course {
   display: flex; }
   .course__itemContainer {
@@ -493,7 +504,8 @@ p {
   margin: 0 5rem; }
 
 .hand-drip__img {
-  width: 100%; }
+  width: 100%;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
 
 .hand-drip__info {
   margin-left: 2rem;
@@ -563,13 +575,29 @@ p {
   width: 50%;
   height: 100%;
   text-align: center; }
-  .timetable__textBox h2 {
-    font-size: 4.5rem;
-    font-weight: 900;
-    color: #1e464a; }
   .timetable__textBox h3 {
     font-size: 3rem;
     font-weight: 300; }
+
+/*
+.review {
+
+    &__row {
+        display: flex;
+        padding: 0 3rem;
+    }
+
+    &__col { padding: 3rem;}
+    &__img { width: 100%;}
+}
+*/
+.review__row {
+  display: flex;
+  padding: 0 3rem; }
+
+.review__img {
+  width: 100%;
+  padding: 3rem; }
 
 .about-school {
   position: relative;

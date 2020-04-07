@@ -21,7 +21,16 @@
             font-size: 2rem;
         }
     }
+
+    // Barista Big image 
+    &-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__img { width: 100%; }
 }
+
 
 .course {
     display: flex;
@@ -142,7 +151,10 @@
         margin: 0 5rem;
     }
 
-    &__img { width: 100%; }
+    &__img { 
+        width: 100%;
+        box-shadow: $shadow-1;
+    }
 
     &__info {
         margin-left: 2rem;
@@ -235,15 +247,35 @@
         height: 100%;
         text-align: center;
 
-        h2 {
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: $color-green-4;
-        }
-
         h3 {
             font-size: 3rem;
             font-weight: 300;
         }
+    }
+}
+
+/*
+.review {
+
+    &__row {
+        display: flex;
+        padding: 0 3rem;
+    }
+
+    &__col { padding: 3rem;}
+    &__img { width: 100%;}
+}
+*/
+
+.review {
+
+    &__row {
+        display: flex;
+        padding: 0 3rem;
+    }
+
+    &__img { 
+        width: 100%; 
+        padding: 3rem;
     }
 }

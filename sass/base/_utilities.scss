@@ -1,11 +1,13 @@
-.font-bold { font-weight: 700; }
-.font-bold-extra { font-weight: 900 }
 .font-bg {
     background-color: $color-brown;
     color: $color-white;
     font-weight: 500;
     padding: .5rem;
 }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.margin-left { margin-left: auto; }
 
 .mt-small { margin-top: 3rem; }
 .mt-medium { margin-top: 10rem; }
