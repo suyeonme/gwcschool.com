@@ -76,6 +76,16 @@
             background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../images/woodcraft-header.jpg);
             @include subHeader;
         }
+
+        &-facility {
+            background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../images/facility-header.jpg);
+            @include subHeader;
+        }
+
+        &-location {
+            background-image: linear-gradient(rgba($color-black, .4), rgba($color-black, .4)), url(../images/location-header.jpg);
+            @include subHeader;
+        }
     }
 }
 

@@ -1,0 +1,49 @@
+.location {
+    @include flex-center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba($color-beige, .3), rgba($color-beige, .3)), url(../images/location-1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+
+    &__container {
+        width: 80%;
+        height: 50vh;
+        background-color: $color-white;
+        @include flex-col-center;
+        align-items: center;
+        padding: 0 15rem;
+    }
+
+    &__ko { font-size: 2.5rem; }
+    &__en {
+        display: block;
+        font-size: 2rem;
+    }
+
+    &__message {
+        font-weight: 300;
+    }
+
+    // MAP
+    &__mapContainer { 
+        display: flex; 
+        padding: 10rem; 
+    }
+
+    &__map { 
+        display: inline-block;
+    }
+
+    &__nearby-tour {
+        padding: 1rem 5rem;
+
+        h2 { font-weight: 300; }
+        ul {
+            list-style: none;
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 1.8;  
+        }
+    }
+}

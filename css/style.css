@@ -34,8 +34,14 @@
 .pt-medium {
   padding-top: 10rem; }
 
+.pt-huge {
+  padding-top: 20rem; }
+
 .pb-medium {
   padding-bottom: 10rem; }
+
+.pb-huge {
+  padding-bottom: 20rem; }
 
 *,
 *::before,
@@ -105,12 +111,19 @@ p {
   color: #fff;
   transition: all 0.3s; }
 
+.btn:active {
+  background-color: #323d3b;
+  transform: translateY(0.5rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
+
 .btn--beige {
   color: #aa9995 !important;
   border: 1px solid #aa9995 !important; }
   .btn--beige:hover {
     background-color: #aa9995 !important;
     color: #fff !important; }
+  .btn--beige:active {
+    background-color: #928380 !important; }
 
 .footer {
   height: 75vh;
@@ -210,6 +223,18 @@ p {
     background-position: center; }
   .header-sub-woodcraft {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/woodcraft-header.jpg);
+    position: relative;
+    height: 80vh;
+    background-size: cover;
+    background-position: center; }
+  .header-sub-facility {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/facility-header.jpg);
+    position: relative;
+    height: 80vh;
+    background-size: cover;
+    background-position: center; }
+  .header-sub-location {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/location-header.jpg);
     position: relative;
     height: 80vh;
     background-size: cover;
@@ -485,9 +510,10 @@ p {
     opacity: .5;
     z-index: -1; }
   .certification__process {
-    width: 100%;
-    display: flex;
-    justify-content: center; }
+    width: 100%; }
+    .certification__process-list {
+      display: flex;
+      justify-content: center; }
     .certification__process-item {
       background-color: #fff;
       width: 20%;
@@ -503,9 +529,19 @@ p {
         font-size: 1.5rem;
         line-height: 1.5;
         margin-top: 1rem; }
+    .certification__process--wood {
+      background-color: #a4a89a; }
+      .certification__process--wood h2 {
+        font-weight: 300;
+        font-size: 4.5rem; }
+      .certification__process--wood h3 {
+        font-weight: 100;
+        font-size: 1.8rem; }
   .certification__icon {
     font-size: 4rem;
     color: #aa9995; }
+    .certification__icon--wood {
+      color: #394744; }
 
 .hand-drip__container {
   width: 100%;
@@ -614,6 +650,39 @@ p {
     font-family: "Song Myung", serif;
     margin: 0; }
 
+.facility__row {
+  display: flex;
+  width: 100%;
+  padding: 0 7rem; }
+
+.facility__imageBox {
+  width: 65%; }
+
+.facility__textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+  text-align: center; }
+  .facility__textBox--right {
+    margin-left: 7rem; }
+  .facility__textBox--left {
+    margin-right: 7rem; }
+  .facility__textBox h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: initial;
+    color: #394744; }
+  .facility__textBox p {
+    font-size: 1.7rem; }
+  .facility__textBox span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500; }
+
+.facility__img {
+  width: 100%; }
+
 .about-school {
   position: relative;
   width: 100%;
@@ -625,7 +694,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 0 25rem; }
   .about-school h3 {
     font-family: "Song Myung", serif;
     font-weight: 500;
@@ -729,6 +799,46 @@ p {
   height: auto;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
 
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(239, 235, 230, 0.3), rgba(239, 235, 230, 0.3)), url(../images/location-1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 80vh; }
+  .location__container {
+    width: 80%;
+    height: 50vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15rem; }
+  .location__ko {
+    font-size: 2.5rem; }
+  .location__en {
+    display: block;
+    font-size: 2rem; }
+  .location__message {
+    font-weight: 300; }
+  .location__mapContainer {
+    display: flex;
+    padding: 10rem; }
+  .location__map {
+    display: inline-block; }
+  .location__nearby-tour {
+    padding: 1rem 5rem; }
+    .location__nearby-tour h2 {
+      font-weight: 300; }
+    .location__nearby-tour ul {
+      list-style: none;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.8; }
+
 .woodcraft-description {
   position: relative;
   text-align: center;
@@ -746,3 +856,14 @@ p {
     font-family: "Song Myung", serif;
     font-size: 3.5rem;
     color: #fff; }
+
+.gallery-wood__row {
+  display: flex;
+  width: 100%;
+  padding: 0 18rem; }
+
+.gallery-wood__col {
+  padding: 3rem; }
+
+.gallery-wood__img {
+  width: 100%; }

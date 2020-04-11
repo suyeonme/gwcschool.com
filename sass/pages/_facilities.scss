@@ -1,0 +1,42 @@
+.facility {
+    
+    &__row {
+        display: flex;
+        width: 100%;
+        padding: 0 7rem;
+
+        
+    }
+
+    &__imageBox {
+        width: 65%;
+        //margin-right: 7rem;
+    }
+
+    &__textBox {
+        @include flex-col-center;
+        width: 35%;
+        text-align: center;
+
+        &--right { margin-left: 7rem; }
+        &--left { margin-right: 7rem; }
+
+        h2 {
+            font-size: 4rem;
+            font-weight: 500;
+            text-transform: initial;
+            color: $color-green-2;
+        }
+
+        p { font-size: 1.7rem;}
+
+        span {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+    }
+
+    &__img { width: 100%; }
+}

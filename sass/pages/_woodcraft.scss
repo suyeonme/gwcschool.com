@@ -23,3 +23,15 @@
         }
     }
 }
+
+.gallery-wood {
+
+    &__row {
+        display: flex;
+        width: 100%;
+        padding: 0 18rem;
+    }
+
+    &__col { padding: 3rem; }
+    &__img { width: 100%; }
+}

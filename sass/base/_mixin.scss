@@ -16,3 +16,8 @@
     background-size: cover;
     background-position: center;
 }
+
+@mixin btn-active {
+    transform: translateY(.5rem);
+    box-shadow: $shadow-1;
+}

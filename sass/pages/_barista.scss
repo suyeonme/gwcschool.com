@@ -114,8 +114,11 @@
     // PROCESS
     &__process {
         width: 100%;
-        display: flex;
-        justify-content: center;
+
+        &-list {
+            display: flex;
+            justify-content: center;
+        }
 
         &-item {
             background-color: $color-white;
@@ -137,11 +140,31 @@
                 margin-top: 1rem;
             }
         }
+
+        // WOODCRAFT
+        &--wood {
+            background-color: $color-green-1;
+
+            h2 {
+                font-weight: 300;
+                font-size: 4.5rem;
+            }
+
+            h3 { 
+                font-weight: 100;
+                font-size: 1.8rem;
+            }
+        }
     }
 
     &__icon {                                           // change to SVG icon !
         font-size: 4rem;
         color: $color-beige-1;
+
+         // WOODCRAFT
+        &--wood {
+            color: $color-green-2;
+        }
     }
 }
 
