@@ -4,28 +4,25 @@
         display: flex;
         width: 100%;
         padding: 0 7rem;
-
-        
     }
 
     &__imageBox {
         width: 65%;
-        //margin-right: 7rem;
     }
 
     &__textBox {
-        @include flex-col-center;
         width: 35%;
         text-align: center;
+        padding-top: 17rem;
 
         &--right { margin-left: 7rem; }
         &--left { margin-right: 7rem; }
 
         h2 {
-            font-size: 4rem;
-            font-weight: 500;
+            font-size: 5rem;
+            font-weight: 700;
             text-transform: initial;
-            color: $color-green-2;
+            color: $color-beige;
         }
 
         p { font-size: 1.7rem;}
@@ -35,7 +32,6 @@
             font-size: 1.3rem;
             font-weight: 500;
         }
-
     }
 
     &__img { width: 100%; }

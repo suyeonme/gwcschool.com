@@ -43,6 +43,12 @@
 .pb-huge {
   padding-bottom: 20rem; }
 
+.wp {
+  opacity: 0; }
+
+.wp.animated {
+  opacity: 1; }
+
 *,
 *::before,
 *::after {
@@ -56,7 +62,8 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: #efebe6; }
+  background-color: #efebe6;
+  transition: background 1s ease; }
 
 body {
   font-family: "Montserrat", "Noto Sans KR", sans-serif, "sans-serif"; }
@@ -402,6 +409,7 @@ p {
       width: 25%; }
       .message__cats-container figcaption {
         text-align: center;
+        font-weight: 300;
         font-size: 1.5rem; }
     .message__cats-img {
       width: 100%;
@@ -659,20 +667,18 @@ p {
   width: 65%; }
 
 .facility__textBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 35%;
-  text-align: center; }
+  text-align: center;
+  padding-top: 17rem; }
   .facility__textBox--right {
     margin-left: 7rem; }
   .facility__textBox--left {
     margin-right: 7rem; }
   .facility__textBox h2 {
-    font-size: 4rem;
-    font-weight: 500;
+    font-size: 5rem;
+    font-weight: 700;
     text-transform: initial;
-    color: #394744; }
+    color: #efebe6; }
   .facility__textBox p {
     font-size: 1.7rem; }
   .facility__textBox span {
