@@ -178,9 +178,10 @@ p {
 .header {
   width: 100%; }
   .header-home {
-    height: 130vh;
+    height: 120vh;
     background-image: url(../images/header-1.jpg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
     position: relative; }
     .header-home__text {
       font-family: "Song Myung", serif;
@@ -217,7 +218,7 @@ p {
     .header-sub__text--en {
       font-size: 9rem;
       font-weight: 900;
-      top: 50%; }
+      top: 40%; }
     .header-sub__text--ko {
       font-family: "Noto Sans KR", sans-serif;
       font-size: 3rem;
@@ -546,10 +547,11 @@ p {
         font-weight: 100;
         font-size: 1.8rem; }
   .certification__icon {
-    font-size: 4rem;
-    color: #aa9995; }
+    width: 3rem;
+    height: 3rem;
+    fill: #352825; }
     .certification__icon--wood {
-      color: #394744; }
+      fill: #323d3b; }
 
 .hand-drip__container {
   width: 100%;
@@ -661,7 +663,7 @@ p {
 .facility__row {
   display: flex;
   width: 100%;
-  padding: 0 7rem; }
+  padding: 0 5rem; }
 
 .facility__imageBox {
   width: 65%; }
@@ -671,14 +673,14 @@ p {
   text-align: center;
   padding-top: 17rem; }
   .facility__textBox--right {
-    margin-left: 7rem; }
+    margin-left: 5rem; }
   .facility__textBox--left {
-    margin-right: 7rem; }
+    margin-right: 5rem; }
   .facility__textBox h2 {
     font-size: 5rem;
     font-weight: 700;
     text-transform: initial;
-    color: #efebe6; }
+    color: #323d3b; }
   .facility__textBox p {
     font-size: 1.7rem; }
   .facility__textBox span {

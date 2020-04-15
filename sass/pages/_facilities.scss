@@ -3,7 +3,7 @@
     &__row {
         display: flex;
         width: 100%;
-        padding: 0 7rem;
+        padding: 0 5rem;
     }
 
     &__imageBox {
@@ -15,14 +15,14 @@
         text-align: center;
         padding-top: 17rem;
 
-        &--right { margin-left: 7rem; }
-        &--left { margin-right: 7rem; }
+        &--right { margin-left: 5rem; }
+        &--left { margin-right: 5rem; }
 
         h2 {
             font-size: 5rem;
             font-weight: 700;
             text-transform: initial;
-            color: $color-beige;
+            color: $color-green-3;
         }
 
         p { font-size: 1.7rem;}

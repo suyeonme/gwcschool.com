@@ -157,14 +157,11 @@
         }
     }
 
-    &__icon {                                           // change to SVG icon !
-        font-size: 4rem;
-        color: $color-beige-1;
-
-         // WOODCRAFT
-        &--wood {
-            color: $color-green-2;
-        }
+    &__icon {                                          
+        width: 3rem;
+        height: 3rem;
+        fill: $color-brown;
+        &--wood { fill: $color-green-3; }
     }
 }
 

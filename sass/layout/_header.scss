@@ -3,9 +3,10 @@
 
     // HOME
     &-home {
-        height: 130vh;
+        height: 120vh;
         background-image: url(../images/header-1.jpg);
-        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 100%;
         position: relative;
 
         &__text {
@@ -57,7 +58,7 @@
             &--en {
                 font-size: 9rem;
                 font-weight: 900;
-                top: 50%;
+                top: 40%;
             }
 
             &--ko {
