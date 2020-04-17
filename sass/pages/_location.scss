@@ -1,28 +1,44 @@
 .location {
     @include flex-center;
     flex-direction: column;
-    background-image: linear-gradient(rgba($color-beige, .3), rgba($color-beige, .3)), url(../images/location-1.jpg);
+    background: linear-gradient(to right bottom, $color-beige, $color-green-1, rgba($color-green-2, .7));
     background-size: cover;
     width: 100%;
-    height: 80vh;
+    height: 150vh;
 
     &__container {
-        width: 80%;
-        height: 50vh;
+        width: 70%;
+        height: 110vh;
         background-color: $color-white;
         @include flex-col-center;
-        align-items: center;
-        padding: 0 15rem;
-    }
+        padding: 10rem;
 
-    &__ko { font-size: 2.5rem; }
-    &__en {
-        display: block;
-        font-size: 2rem;
-    }
+        p {
+            font-size: 1.8rem;
+            font-weight: 300;
 
+            &:last-child {
+                font-size: 2.5rem;
+                padding-top: 3rem;
+            }
+        }
+
+        span {
+            display: block;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    
     &__message {
         font-weight: 300;
+        color: $color-green-3;
+
+        svg {
+            width: 2.3rem;
+            height: 2.3rem;
+            margin-left: .5rem;
+        }
     }
 
     // MAP
