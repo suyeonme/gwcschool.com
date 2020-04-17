@@ -2,7 +2,9 @@
   background-color: #352825;
   color: #fff;
   font-weight: 500;
-  padding: .5rem; }
+  padding: 0 .5rem; }
+  .font-bg--green {
+    background-color: #a4a89a; }
 
 .text-center {
   text-align: center; }
@@ -669,6 +671,58 @@ p {
     font-family: "Song Myung", serif;
     margin: 0; }
 
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right bottom, #efebe6, #a4a89a, rgba(57, 71, 68, 0.6));
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding-top: 13rem; }
+  .location__container {
+    width: 75%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10rem;
+    font-size: 1.7rem; }
+    .location__container p {
+      font-weight: 300; }
+      .location__container p:last-child {
+        font-size: 2.5rem;
+        padding-top: 3rem; }
+    .location__container span {
+      display: inline-block;
+      font-weight: 500; }
+  .location__message {
+    font-weight: 300;
+    color: #323d3b;
+    font-family: "Song Myung", serif; }
+    .location__message svg {
+      width: 2.3rem;
+      height: 2.3rem;
+      margin-left: .5rem; }
+  .location__mapContainer {
+    display: flex;
+    padding: 10rem; }
+  .location__map {
+    display: inline-block; }
+  .location__nearby-tour {
+    padding: 1rem 5rem;
+    color: #efebe6;
+    font-family: "Song Myung", serif; }
+    .location__nearby-tour h2 {
+      font-size: 3rem; }
+    .location__nearby-tour ul {
+      list-style: circle;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.8; }
+
 .facility__row {
   display: flex;
   width: 100%;
@@ -833,55 +887,6 @@ p {
   width: 100%;
   height: auto;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
-
-.location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: linear-gradient(to right bottom, #efebe6, #a4a89a, rgba(57, 71, 68, 0.7));
-  background-size: cover;
-  width: 100%;
-  height: 150vh; }
-  .location__container {
-    width: 70%;
-    height: 110vh;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10rem; }
-    .location__container p {
-      font-size: 1.8rem;
-      font-weight: 300; }
-      .location__container p:last-child {
-        font-size: 2.5rem;
-        padding-top: 3rem; }
-    .location__container span {
-      display: block;
-      font-size: 2rem;
-      font-weight: 500; }
-  .location__message {
-    font-weight: 300;
-    color: #323d3b; }
-    .location__message svg {
-      width: 2.3rem;
-      height: 2.3rem;
-      margin-left: .5rem; }
-  .location__mapContainer {
-    display: flex;
-    padding: 10rem; }
-  .location__map {
-    display: inline-block; }
-  .location__nearby-tour {
-    padding: 1rem 5rem; }
-    .location__nearby-tour h2 {
-      font-weight: 300; }
-    .location__nearby-tour ul {
-      list-style: none;
-      font-size: 2rem;
-      font-weight: 300;
-      line-height: 1.8; }
 
 .woodcraft-description {
   position: relative;

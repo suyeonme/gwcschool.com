@@ -2,7 +2,11 @@
     background-color: $color-brown;
     color: $color-white;
     font-weight: 500;
-    padding: .5rem;
+    padding: 0 .5rem;
+
+    &--green {
+        background-color: $color-green-1;
+    }
 }
 
 .text-center { text-align: center; }
