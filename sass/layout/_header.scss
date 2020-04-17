@@ -3,15 +3,15 @@
 
     // HOME
     &-home {
-        height: 120vh;
+        height: 130vh;
         background-image: url(../images/header-1.jpg);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 110%;
         position: relative;
 
         &__text {
             font-family: $font-secondary-ko;
-            color: $color-white;
+            color: $color-beige;
             writing-mode: vertical-rl;
             position: absolute;
 
@@ -134,19 +134,9 @@
         position: relative;
         right: 2.5rem;
         border-radius: 50%;
-        border: 1.5px solid $color-beige-1;
+        border: 3px solid $color-orange;
         cursor: pointer;
         transition: $transition-1;
-
-        &:hover {
-            border: 1.5px solid $color-green-4;
-        }
-
-        &:hover &-container &-icon,
-        &:hover &-container &-icon::before,
-        &:hover &-container &-icon::after {
-            background-color: $color-green-4;
-        }
 
         &-container {
             @include flex-col-center;
@@ -164,7 +154,7 @@
                 left: 1.2rem;
                 width: 3.5rem;
                 height: .4rem;
-                background-color: $color-beige-1;
+                background-color: $color-orange;
                 border-radius: 3rem;
                 transition: $transition-1;
             }

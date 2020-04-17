@@ -12,7 +12,6 @@
 
     h3 {
         font-family: $font-secondary-ko;
-        font-weight: 500;
         font-size: 3.2rem;
         color: $color-beige-1;
         margin-bottom: 3rem;
@@ -83,7 +82,6 @@
         font-family: $font-primary-ko;
         font-size: 2rem;
         font-weight: 100;
-        //font-weight: 900;
 
         &--right {
             margin-left: auto;
@@ -108,7 +106,6 @@
         &--right {
             left: 38rem;
             bottom: -4rem;
-            background-image: linear-gradient(to right bottom, $color-beige, $color-beige-1, rgba($color-pink, .5));
         }
     }
 
@@ -120,8 +117,8 @@
 
 .school-video {
     width: 100%;
-    height: 85vh;
-    background-color: $color-green-1;
+    height: 100vh;
+    background-color: $color-beige-2;
     position: relative;
 
     &__bg {

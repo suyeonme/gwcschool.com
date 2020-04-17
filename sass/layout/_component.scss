@@ -40,4 +40,18 @@
             background-color: #928380 !important;
         }
     }
+
+    &--orange  {
+        color: $color-orange !important;
+        border: 1px solid $color-orange !important;
+
+        &:hover {
+            background-color: $color-orange !important;
+            color: $color-white !important;
+        }
+
+        &:active {
+            background-color: $color-orange-1 !important;
+        }
+    }
 }

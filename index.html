@@ -8,10 +8,9 @@
     <!-- Normalize -->
     <link rel="stylesheet" href="css/normalize.css">
 
-    <!-- Google font
-        ***** DELETE useless font!  *****-->
+    <!-- Google font -->
     <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900|Noto+Sans+KR:100,300,500,700,900|Song+Myung&display=swap"
+        href="https://fonts.googleapis.com/css?family=Montserrat:200, 300,700,900|Noto+Sans+KR:100,200,300,500|Song+Myung&display=swap"
         rel="stylesheet">
 
     <!-- Favicon -->
@@ -81,16 +80,19 @@
 
 
         <!-- Video content -->
-        <section class="school-video">
+        <section class="school-video wp" id="wp-3">
             <div class="school-video__bg">
                 <div class="school-video__container">
-                    <iframe class="school-video__video" width="560" height="315" src="https://www.youtube.com/embed/xOFuSpB160s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="school-video__video" width="560" height="315"
+                        src="https://www.youtube.com/embed/xOFuSpB160s" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
         <section class="activity">
-            <div class="activity__wrapper activity-left mt-medium wp"  id="wp-1">
+            <div class="activity__wrapper activity-left mt-medium wp" id="wp-1">
                 <div class="activity__textBox activity__textBox--left">
                     <div class="activity__text">
                         <h2>Woodcraft<span>목공예<span></h2>
@@ -98,7 +100,7 @@
                             디지털의 홍수 속에서살아가는 우리의 감성이 점점 매말라갑니다. 편리한 플라스틱이 집안을 점령하고 있는 요즘,
                             목공예를 통해 <b>아날로그적 예술가</b>가 되어보세요.
                         </p>
-                        <a href="woodcraft.html" class="btn activity__btn">더 알아보기</a>
+                        <a href="woodcraft.html" class="btn btn--orange activity__btn">더 알아보기</a>
                     </div>
                 </div>
                 <div class="activity__image-container">
@@ -117,7 +119,7 @@
                             커피의 대중화에도 불구하고 <b>제대로 맛있는 커피</b>를 맛보기가 힘든 것은 사실입니다.
                             나에게 맞는, 나만의 커피를 만들고 심도있게 커피를 즐겨보세요.
                         </p>
-                        <a href="barista.html" class="btn activity__btn">더 알아보기</a>
+                        <a href="barista.html" class="btn btn--orange activity__btn">더 알아보기</a>
                     </div>
                 </div>
                 <div class="activity__image-container activity__image-container--right">
@@ -128,6 +130,7 @@
         </section>
     </main>
 
+    <!-- 
     <footer>
         <div class="footer">
             <div class="footer__logo-container">
@@ -158,13 +161,38 @@
             <p class="footer__copyright">COPYRIGHT &copy; 2020 곡성 목공예커피체험관. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
+    -->
+
+    <footer class="footer">
+    <div class="footer__logo">
+        <img src="images/cat.png" alt="고양이 로고" class="footer__img">
+    </div>
+
+    <div class="footer__text">
+        <div class="footer__col">
+            <h4 class="footer__primary">TALK</h4>
+            <p class="footer__secondary">010-4173-3062</p>
+            <p class="footer__secondary">061-362-0778</p>
+        </div>
+        <div class="footer__col">
+            <h4 class="footer__primary">MEET</h4>
+            <p class="footer__secondary">전라남도 곡성군 죽곡면 오죽로 407-8<br>(봉정리 264)</p>
+        </div>
+        <div class="footer__col">
+            <h4 class="footer__primary">WRITE</h4>
+            <p class="footer__secondary">tndusrkd92@gmail.com</p>
+        </div>
+    </div>
+    <p class="footer__copyright">COPYRIGHT &copy; 2020 곡성 목공예커피체험관. ALL RIGHTS RESERVED.</p>
+    </footer>
 
     <!-- KAKAO MAP -->
-    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script"
+        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     <!-- Scrolli -->
     <script src="js/jquery.scrollie.min.js"></script>
 

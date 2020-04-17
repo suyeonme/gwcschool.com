@@ -8,7 +8,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%; // 1rem = 10px
+    font-size: 62.5%;   // 1rem = 10px
     scroll-behavior: smooth;
 }
 
@@ -18,8 +18,8 @@ body {
 }
 
 ::selection {
-    //background-color: $color-gold;
-    //color: $color-primary-light;
+    background-color: $color-green-1;
+    color: $color-white;
 }
 
 

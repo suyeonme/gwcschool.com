@@ -65,6 +65,10 @@ body {
   background-color: #efebe6;
   transition: background 1s ease; }
 
+::selection {
+  background-color: #a4a89a;
+  color: #fff; }
+
 body {
   font-family: "Montserrat", "Noto Sans KR", sans-serif, "sans-serif"; }
 
@@ -132,60 +136,139 @@ p {
   .btn--beige:active {
     background-color: #928380 !important; }
 
+.btn--orange {
+  color: #be7e64 !important;
+  border: 1px solid #be7e64 !important; }
+  .btn--orange:hover {
+    background-color: #be7e64 !important;
+    color: #fff !important; }
+  .btn--orange:active {
+    background-color: #c77a5e !important; }
+
+/*
 .footer {
-  height: 75vh;
-  padding-bottom: 1.5rem;
-  background-color: #aa9995;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .footer__content {
-    position: relative;
+    height: 75vh;
+    padding-bottom: 1.5rem;
+    background-color: $color-beige-1;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center; }
-  .footer__logo-container {
-    width: 10%;
-    padding-top: 13rem; }
-  .footer__logo {
-    width: 100%; }
-  .footer__text-container {
+    align-items: center;
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-container {
+        width: 10%;
+        padding-top: 13rem;
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__text-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: auto;
+    }
+
+    &__text  {
+
+        &-wrapper {
+            color: $color-brown;
+
+            &:not(:last-child) {
+                margin-right: 10rem;
+            }
+        }
+
+        &-primary {
+            font-size: 2.5rem;
+            font-weight: 900; 
+        }
+
+        &-secondary {
+            font-size: 1.7rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        } 
+    }
+
+    &__tel {
+        letter-spacing: 1px;
+        word-spacing: 3px;
+    }
+
+    &__email {
+        &,
+        &:visited,
+        &:link {
+            color: currentColor;
+            text-decoration: none;
+        }
+    }
+
+    &__copyright {
+        font-size: 1rem;
+        color: $color-brown;
+    }
+}
+*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f3ec;
+  padding-top: 13rem; }
+  .footer__text {
     display: flex;
-    justify-content: space-around;
-    margin-top: auto; }
-  .footer__text-wrapper {
-    color: #352825; }
-    .footer__text-wrapper:not(:last-child) {
-      margin-right: 10rem; }
-  .footer__text-primary {
-    font-size: 2.5rem;
-    font-weight: 900; }
-  .footer__text-secondary {
-    font-size: 1.7rem;
-    font-weight: 500;
-    margin-top: 1rem; }
-  .footer__tel {
-    letter-spacing: 1px;
-    word-spacing: 3px; }
-  .footer__email, .footer__email:visited, .footer__email:link {
-    color: currentColor;
-    text-decoration: none; }
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 20rem;
+    transform: translateX(4.5rem); }
+  .footer__col:not(:last-child) {
+    margin-right: 5rem; }
+  .footer__col--logo {
+    display: flex;
+    flex-direction: column; }
+  .footer__primary {
+    font-size: 2.7rem;
+    font-weight: 300;
+    margin-bottom: 1rem; }
+  .footer__secondary {
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    color: #333333;
+    margin: 0; }
   .footer__copyright {
     font-size: 1rem;
-    color: #352825; }
+    margin-top: auto;
+    padding-top: 12rem;
+    margin-bottom: 2rem; }
+  .footer__img {
+    width: 100%; }
+  .footer__logo {
+    width: 7%;
+    padding-top: 10rem; }
 
 .header {
   width: 100%; }
   .header-home {
-    height: 120vh;
+    height: 130vh;
     background-image: url(../images/header-1.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 110%;
     position: relative; }
     .header-home__text {
       font-family: "Song Myung", serif;
-      color: #fff;
+      color: #efebe6;
       writing-mode: vertical-rl;
       position: absolute; }
       .header-home__text--1 {
@@ -276,15 +359,9 @@ p {
     position: relative;
     right: 2.5rem;
     border-radius: 50%;
-    border: 1.5px solid #aa9995;
+    border: 3px solid #be7e64;
     cursor: pointer;
     transition: all 0.3s; }
-    .navbar__menu:hover {
-      border: 1.5px solid #1e464a; }
-    .navbar__menu:hover .navbar__menu-container .navbar__menu-icon,
-    .navbar__menu:hover .navbar__menu-container .navbar__menu-icon::before,
-    .navbar__menu:hover .navbar__menu-container .navbar__menu-icon::after {
-      background-color: #1e464a; }
     .navbar__menu-container {
       display: flex;
       flex-direction: column;
@@ -297,7 +374,7 @@ p {
       left: 1.2rem;
       width: 3.5rem;
       height: .4rem;
-      background-color: #aa9995;
+      background-color: #be7e64;
       border-radius: 3rem;
       transition: all 0.3s; }
     .navbar__menu-icon::before, .navbar__menu-icon::after {
@@ -316,7 +393,7 @@ p {
   height: 100vh;
   overflow: hidden;
   background-color: #efebe6;
-  color: #1e464a;
+  color: #807c65;
   right: -200rem;
   transition: .5s; }
   .navigation__container {
@@ -612,7 +689,7 @@ p {
   word-break: break-all; }
 
 .timetable td, .timetable th {
-  border: 1px solid #a4a89a;
+  border: 1px solid #adadad;
   text-align: center; }
 
 .timetable td {
@@ -620,7 +697,7 @@ p {
   padding: 3rem 1rem; }
 
 .timetable th {
-  background-color: #394744;
+  background-color: #323d3b;
   color: #fff;
   font-size: 1.5rem;
   padding: 8px; }
@@ -706,7 +783,6 @@ p {
   padding: 0 25rem; }
   .about-school h3 {
     font-family: "Song Myung", serif;
-    font-weight: 500;
     font-size: 3.2rem;
     color: #aa9995;
     margin-bottom: 3rem; }
@@ -767,15 +843,14 @@ p {
       background-image: linear-gradient(to right bottom, #4343bd, #efebe6, #aa9995); }
     .activity__gradient--right {
       left: 38rem;
-      bottom: -4rem;
-      background-image: linear-gradient(to right bottom, #efebe6, #aa9995, rgba(245, 186, 177, 0.5)); }
+      bottom: -4rem; }
   .activity__btn {
     margin-top: 5rem; }
 
 .school-video {
   width: 100%;
-  height: 85vh;
-  background-color: #a4a89a;
+  height: 100vh;
+  background-color: #f7f3ec;
   position: relative; }
   .school-video__bg {
     position: absolute;
