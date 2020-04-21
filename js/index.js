@@ -80,6 +80,12 @@ $('#wp-6').waypoint(function (direction) {
     offset: '60%'
 });
 
+$('#wp-7').waypoint(function (direction) {
+    $('#wp-7').addClass('animated fadeIn');
+}, {
+    offset: '60%'
+});
+
 // fadeInUp
 $('#wp-16').waypoint(function (direction) {
     $('#wp-16').addClass('animated fadeInUp');
