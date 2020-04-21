@@ -35,3 +35,19 @@
     &__col { padding: 3rem; }
     &__img { width: 100%; }
 }
+
+.woodcraft-oneday {
+    width: 100%;
+
+    p {  padding: 0 25rem; }
+
+    &__row { 
+        display: flex;
+        padding: 0 15rem;
+
+        li { margin-left: 3rem;}
+    }
+    
+    &__col { padding: 3rem; }
+    &__img { width: 100%; }
+}

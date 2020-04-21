@@ -3,11 +3,29 @@
 
     // HOME
     &-home {
-        height: 130vh;
+        width: 100%;
+        min-height: 130vh; 
         background-image: url(../images/header-1.jpg);
         background-repeat: no-repeat;
         background-size: 110%;
         position: relative;
+
+        @include respond(desktop) { 
+            min-height: 110vh;
+            background-size: 100%;
+        }
+
+        @include respond(tab-land) {
+            min-height: 110vh; 
+        }
+
+        @include respond(tab-port) {
+            min-height: 90vh; 
+        }
+
+        @include respond(phone) {
+            min-height: 60vh; 
+        }
 
         &__text {
             font-family: $font-secondary-ko;
@@ -103,8 +121,17 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond(tab-port) {
+        padding: 3rem;
+    }
+
+    @include respond(small-phone) {
+        padding: 5rem;
+    }
+
     &__logo-container {
         width: 13rem;
+        padding-top: 1rem;
     }
 
     &__logo {
@@ -132,11 +159,14 @@
 
     &__menu {
         position: relative;
-        right: 2.5rem;
         border-radius: 50%;
         border: 3px solid $color-orange;
         cursor: pointer;
         transition: $transition-1;
+
+        @include respond(phone) {
+            border: 2px solid $color-orange;
+        }
 
         &-container {
             @include flex-col-center;
@@ -157,6 +187,10 @@
                 background-color: $color-orange;
                 border-radius: 3rem;
                 transition: $transition-1;
+
+                @include respond(tab-port) {
+                    height: .6rem;
+                }
             }
 
             &::before,

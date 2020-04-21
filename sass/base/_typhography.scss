@@ -1,8 +1,5 @@
 body {
     font-family: $font-primary-en, $font-primary-ko, 'sans-serif';
-
-    //line-height: 1;
-    //color: $color-primary-light;
 }
 
 h2 {
@@ -37,12 +34,32 @@ p {
 
 // CATEGORY
 .h3-category {
+    display: inline-block;
     color: $color-brown;
     font-weight: 300;
     font-size: 2rem;
-    margin: 0 0 1rem .5rem;
+    padding: 1.5rem 2rem;
+
+    &--right {
+        float: right;
+    }
 }
 
+.h2-title {
+    font-weight: 100;
+    font-size: 5rem;
+    margin-bottom: 7rem;
+    text-align: center;
+
+    span {
+        display: block;
+        font-size: 2.5rem;
+        margin-bottom: 1.3rem;
+        letter-spacing: 2px;
+    }
+}
+
+// CHECK !
 .h2-category {
     font-size: 5rem;
     color: $color-green-2;

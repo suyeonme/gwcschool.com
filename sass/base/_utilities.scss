@@ -11,7 +11,7 @@
 
 .text-center { text-align: center; }
 .text-right { text-align: right; }
-.margin-left { margin-left: auto; }
+.margin-left { margin-left: auto !important; }
 
 .mt-small { margin-top: 3rem; }
 .mt-medium { margin-top: 10rem; }

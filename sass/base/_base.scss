@@ -10,6 +10,27 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;   // 1rem = 10px
     scroll-behavior: smooth;
+    
+
+    @include respond(desktop) {
+        font-size: 62.5%; // 1rem = 10px; 10/16 = 62.5%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem = 9px; 9/16 = 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px; 8/16 = 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 31.25%;         // 1rem = 5px; 5/16 = 31.25%;
+    }
+
+    @include respond(small-phone) {
+        font-size: 20%; // 1rem = 3px; 3/16 = 19%;
+    }
 }
 
 body {
