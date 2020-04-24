@@ -155,6 +155,14 @@ p {
   font-size: 5rem;
   color: #394744;
   font-family: "Noto Sans KR", sans-serif; }
+  @media only screen and (max-width: 62em) {
+    .h2-category {
+      text-align: center;
+      font-size: 6rem;
+      margin: 5rem 0; } }
+  @media only screen and (max-width: 30em) {
+    .h2-category {
+      margin: 10rem 0; } }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;
@@ -272,49 +280,87 @@ p {
     min-height: 130vh;
     background-image: url(../images/header-1.jpg);
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: cover;
     position: relative; }
     @media only screen and (max-width: 75em) {
       .header-home {
-        min-height: 110vh;
-        background-size: 100%; } }
-    @media only screen and (max-width: 62em) {
-      .header-home {
-        min-height: 110vh; } }
+        min-height: 125vh;
+        background-position: 20% 0; } }
     @media only screen and (max-width: 48em) {
       .header-home {
-        min-height: 90vh; } }
+        min-height: 110vh; } }
     @media only screen and (max-width: 30em) {
       .header-home {
-        min-height: 60vh; } }
+        min-height: 71vh; } }
+    @media only screen and (max-width: 20em) {
+      .header-home {
+        min-height: 65vh; } }
+    .header-home__textBox {
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      top: 50%;
+      left: 15rem;
+      transform: translateY(-50%); }
+      @media only screen and (max-width: 30em) {
+        .header-home__textBox {
+          left: 10rem; } }
     .header-home__text {
       font-family: "Song Myung", serif;
       color: #efebe6;
-      writing-mode: vertical-rl;
-      position: absolute; }
+      writing-mode: vertical-rl; }
       .header-home__text--1 {
         font-size: 4em;
-        letter-spacing: 2px;
-        left: 17rem;
-        top: 41rem; }
+        letter-spacing: 2px; }
+        @media only screen and (max-width: 75em) {
+          .header-home__text--1 {
+            font-size: 4.5rem; } }
+        @media only screen and (max-width: 75em) {
+          .header-home__text--1 {
+            font-size: 4.5rem; } }
       .header-home__text--2 {
-        font-size: 8.5rem;
-        left: 23rem;
-        top: 23rem;
-        letter-spacing: 10px; }
+        font-size: 10.5rem;
+        letter-spacing: 10px;
+        margin: 0; }
+        @media only screen and (max-width: 30em) {
+          .header-home__text--2 {
+            font-size: 9rem; } }
   .header-about {
     background-image: url(../images/about-header.jpg);
     position: relative;
     height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media only screen and (max-width: 75em) {
+      .header-about {
+        height: 70vh; } }
+    @media only screen and (max-width: 48em) {
+      .header-about {
+        height: 70vh; } }
+    @media only screen and (max-width: 30em) {
+      .header-about {
+        height: 45vh; } }
+    @media only screen and (max-width: 20em) {
+      .header-about {
+        height: 40vh; } }
     .header-about__text {
-      position: absolute;
-      top: 27rem;
-      left: 5rem;
-      line-height: 1.5; }
+      line-height: 1.5;
+      padding-left: 8rem; }
       .header-about__text span {
         color: #a4a89a; }
+      @media only screen and (max-width: 30em) {
+        .header-about__text {
+          padding-left: 0; } }
+    .header-about__textBox {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      @media only screen and (max-width: 30em) {
+        .header-about__textBox {
+          left: 10em; } }
+      @media only screen and (max-width: 20em) {
+        .header-about__textBox {
+          left: 15em; } }
   .header-sub__text {
     position: absolute;
     left: 50%;
@@ -358,11 +404,14 @@ p {
   left: 0;
   width: 100%;
   z-index: 500;
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  @media only screen and (max-width: 48em) {
+  @media only screen and (max-width: 75em) {
+    .navbar {
+      padding: 5rem; } }
+  @media only screen and (max-width: 30em) {
     .navbar {
       padding: 3rem; } }
   @media only screen and (max-width: 20em) {
@@ -519,42 +568,103 @@ p {
 
 .message {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   position: relative; }
+  @media only screen and (max-width: 75em) {
+    .message {
+      min-height: 50vh; } }
+  @media only screen and (max-width: 62em) {
+    .message {
+      margin-top: 0; } }
+  @media only screen and (max-width: 48em) {
+    .message {
+      margin: 0; } }
   .message__image-container {
     width: 40%;
     height: auto;
     position: absolute;
     z-index: 200; }
+    @media only screen and (max-width: 75em) {
+      .message__image-container {
+        width: 35%;
+        padding: 0;
+        position: relative; } }
+    @media only screen and (max-width: 62em) {
+      .message__image-container {
+        width: 100%;
+        padding: 5rem 15rem 15rem 15rem; } }
+    @media only screen and (max-width: 48em) {
+      .message__image-container {
+        padding: 10rem; } }
+    @media only screen and (max-width: 30em) {
+      .message__image-container {
+        padding: 0; } }
   .message__img {
     width: 100%; }
   .message__textBox {
     background-image: linear-gradient(rgba(239, 235, 230, 0.7), rgba(239, 235, 230, 0.7)), url(../images/profile-background.jpg);
     background-size: cover;
     width: 80%;
-    height: 90vh;
+    height: auto;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 10rem;
     left: 50%;
     transform: translateX(-50%); }
+    @media only screen and (max-width: 75em) {
+      .message__textBox {
+        width: 90%;
+        top: 2rem; } }
+    @media only screen and (max-width: 62em) {
+      .message__textBox {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translateX(0); } }
   .message__text {
     width: 60%;
     margin-left: auto;
     padding: 10rem; }
+    @media only screen and (max-width: 75em) {
+      .message__text {
+        width: 70%;
+        padding: 10rem 8rem 10rem 10rem; } }
+    @media only screen and (max-width: 62em) {
+      .message__text {
+        width: 100%;
+        margin-left: 0;
+        padding: 15rem 7rem; } }
     .message__text h2 {
       font-weight: 500;
       font-size: 3rem;
       color: #352825; }
+      @media only screen and (max-width: 62em) {
+        .message__text h2 {
+          text-align: center; } }
+      @media only screen and (max-width: 20em) {
+        .message__text h2 {
+          font-size: 4rem; } }
     .message__text span {
       font-size: 2rem; }
     .message__text p {
       line-height: 2.5;
       padding-top: 2rem; }
+      @media only screen and (max-width: 30em) {
+        .message__text p {
+          font-size: 2.5rem; } }
   .message__cats {
     width: 35%;
     margin-left: auto;
     margin-right: 10rem; }
+    @media only screen and (max-width: 62em) {
+      .message__cats {
+        width: 100%;
+        padding: 5rem 15rem 0 15rem; } }
+    @media only screen and (max-width: 30em) {
+      .message__cats {
+        padding: 8rem 5rem 0 5rem; } }
     .message__cats-wrapper {
       display: flex;
       justify-content: space-between; }
@@ -573,6 +683,15 @@ p {
   height: 100vh;
   background-image: url(../images/about-quote-1.jpg);
   background-size: cover; }
+  @media only screen and (max-width: 75em) {
+    .about-quote__image-container {
+      height: 60vh; } }
+  @media only screen and (max-width: 48em) {
+    .about-quote__image-container {
+      height: 60vh; } }
+  @media only screen and (max-width: 30em) {
+    .about-quote__image-container {
+      height: 40vh; } }
 
 .about-quote__textBox {
   display: flex;
@@ -582,12 +701,30 @@ p {
   height: 70vh;
   background-color: #111111;
   color: #adadad; }
+  @media only screen and (max-width: 75em) {
+    .about-quote__textBox {
+      height: 50vh; } }
+  @media only screen and (max-width: 48em) {
+    .about-quote__textBox {
+      height: 50vh; } }
+  @media only screen and (max-width: 30em) {
+    .about-quote__textBox {
+      height: 40vh; } }
   .about-quote__textBox p {
     font-size: 2.5rem; }
+    @media only screen and (max-width: 30em) {
+      .about-quote__textBox p {
+        font-size: 3rem; } }
+    @media only screen and (max-width: 20em) {
+      .about-quote__textBox p {
+        font-size: 3.5rem; } }
     .about-quote__textBox p span {
       display: block;
       font-size: 1.6rem;
       margin-top: 2rem; }
+      @media only screen and (max-width: 30em) {
+        .about-quote__textBox p span {
+          font-size: 2rem; } }
 
 .barista-description {
   position: relative;

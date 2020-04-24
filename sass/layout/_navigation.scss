@@ -7,7 +7,6 @@
     background-color: $color-beige-2;
     color: $color-black;
 
-
     @include respond(tab-port) {
         display: flex;
         flex-direction: column;
@@ -51,8 +50,6 @@
         @include respond(tab-port) {
             padding: 10rem 15rem 0 0;
         }
-
-
     }
 
     &__list {
@@ -134,7 +131,6 @@
             font-size: 1.3rem;
             font-weight: 500;
             letter-spacing: 2px;
-
             margin-top: 0;
 
             &:not(:last-child) {

@@ -7,44 +7,65 @@
         min-height: 130vh; 
         background-image: url(../images/header-1.jpg);
         background-repeat: no-repeat;
-        background-size: 110%;
+        background-size: cover;
         position: relative;
 
         @include respond(desktop) { 
-            min-height: 110vh;
-            background-size: 100%;
-        }
-
-        @include respond(tab-land) {
-            min-height: 110vh; 
+            min-height: 125vh;
+            background-position: 20% 0;
         }
 
         @include respond(tab-port) {
-            min-height: 90vh; 
+            min-height: 110vh; 
         }
 
         @include respond(phone) {
-            min-height: 60vh; 
+            min-height: 71vh; 
+        }
+        
+        @include respond(small-phone) {
+            min-height: 65vh;
+        }
+
+        &__textBox {
+            display: flex;
+            align-items: flex-end;  
+            position: absolute;
+            top: 50%;
+            left: 15rem;
+            transform: translateY(-50%);
+
+            @include respond(phone) {
+                left: 10rem;
+            }
         }
 
         &__text {
             font-family: $font-secondary-ko;
             color: $color-beige;
             writing-mode: vertical-rl;
-            position: absolute;
 
             &--1 {
                 font-size: 4em;
                 letter-spacing: 2px;
-                left: 17rem;
-                top: 41rem;
+
+                @include respond(desktop) {
+                    font-size: 4.5rem;
+                }
+
+                @include respond(desktop) {
+                    font-size: 4.5rem;
+                }
             }
 
             &--2 {
-                font-size: 8.5rem;
-                left: 23rem;
-                top: 23rem;
-                letter-spacing: 10px;
+                font-size: 10.5rem;
+                letter-spacing: 10px; 
+                margin: 0;
+
+                @include respond(phone) {
+                    font-size: 9rem;
+                }
             }
         }
     }
@@ -54,14 +75,47 @@
         background-image: url(../images/about-header.jpg);
         @include subHeader;
 
+        // MEDIA QUERY 
+        @include respond(desktop) {
+            height: 70vh;
+        }
+
+        @include respond(tab-port) {
+            height: 70vh;
+        }
+
+        @include respond(phone) {
+            height: 45vh;
+        }
+
+        @include respond(small-phone) {
+            height: 40vh;
+        }
+
         &__text {
-            position: absolute;
-            top: 27rem;
-            left: 5rem;
             line-height: 1.5;
+            padding-left: 8rem;
 
             span {
                 color: $color-green-1;
+            }
+
+            @include respond(phone) {
+                padding-left: 0;
+            }
+        }
+
+        &__textBox {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include respond(phone) {
+                left: 10em
+            }
+
+            @include respond(small-phone) {
+                left: 15em
             }
         }
     }
@@ -109,19 +163,24 @@
 }
 
 
+
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 500;
-    padding: 2rem;
+    padding: 3rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @include respond(tab-port) {
+    @include respond(desktop) {
+        padding: 5rem;
+    }
+
+    @include respond(phone) {
         padding: 3rem;
     }
 
