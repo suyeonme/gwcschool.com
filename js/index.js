@@ -22,23 +22,12 @@ $(window).ready(function () {
 });
 
 /////////////////////////////////////
-// ZOOMIN AN IMAGE WHILE SCROLLING
-/*
-$(window).scroll(function(){
-
-    $(".header-home")
-    .css("background-size", (100 + 100 * jQuery(window).scrollTop() / 3000) + "%")
-    .css({ transition: 'all 1s ease' })
-});
-*/
-
-/////////////////////////////////////
 // KAKAO MAP
 new daum.roughmap.Lander({
-    "timestamp" : "1586588048930",
-    "key" : "xvj6",
-    "mapWidth" : "700",
-    "mapHeight" : "360"
+    "timestamp": "1586588048930",
+    "key": "xvj6",
+    "mapWidth": "700",
+    "mapHeight": "360"
 }).render();
 
 /////////////////////////////////////
@@ -110,4 +99,3 @@ $('#wp-19').waypoint(function (direction) {
 }, {
     offset: '60%'
 });
-

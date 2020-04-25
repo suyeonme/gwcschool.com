@@ -3,11 +3,35 @@
     &__row {
         display: flex;
         width: 100%;
-        padding: 0 5rem;
+        padding: 10rem 5rem;
+        height: auto !important;
+
+        @include respond(tab-port) {
+            
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            padding-bottom: 10rem;
+        }
+
+        @include respond(small-phone) {
+            padding-bottom: 15rem;
+        }
+
+        &--right {                                  // MOBILE VERSION 
+            @include respond(phone) {   
+                flex-direction: column-reverse;
+            }
+        }
     }
 
     &__imageBox {
         width: 65%;
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 
     &__textBox {
@@ -15,7 +39,99 @@
         text-align: center;
         padding-top: 17rem;
 
-        &--right { margin-left: 5rem; }
+        @include respond(desktop) {
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            padding-top: 3rem;
+            padding-bottom: 10rem;
+        }
+
+        &--right { 
+            margin-left: 5rem; 
+
+            @include respond(phone) {
+                margin-left: 0;
+            }
+        }
+        &--left {
+            margin-right: 5rem; 
+        }
+
+        h2 {
+            font-size: 5rem;
+            font-weight: 700;
+            text-transform: initial;
+            color: $color-green-3;
+        }
+
+        p { font-size: 1.7rem;}
+
+        span {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+    }
+
+    &__img { width: 100%; }
+}
+
+
+
+
+
+/*
+.facility {
+    
+    &__row {
+        display: flex;
+        width: 100%;
+        padding: 0 5rem;
+
+        @include respond(phone) {
+            flex-direction: column;
+            padding: 5rem 0;
+        }
+
+        &--right {          // MOBILE VERSION 
+            @include respond(phone) {   
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__imageBox {
+        width: 65%;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__textBox {
+        width: 35%;
+        text-align: center;
+        padding-top: 17rem;
+
+        @include respond(phone) {
+            width: 100%;
+            padding-top: 3rem;
+            //hpadding-bottom: 10rem;
+        }
+
+        &--right { 
+            margin-left: 5rem; 
+
+            @include respond(phone) {
+                margin-left: 0;
+            }
+        }
         &--left { margin-right: 5rem; }
 
         h2 {
@@ -36,3 +152,4 @@
 
     &__img { width: 100%; }
 }
+*/
