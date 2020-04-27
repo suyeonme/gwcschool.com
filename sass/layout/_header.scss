@@ -127,6 +127,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
 
+            @include respond(desktop) {
+                text-align: center;
+            }
+
             &--en {
                 font-size: 9rem;
                 font-weight: 900;

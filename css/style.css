@@ -328,9 +328,13 @@ p {
   .header-about {
     background-image: url(../images/about-header.jpg);
     position: relative;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media only screen and (max-width: 30em) {
+      .header-about {
+        min-height: 60vh; } }
     @media only screen and (max-width: 75em) {
       .header-about {
         height: 70vh; } }
@@ -365,6 +369,9 @@ p {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 75em) {
+      .header-sub__text {
+        text-align: center; } }
     .header-sub__text--en {
       font-size: 9rem;
       font-weight: 900;
@@ -376,27 +383,43 @@ p {
   .header-sub-barista {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/barista.jpg);
     position: relative;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media only screen and (max-width: 30em) {
+      .header-sub-barista {
+        min-height: 60vh; } }
   .header-sub-woodcraft {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/woodcraft-header.jpg);
     position: relative;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media only screen and (max-width: 30em) {
+      .header-sub-woodcraft {
+        min-height: 60vh; } }
   .header-sub-facility {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/facility-header.jpg);
     position: relative;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media only screen and (max-width: 30em) {
+      .header-sub-facility {
+        min-height: 60vh; } }
   .header-sub-location {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/location-header.jpg);
     position: relative;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media only screen and (max-width: 30em) {
+      .header-sub-location {
+        min-height: 60vh; } }
 
 .navbar {
   position: fixed;
@@ -966,21 +989,37 @@ p {
   background-size: cover;
   width: 100%;
   height: auto;
-  padding-top: 13rem; }
+  padding: 15rem; }
+  @media only screen and (max-width: 75em) {
+    .location {
+      padding: 10rem; } }
+  @media only screen and (max-width: 30em) {
+    .location {
+      padding: 0; } }
   .location__container {
-    width: 75%;
-    height: 100vh;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 10rem;
+    padding: 10rem;
     font-size: 1.7rem; }
+    @media only screen and (max-width: 75em) {
+      .location__container {
+        min-height: 70vh; } }
+    @media only screen and (max-width: 30em) {
+      .location__container {
+        min-height: 65vh; } }
     .location__container p {
+      font-size: 2rem;
       font-weight: 300; }
-      .location__container p:last-child {
-        font-size: 2.5rem;
+      .location__container p:not(last-child) {
         padding-top: 3rem; }
+        @media only screen and (max-width: 30em) {
+          .location__container p:not(last-child) {
+            padding-top: 5rem; } }
     .location__container span {
       display: inline-block;
       font-weight: 500; }
@@ -992,15 +1031,16 @@ p {
       width: 2.3rem;
       height: 2.3rem;
       margin-left: .5rem; }
-  .location__mapContainer {
-    display: flex;
-    padding: 10rem; }
-  .location__map {
-    display: inline-block; }
   .location__nearby-tour {
-    padding: 1rem 5rem;
+    margin-left: 7rem;
     color: #efebe6;
-    font-family: "Song Myung", serif; }
+    font-family: "Song Myung", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    @media only screen and (max-width: 30em) {
+      .location__nearby-tour {
+        margin-top: 7rem; } }
     .location__nearby-tour h2 {
       font-size: 3rem; }
     .location__nearby-tour ul {
@@ -1008,6 +1048,33 @@ p {
       font-size: 2rem;
       font-weight: 300;
       line-height: 1.8; }
+
+.map__wrapper {
+  width: 100%;
+  height: auto;
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center; }
+  @media only screen and (max-width: 30em) {
+    .map__wrapper {
+      flex-direction: column;
+      padding: 10rem 3rem;
+      margin-top: 0; } }
+  @media only screen and (max-width: 20em) {
+    .map__wrapper {
+      flex-direction: column;
+      padding: 15rem 5rem;
+      margin-top: 0; } }
+
+.map__container {
+  width: 55%;
+  height: auto; }
+  @media only screen and (max-width: 75em) {
+    .map__container {
+      width: 65%; } }
+  @media only screen and (max-width: 30em) {
+    .map__container {
+      width: 100%; } }
 
 .facility__row {
   display: flex;

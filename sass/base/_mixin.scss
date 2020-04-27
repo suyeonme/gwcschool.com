@@ -19,9 +19,14 @@
 
 @mixin subHeader {
     position: relative;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     background-size: cover;
     background-position: center;
+
+    @include respond(phone) {
+        min-height: 60vh;
+    }
 }
 
 @mixin btn-active {
