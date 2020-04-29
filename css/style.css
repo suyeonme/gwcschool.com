@@ -162,7 +162,7 @@ p {
       margin: 5rem 0; } }
   @media only screen and (max-width: 30em) {
     .h2-category {
-      margin: 10rem 0; } }
+      margin: 8rem 0; } }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;
@@ -753,6 +753,12 @@ p {
   position: relative;
   text-align: center;
   padding: 20rem; }
+  @media only screen and (max-width: 75em) {
+    .barista-description {
+      padding: 15rem 6rem; } }
+  @media only screen and (max-width: 20em) {
+    .barista-description {
+      padding: 15rem 10rem; } }
   .barista-description__bg {
     position: absolute;
     top: 0;
@@ -780,6 +786,13 @@ p {
     margin-left: auto; }
   .barista__center figure {
     width: 70%; }
+    @media only screen and (max-width: 30em) {
+      .barista__center figure {
+        width: 90%; } }
+  @media only screen and (max-width: 30em) {
+    .barista__center {
+      padding-top: 15rem !important;
+      margin-bottom: 20rem !important; } }
 
 .barista__icon {
   width: 1.5rem;
@@ -788,18 +801,36 @@ p {
 
 .course {
   display: flex; }
+  @media only screen and (max-width: 30em) {
+    .course {
+      flex-direction: column; } }
   .course__itemContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #efebe6;
     width: 100%;
-    height: 90vh;
+    height: auto;
+    min-height: 90vh;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 100%;
     transition: all 0.7s; }
+    @media only screen and (max-width: 75em) {
+      .course__itemContainer {
+        background-size: cover;
+        min-height: 80vh; } }
+    @media only screen and (max-width: 62em) {
+      .course__itemContainer {
+        min-height: 70vh; } }
+    @media only screen and (max-width: 30em) {
+      .course__itemContainer {
+        min-height: 60vh; } }
     .course__itemContainer:hover {
       background-size: 110%; }
+      @media only screen and (max-width: 75em) {
+        .course__itemContainer:hover {
+          background-size: cover; } }
     .course__itemContainer--1 {
       background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/1.jpg); }
       .course__itemContainer--1:hover {
@@ -824,6 +855,12 @@ p {
     align-items: center;
     position: relative;
     padding: 13rem; }
+    @media only screen and (max-width: 30em) {
+      .certification__description {
+        padding: 8rem 15rem; } }
+    @media only screen and (max-width: 20em) {
+      .certification__description {
+        padding: 15rem; } }
     .certification__description p {
       font-size: 2rem;
       font-weight: 500; }
@@ -834,18 +871,32 @@ p {
     width: 15%;
     opacity: .5;
     z-index: -1; }
+    @media only screen and (max-width: 30em) {
+      .certification__logo {
+        left: 10rem; } }
   .certification__process {
     width: 100%; }
     .certification__process-list {
       display: flex;
       justify-content: center; }
+      @media only screen and (max-width: 30em) {
+        .certification__process-list {
+          flex-direction: column;
+          align-items: center; } }
     .certification__process-item {
       background-color: #fff;
       width: 20%;
       text-align: center;
       padding: 4rem;
-      margin-right: 3rem;
       box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
+      .certification__process-item:not(:last-child) {
+        margin-right: 3rem; }
+      @media only screen and (max-width: 30em) {
+        .certification__process-item {
+          width: 80%; }
+          .certification__process-item:not(:last-child) {
+            margin-bottom: 2rem;
+            margin-right: 0; } }
       .certification__process-item h3 {
         font-size: 1.8rem;
         font-weight: 300;
@@ -869,16 +920,35 @@ p {
     .certification__icon--wood {
       fill: #323d3b; }
 
+@media only screen and (max-width: 30em) {
+  .hand-drip {
+    margin: 0 !important;
+    padding: 0 !important; } }
+
 .hand-drip__container {
   width: 100%;
   height: auto;
   display: flex;
   padding: 0 7rem; }
+  @media only screen and (max-width: 75em) {
+    .hand-drip__container {
+      padding: 0; } }
+  @media only screen and (max-width: 30em) {
+    .hand-drip__container {
+      padding: 7rem;
+      flex-direction: column;
+      align-items: center; } }
+  @media only screen and (max-width: 20em) {
+    .hand-drip__container {
+      padding: 9rem; } }
 
 .hand-drip__item {
   width: 100%;
   height: 100%;
   margin: 0 5rem; }
+  @media only screen and (max-width: 30em) {
+    .hand-drip__item p {
+      margin-top: 5rem; } }
 
 .hand-drip__img {
   width: 100%;
@@ -909,16 +979,42 @@ p {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 7rem; }
+  @media only screen and (max-width: 30em) {
+    .hand-drip__textBox p {
+      writing-mode: initial;
+      text-align: center;
+      margin-bottom: 5rem; } }
 
 .hand-drip__textBox h2 {
   font-weight: 100;
   font-size: 5rem;
   margin-bottom: 7rem; }
+  @media only screen and (max-width: 30em) {
+    .hand-drip__textBox h2 {
+      text-align: center; } }
+
+@media only screen and (max-width: 30em) {
+  .hand-drip__hidden {
+    display: none; } }
+
+@media only screen and (max-width: 30em) {
+  .hand-drip__advanced {
+    flex-direction: column-reverse; } }
+
+@media only screen and (max-width: 30em) {
+  .timetable {
+    margin-top: 0; } }
 
 .timetable__container {
   width: 100%;
   height: auto;
   padding: 0 20rem; }
+  @media only screen and (max-width: 75em) {
+    .timetable__container {
+      padding: 0 10rem; } }
+  @media only screen and (max-width: 30em) {
+    .timetable__container {
+      padding: 0 5rem; } }
 
 .timetable__table {
   width: 100%;
@@ -961,19 +1057,38 @@ p {
     font-weight: 300; }
 
 .review {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
-  color: #394744; }
+  color: #394744;
+  padding-top: 10rem; }
+  @media only screen and (max-width: 30em) {
+    .review {
+      width: 100%;
+      padding-top: 0; } }
   .review__row {
     display: flex;
     align-items: center;
     padding: 0 15rem; }
+    @media only screen and (max-width: 75em) {
+      .review__row {
+        padding: 0 8rem; } }
+    @media only screen and (max-width: 48em) {
+      .review__row {
+        padding: 0 5rem; } }
+    @media only screen and (max-width: 30em) {
+      .review__row {
+        padding: 0 3rem;
+        justify-content: center; } }
   .review__col {
     width: 33.3333%;
     padding: 2rem;
     font-size: 1.7rem;
     font-weight: 100;
     line-height: 2.5; }
+    @media only screen and (max-width: 30em) {
+      .review__col {
+        padding: 1.5rem 2rem;
+        width: 50%; } }
   .review__img {
     width: 100%; }
   .review p {

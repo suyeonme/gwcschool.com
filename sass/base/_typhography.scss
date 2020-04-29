@@ -72,6 +72,6 @@ p {
     }
 
     @include respond(phone) {
-        margin: 10rem 0;
+        margin: 8rem 0;
     }
 }
