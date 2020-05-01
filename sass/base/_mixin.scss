@@ -24,8 +24,16 @@
     background-size: cover;
     background-position: center;
 
+    @include respond(phone-land) {
+        min-height: 100vh;
+    }
+
     @include respond(phone) {
         min-height: 60vh;
+    }
+
+    @include respond(smallPhone-land) {
+        min-height: 100vh;
     }
 }
 
@@ -65,6 +73,11 @@ Breakpoint argument choices:
         ; //  320px 
     }
 
+    @if $breakpoint==smallPhone-land {
+        @media (orientation: landscape) and (max-width: 35.5em) { @content };
+    }  // 568px
+
+
     @if $breakpoint==phone {
         @media only screen and (max-width: 30em) {
             @content
@@ -72,6 +85,12 @@ Breakpoint argument choices:
 
         ; //  480px
     }
+
+    @if $breakpoint==phone-land {
+        @media (orientation: landscape) and (max-width: 50.75em) { @content };
+    }   
+     // 812px  
+
 
     @if $breakpoint==tab-port {
         @media only screen and (max-width: 48em) {

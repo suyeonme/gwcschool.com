@@ -8,11 +8,11 @@
         min-height: 50vh;
     }
 
-    @include respond(tab-land) {
-        margin-top: 0;
+    @include respond(phone) {
+        margin: 0;
     }
 
-    @include respond(tab-port) {
+    @include respond(smallPhone-land) {
         margin: 0;
     }
 
@@ -28,17 +28,14 @@
             position: relative;
         }
 
-        @include respond(tab-land) {
-            width: 100%;
-            padding: 5rem 15rem 15rem 15rem;
-        }
-
-        @include respond(tab-port) {
-            padding: 10rem;
-        }
-
         @include respond(phone) {
-            padding: 0;
+            width: 100%;
+            padding: 0 5rem 8rem 5rem;
+        }
+
+        @include respond(smallPhone-land) {
+            width: 100%;
+            padding: 0 5rem 8rem 5rem;
         }
     }
 
@@ -63,7 +60,15 @@
             top: 2rem;
         }
 
-        @include respond(tab-land) {
+        @include respond(phone) {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translateX(0);
+        }
+
+        @include respond(smallPhone-land) {
             width: 100%;
             position: relative;
             top: 0;
@@ -79,16 +84,30 @@
 
         @include respond(desktop) {        
             width: 70%;
-            padding: 10rem 8rem 10rem 10rem;
+            padding: 6rem 8rem 6rem 10rem;
         }
 
-        @include respond(tab-land) {
+        @include respond(phone-land) {
+            padding: 6rem 6rem 6rem 8rem;
+        }
+
+        @include respond(phone) {
             width: 100%;
             margin-left: 0;
-            padding: 15rem 7rem;
+            padding: 10rem 7rem;
         }
 
-        h2 {
+        @include respond(smallPhone-land) {
+            width: 100%;
+            margin-left: 0;
+            padding: 10rem 7rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 13rem 7rem;
+        }
+
+        h3 {
             font-weight: 500;
             font-size: 3rem;
             color: $color-brown;
@@ -122,12 +141,24 @@
         margin-right: 10rem;
 
         @include respond(tab-land) {
-            width: 100%;
-            padding: 5rem 15rem 0 15rem;
+            padding: 0;
+        }
+
+        @include respond(phone-land) {
+            margin-bottom: 0 !important;
+            margin-top: 25rem;
         }
 
         @include respond(phone) {
-            padding: 8rem 5rem 0 5rem;
+            width: 100%;
+            padding: 8rem 10rem 0;
+            margin-bottom: 7rem !important;
+        }
+
+        @include respond(smallPhone-land) {
+            width: 100%;
+            padding: 5rem 10rem 0;
+            margin: 0;
         }
 
         &-wrapper {
@@ -168,6 +199,10 @@
             height: 60vh;
         }
 
+        @include respond(phone-land) {
+            height: 100vh;
+        }
+
         @include respond(phone) {
             height: 40vh;
         }
@@ -188,8 +223,16 @@
             height: 50vh;
         }
 
+        @include respond(phone-land) {
+            height: 80vh;
+        }
+
         @include respond(phone) {
             height: 40vh;
+        }
+
+        @include respond(smallPhone-land) {
+            height: 80vh;
         }
 
         p {
@@ -197,6 +240,10 @@
 
             @include respond(phone) {
                 font-size: 3rem;
+            }
+
+            @include respond(smallPhone-land) {
+                font-size: 2rem;
             }
 
             @include respond(small-phone) {

@@ -5,6 +5,18 @@
         text-align: center;
         padding: 17rem 20rem;
 
+        @include respond(desktop) {
+            padding: 15rem;
+        }
+
+        @include respond(phone) {
+            padding: 15rem 9rem;
+        }
+
+        @include respond(smallPhone-land) {
+            padding: 13rem 3rem;
+        }
+
         &__bg {
             position: absolute;
             top: 0;
@@ -20,6 +32,10 @@
             font-family: $font-secondary-ko;
             font-size: 3.5rem;
             color: $color-white;
+
+            @include respond(smallPhone-land) {
+                font-size: 3rem;
+            }
         }
     }
 }
@@ -30,24 +46,74 @@
         display: flex;
         width: 100%;
         padding: 0 18rem;
+
+        @include respond(desktop) {
+            padding: 0 5rem;
+        }
+
+        @include respond(phone) {
+            padding: 0 5rem;
+        }
     }
 
-    &__col { padding: 3rem; }
+    &__col { 
+        padding: 3rem; 
+
+        @include respond(phone) {
+            padding: 1rem;
+        }
+
+        @include respond(smallPhone-land) {
+            padding: 1rem;
+        }
+    }
     &__img { width: 100%; }
 }
 
 .woodcraft-oneday {
     width: 100%;
 
-    p {  padding: 0 25rem; }
+    @include respond(smallPhone-land) {
+        padding: 0 !important;
+    }
+
+    p {  
+        padding: 0 25rem; 
+
+        @include respond(desktop) {
+            padding: 0 7rem;
+        }
+        
+        @include respond(phone) {
+            padding: 0 5rem;
+        }
+    }
 
     &__row { 
         display: flex;
         padding: 0 15rem;
 
+        @include respond(desktop) {
+            padding: 0 5rem;
+        }
+
+        @include respond(phone) {
+            padding: 3rem;
+        }
+
         li { margin-left: 3rem;}
     }
     
-    &__col { padding: 3rem; }
+    &__col { 
+        padding: 3rem; 
+
+        @include respond(phone) {
+            padding: 1rem;
+        }
+
+        @include respond(smallPhone-land) {
+            padding: 1rem;
+        }
+    }
     &__img { width: 100%; }
 }

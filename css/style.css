@@ -156,11 +156,24 @@ p {
   color: #394744;
   font-family: "Noto Sans KR", sans-serif; }
   @media only screen and (max-width: 62em) {
+    .h2-category--review {
+      font-size: 4rem !important;
+      margin: 8rem 0 3rem 0 !important; } }
+  @media only screen and (max-width: 30em) {
+    .h2-category--review {
+      font-size: 3rem !important;
+      margin: 8rem 0 3rem 0 !important; } }
+  @media only screen and (max-width: 20em) {
+    .h2-category--review {
+      font-size: 5rem !important; } }
+  @media only screen and (max-width: 62em) {
     .h2-category {
       text-align: center;
-      font-size: 6rem;
-      margin: 5rem 0; } }
+      font-size: 6rem; } }
   @media only screen and (max-width: 30em) {
+    .h2-category {
+      margin: 8rem 0; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
     .h2-category {
       margin: 8rem 0; } }
 
@@ -211,9 +224,15 @@ p {
   @media only screen and (max-width: 48em) {
     .footer {
       padding-top: 18rem; } }
+  @media (orientation: landscape) and (max-width: 50.75em) {
+    .footer {
+      padding-top: 8rem; } }
   @media only screen and (max-width: 30em) {
     .footer {
       padding-top: 10rem; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .footer {
+      padding-top: 8rem; } }
   .footer__text {
     display: flex;
     justify-content: space-between;
@@ -289,9 +308,15 @@ p {
     @media only screen and (max-width: 48em) {
       .header-home {
         min-height: 110vh; } }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .header-home {
+        min-height: 130vh; } }
     @media only screen and (max-width: 30em) {
       .header-home {
         min-height: 71vh; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .header-home {
+        min-height: 130vh; } }
     @media only screen and (max-width: 20em) {
       .header-home {
         min-height: 65vh; } }
@@ -318,6 +343,12 @@ p {
         @media only screen and (max-width: 75em) {
           .header-home__text--1 {
             font-size: 4.5rem; } }
+        @media (orientation: landscape) and (max-width: 50.75em) {
+          .header-home__text--1 {
+            font-size: 3rem; } }
+        @media (orientation: landscape) and (max-width: 35.5em) {
+          .header-home__text--1 {
+            font-size: 3rem; } }
       .header-home__text--2 {
         font-size: 10.5rem;
         letter-spacing: 10px;
@@ -325,46 +356,12 @@ p {
         @media only screen and (max-width: 30em) {
           .header-home__text--2 {
             font-size: 9rem; } }
-  .header-about {
-    background-image: url(../images/about-header.jpg);
-    position: relative;
-    height: auto;
-    min-height: 80vh;
-    background-size: cover;
-    background-position: center; }
-    @media only screen and (max-width: 30em) {
-      .header-about {
-        min-height: 60vh; } }
-    @media only screen and (max-width: 75em) {
-      .header-about {
-        height: 70vh; } }
-    @media only screen and (max-width: 48em) {
-      .header-about {
-        height: 70vh; } }
-    @media only screen and (max-width: 30em) {
-      .header-about {
-        height: 45vh; } }
-    @media only screen and (max-width: 20em) {
-      .header-about {
-        height: 40vh; } }
-    .header-about__text {
-      line-height: 1.5;
-      padding-left: 8rem; }
-      .header-about__text span {
-        color: #a4a89a; }
-      @media only screen and (max-width: 30em) {
-        .header-about__text {
-          padding-left: 0; } }
-    .header-about__textBox {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%); }
-      @media only screen and (max-width: 30em) {
-        .header-about__textBox {
-          left: 10em; } }
-      @media only screen and (max-width: 20em) {
-        .header-about__textBox {
-          left: 15em; } }
+        @media (orientation: landscape) and (max-width: 50.75em) {
+          .header-home__text--2 {
+            font-size: 5rem; } }
+        @media (orientation: landscape) and (max-width: 35.5em) {
+          .header-home__text--2 {
+            font-size: 5rem; } }
   .header-sub__text {
     position: absolute;
     left: 50%;
@@ -376,10 +373,39 @@ p {
       font-size: 9rem;
       font-weight: 900;
       top: 40%; }
+      @media (orientation: landscape) and (max-width: 50.75em) {
+        .header-sub__text--en {
+          font-size: 5rem; } }
+      @media (orientation: landscape) and (max-width: 35.5em) {
+        .header-sub__text--en {
+          font-size: 5rem; } }
     .header-sub__text--ko {
       font-family: "Noto Sans KR", sans-serif;
       font-size: 3rem;
       top: 58%; }
+      @media (orientation: landscape) and (max-width: 50.75em) {
+        .header-sub__text--ko {
+          font-size: 2.3rem; } }
+      @media (orientation: landscape) and (max-width: 35.5em) {
+        .header-sub__text--ko {
+          font-size: 2.3rem;
+          top: 60%; } }
+  .header-sub-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/about-header.jpg);
+    position: relative;
+    height: auto;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center; }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .header-sub-about {
+        min-height: 100vh; } }
+    @media only screen and (max-width: 30em) {
+      .header-sub-about {
+        min-height: 60vh; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .header-sub-about {
+        min-height: 100vh; } }
   .header-sub-barista {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/barista.jpg);
     position: relative;
@@ -387,9 +413,15 @@ p {
     min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .header-sub-barista {
+        min-height: 100vh; } }
     @media only screen and (max-width: 30em) {
       .header-sub-barista {
         min-height: 60vh; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .header-sub-barista {
+        min-height: 100vh; } }
   .header-sub-woodcraft {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/woodcraft-header.jpg);
     position: relative;
@@ -397,9 +429,15 @@ p {
     min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .header-sub-woodcraft {
+        min-height: 100vh; } }
     @media only screen and (max-width: 30em) {
       .header-sub-woodcraft {
         min-height: 60vh; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .header-sub-woodcraft {
+        min-height: 100vh; } }
   .header-sub-facility {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/facility-header.jpg);
     position: relative;
@@ -407,9 +445,15 @@ p {
     min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .header-sub-facility {
+        min-height: 100vh; } }
     @media only screen and (max-width: 30em) {
       .header-sub-facility {
         min-height: 60vh; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .header-sub-facility {
+        min-height: 100vh; } }
   .header-sub-location {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/location-header.jpg);
     position: relative;
@@ -417,9 +461,15 @@ p {
     min-height: 80vh;
     background-size: cover;
     background-position: center; }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .header-sub-location {
+        min-height: 100vh; } }
     @media only screen and (max-width: 30em) {
       .header-sub-location {
         min-height: 60vh; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .header-sub-location {
+        min-height: 100vh; } }
 
 .navbar {
   position: fixed;
@@ -496,7 +546,6 @@ p {
   z-index: 400;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   background-color: #f7f3ec;
   color: #000;
   right: -200rem;
@@ -507,6 +556,13 @@ p {
       flex-direction: column;
       align-items: center;
       justify-content: center; } }
+  @media (orientation: landscape) and (max-width: 50.75em) {
+    .navigation {
+      overflow: scroll; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .navigation {
+      overflow: scroll;
+      padding: 30rem 0; } }
   .navigation__container {
     display: flex; }
     @media only screen and (max-width: 48em) {
@@ -525,6 +581,12 @@ p {
       .navigation__image-container {
         width: 100%;
         height: 35vh; } }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .navigation__image-container {
+        height: auto; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .navigation__image-container {
+        height: auto; } }
   .navigation__item-container {
     font-size: 2.7rem;
     font-weight: 700;
@@ -535,6 +597,13 @@ p {
     @media only screen and (max-width: 48em) {
       .navigation__item-container {
         padding: 10rem 15rem 0 0; } }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .navigation__item-container {
+        padding-top: 7rem; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .navigation__item-container {
+        height: auto;
+        padding-top: 22rem; } }
   .navigation__list {
     margin-left: 5rem;
     margin-top: 12rem; }
@@ -597,10 +666,10 @@ p {
   @media only screen and (max-width: 75em) {
     .message {
       min-height: 50vh; } }
-  @media only screen and (max-width: 62em) {
+  @media only screen and (max-width: 30em) {
     .message {
-      margin-top: 0; } }
-  @media only screen and (max-width: 48em) {
+      margin: 0; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
     .message {
       margin: 0; } }
   .message__image-container {
@@ -613,16 +682,14 @@ p {
         width: 35%;
         padding: 0;
         position: relative; } }
-    @media only screen and (max-width: 62em) {
-      .message__image-container {
-        width: 100%;
-        padding: 5rem 15rem 15rem 15rem; } }
-    @media only screen and (max-width: 48em) {
-      .message__image-container {
-        padding: 10rem; } }
     @media only screen and (max-width: 30em) {
       .message__image-container {
-        padding: 0; } }
+        width: 100%;
+        padding: 0 5rem 8rem 5rem; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .message__image-container {
+        width: 100%;
+        padding: 0 5rem 8rem 5rem; } }
   .message__img {
     width: 100%; }
   .message__textBox {
@@ -639,7 +706,14 @@ p {
       .message__textBox {
         width: 90%;
         top: 2rem; } }
-    @media only screen and (max-width: 62em) {
+    @media only screen and (max-width: 30em) {
+      .message__textBox {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translateX(0); } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
       .message__textBox {
         width: 100%;
         position: relative;
@@ -653,21 +727,32 @@ p {
     @media only screen and (max-width: 75em) {
       .message__text {
         width: 70%;
-        padding: 10rem 8rem 10rem 10rem; } }
-    @media only screen and (max-width: 62em) {
+        padding: 6rem 8rem 6rem 10rem; } }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .message__text {
+        padding: 6rem 6rem 6rem 8rem; } }
+    @media only screen and (max-width: 30em) {
       .message__text {
         width: 100%;
         margin-left: 0;
-        padding: 15rem 7rem; } }
-    .message__text h2 {
+        padding: 10rem 7rem; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .message__text {
+        width: 100%;
+        margin-left: 0;
+        padding: 10rem 7rem; } }
+    @media only screen and (max-width: 20em) {
+      .message__text {
+        padding: 13rem 7rem; } }
+    .message__text h3 {
       font-weight: 500;
       font-size: 3rem;
       color: #352825; }
       @media only screen and (max-width: 62em) {
-        .message__text h2 {
+        .message__text h3 {
           text-align: center; } }
       @media only screen and (max-width: 20em) {
-        .message__text h2 {
+        .message__text h3 {
           font-size: 4rem; } }
     .message__text span {
       font-size: 2rem; }
@@ -683,11 +768,21 @@ p {
     margin-right: 10rem; }
     @media only screen and (max-width: 62em) {
       .message__cats {
-        width: 100%;
-        padding: 5rem 15rem 0 15rem; } }
+        padding: 0; } }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .message__cats {
+        margin-bottom: 0 !important;
+        margin-top: 25rem; } }
     @media only screen and (max-width: 30em) {
       .message__cats {
-        padding: 8rem 5rem 0 5rem; } }
+        width: 100%;
+        padding: 8rem 10rem 0;
+        margin-bottom: 7rem !important; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .message__cats {
+        width: 100%;
+        padding: 5rem 10rem 0;
+        margin: 0; } }
     .message__cats-wrapper {
       display: flex;
       justify-content: space-between; }
@@ -712,6 +807,9 @@ p {
   @media only screen and (max-width: 48em) {
     .about-quote__image-container {
       height: 60vh; } }
+  @media (orientation: landscape) and (max-width: 50.75em) {
+    .about-quote__image-container {
+      height: 100vh; } }
   @media only screen and (max-width: 30em) {
     .about-quote__image-container {
       height: 40vh; } }
@@ -730,14 +828,23 @@ p {
   @media only screen and (max-width: 48em) {
     .about-quote__textBox {
       height: 50vh; } }
+  @media (orientation: landscape) and (max-width: 50.75em) {
+    .about-quote__textBox {
+      height: 80vh; } }
   @media only screen and (max-width: 30em) {
     .about-quote__textBox {
       height: 40vh; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .about-quote__textBox {
+      height: 80vh; } }
   .about-quote__textBox p {
     font-size: 2.5rem; }
     @media only screen and (max-width: 30em) {
       .about-quote__textBox p {
         font-size: 3rem; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .about-quote__textBox p {
+        font-size: 2rem; } }
     @media only screen and (max-width: 20em) {
       .about-quote__textBox p {
         font-size: 3.5rem; } }
@@ -756,6 +863,9 @@ p {
   @media only screen and (max-width: 75em) {
     .barista-description {
       padding: 15rem 6rem; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .barista-description {
+      padding: 10rem 5rem; } }
   @media only screen and (max-width: 20em) {
     .barista-description {
       padding: 15rem 10rem; } }
@@ -811,7 +921,7 @@ p {
     color: #efebe6;
     width: 100%;
     height: auto;
-    min-height: 90vh;
+    min-height: 85vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -842,9 +952,21 @@ p {
   .course__text {
     padding: 0 10rem;
     text-align: center; }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .course__text {
+        padding: 10rem 5rem; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .course__text {
+        padding: 8rem 5rem; } }
     .course__text h2 {
       font-family: "Song Myung", serif;
       font-size: 5rem; }
+      @media (orientation: landscape) and (max-width: 50.75em) {
+        .course__text h2 {
+          font-size: 4rem; } }
+      @media (orientation: landscape) and (max-width: 35.5em) {
+        .course__text h2 {
+          font-size: 3rem; } }
 
 .certification {
   width: 100%;
@@ -855,9 +977,15 @@ p {
     align-items: center;
     position: relative;
     padding: 13rem; }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .certification__description {
+        padding: 7rem; } }
     @media only screen and (max-width: 30em) {
       .certification__description {
         padding: 8rem 15rem; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .certification__description {
+        padding: 5rem; } }
     @media only screen and (max-width: 20em) {
       .certification__description {
         padding: 15rem; } }
@@ -871,7 +999,13 @@ p {
     width: 15%;
     opacity: .5;
     z-index: -1; }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .certification__logo {
+        left: 10rem; } }
     @media only screen and (max-width: 30em) {
+      .certification__logo {
+        left: 10rem; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
       .certification__logo {
         left: 10rem; } }
   .certification__process {
@@ -880,6 +1014,10 @@ p {
       display: flex;
       justify-content: center; }
       @media only screen and (max-width: 30em) {
+        .certification__process-list {
+          flex-direction: column;
+          align-items: center; } }
+      @media (orientation: landscape) and (max-width: 35.5em) {
         .certification__process-list {
           flex-direction: column;
           align-items: center; } }
@@ -892,6 +1030,12 @@ p {
       .certification__process-item:not(:last-child) {
         margin-right: 3rem; }
       @media only screen and (max-width: 30em) {
+        .certification__process-item {
+          width: 80%; }
+          .certification__process-item:not(:last-child) {
+            margin-bottom: 2rem;
+            margin-right: 0; } }
+      @media (orientation: landscape) and (max-width: 35.5em) {
         .certification__process-item {
           width: 80%; }
           .certification__process-item:not(:last-child) {
@@ -925,6 +1069,15 @@ p {
     margin: 0 !important;
     padding: 0 !important; } }
 
+@media (orientation: landscape) and (max-width: 35.5em) {
+  .hand-drip {
+    margin: 5rem 0 !important;
+    padding: 5rem 0 !important; } }
+
+@media (orientation: landscape) and (max-width: 35.5em) {
+  .hand-drip--wood {
+    padding: 0 !important; } }
+
 .hand-drip__container {
   width: 100%;
   height: auto;
@@ -938,6 +1091,9 @@ p {
       padding: 7rem;
       flex-direction: column;
       align-items: center; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .hand-drip__container {
+      padding: 0; } }
   @media only screen and (max-width: 20em) {
     .hand-drip__container {
       padding: 9rem; } }
@@ -946,6 +1102,9 @@ p {
   width: 100%;
   height: 100%;
   margin: 0 5rem; }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .hand-drip__item {
+      margin: 2rem; } }
   @media only screen and (max-width: 30em) {
     .hand-drip__item p {
       margin-top: 5rem; } }
@@ -1065,6 +1224,12 @@ p {
     .review {
       width: 100%;
       padding-top: 0; } }
+  @media (orientation: landscape) and (max-width: 50.75em) {
+    .review {
+      padding-top: 0; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .review {
+      padding-top: 0; } }
   .review__row {
     display: flex;
     align-items: center;
@@ -1088,6 +1253,14 @@ p {
     @media only screen and (max-width: 30em) {
       .review__col {
         padding: 1.5rem 2rem;
+        width: 50%; } }
+    @media (orientation: landscape) and (max-width: 50.75em) {
+      .review__col {
+        padding: 1rem 1.4rem;
+        width: 50%; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .review__col {
+        padding: 1rem 1.4rem;
         width: 50%; } }
   .review__img {
     width: 100%; }
@@ -1200,6 +1373,9 @@ p {
     .facility__row {
       flex-direction: column;
       padding-bottom: 10rem; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .facility__row {
+      padding: 10rem 3rem; } }
   @media only screen and (max-width: 20em) {
     .facility__row {
       padding-bottom: 15rem; } }
@@ -1233,6 +1409,9 @@ p {
     @media only screen and (max-width: 30em) {
       .facility__textBox--right {
         margin-left: 0; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .facility__textBox--right {
+        margin-left: 3rem; } }
   .facility__textBox--left {
     margin-right: 5rem; }
   .facility__textBox h2 {
@@ -1240,12 +1419,21 @@ p {
     font-weight: 700;
     text-transform: initial;
     color: #323d3b; }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .facility__textBox h2 {
+        font-size: 3.5rem; } }
   .facility__textBox p {
     font-size: 1.7rem; }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .facility__textBox p {
+        font-size: 1.5rem; } }
   .facility__textBox span {
     display: block;
     font-size: 1.3rem;
     font-weight: 500; }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .facility__textBox span {
+        font-size: 1rem; } }
 
 .facility__img {
   width: 100%; }
@@ -1506,6 +1694,12 @@ p {
   @media only screen and (max-width: 48em) {
     .school-video {
       min-height: 60vh; } }
+  @media (orientation: landscape) and (max-width: 50.75em) {
+    .school-video {
+      min-height: 100vh; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .school-video {
+      min-height: 100vh; } }
   @media only screen and (max-width: 30em) {
     .school-video {
       min-height: 45vh; } }
@@ -1569,6 +1763,15 @@ p {
   position: relative;
   text-align: center;
   padding: 17rem 20rem; }
+  @media only screen and (max-width: 75em) {
+    .woodcraft-description {
+      padding: 15rem; } }
+  @media only screen and (max-width: 30em) {
+    .woodcraft-description {
+      padding: 15rem 9rem; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .woodcraft-description {
+      padding: 13rem 3rem; } }
   .woodcraft-description__bg {
     position: absolute;
     top: 0;
@@ -1582,28 +1785,64 @@ p {
     font-family: "Song Myung", serif;
     font-size: 3.5rem;
     color: #fff; }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .woodcraft-description p {
+        font-size: 3rem; } }
 
 .gallery-wood__row {
   display: flex;
   width: 100%;
   padding: 0 18rem; }
+  @media only screen and (max-width: 75em) {
+    .gallery-wood__row {
+      padding: 0 5rem; } }
+  @media only screen and (max-width: 30em) {
+    .gallery-wood__row {
+      padding: 0 5rem; } }
 
 .gallery-wood__col {
   padding: 3rem; }
+  @media only screen and (max-width: 30em) {
+    .gallery-wood__col {
+      padding: 1rem; } }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .gallery-wood__col {
+      padding: 1rem; } }
 
 .gallery-wood__img {
   width: 100%; }
 
 .woodcraft-oneday {
   width: 100%; }
+  @media (orientation: landscape) and (max-width: 35.5em) {
+    .woodcraft-oneday {
+      padding: 0 !important; } }
   .woodcraft-oneday p {
     padding: 0 25rem; }
+    @media only screen and (max-width: 75em) {
+      .woodcraft-oneday p {
+        padding: 0 7rem; } }
+    @media only screen and (max-width: 30em) {
+      .woodcraft-oneday p {
+        padding: 0 5rem; } }
   .woodcraft-oneday__row {
     display: flex;
     padding: 0 15rem; }
+    @media only screen and (max-width: 75em) {
+      .woodcraft-oneday__row {
+        padding: 0 5rem; } }
+    @media only screen and (max-width: 30em) {
+      .woodcraft-oneday__row {
+        padding: 3rem; } }
     .woodcraft-oneday__row li {
       margin-left: 3rem; }
   .woodcraft-oneday__col {
     padding: 3rem; }
+    @media only screen and (max-width: 30em) {
+      .woodcraft-oneday__col {
+        padding: 1rem; } }
+    @media (orientation: landscape) and (max-width: 35.5em) {
+      .woodcraft-oneday__col {
+        padding: 1rem; } }
   .woodcraft-oneday__img {
     width: 100%; }

@@ -9,8 +9,16 @@
         padding-top: 18rem;
     }
 
+    @include respond(phone-land) {
+        padding-top: 8rem;
+    }
+
     @include respond(phone) {
         padding-top: 10rem;
+    }
+
+    @include respond(smallPhone-land) {
+        padding-top: 8rem;
     }
 
 

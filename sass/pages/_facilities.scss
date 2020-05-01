@@ -6,13 +6,13 @@
         padding: 10rem 5rem;
         height: auto !important;
 
-        @include respond(tab-port) {
-            
-        }
-
         @include respond(phone) {
             flex-direction: column;
             padding-bottom: 10rem;
+        }
+
+        @include respond (smallPhone-land) {
+            padding: 10rem 3rem;
         }
 
         @include respond(small-phone) {
@@ -58,6 +58,10 @@
             @include respond(phone) {
                 margin-left: 0;
             }
+
+            @include respond (smallPhone-land) {
+                margin-left: 3rem;
+            }
         }
         &--left {
             margin-right: 5rem; 
@@ -68,14 +72,28 @@
             font-weight: 700;
             text-transform: initial;
             color: $color-green-3;
+
+            @include respond (smallPhone-land) {
+                font-size: 3.5rem;
+            }
         }
 
-        p { font-size: 1.7rem;}
+        p { 
+            font-size: 1.7rem;
+
+            @include respond (smallPhone-land) {
+                font-size: 1.5rem;
+            }
+        }
 
         span {
             display: block;
             font-size: 1.3rem;
             font-weight: 500;
+
+            @include respond (smallPhone-land) {
+                font-size: 1rem;
+            }
         }
     }
 

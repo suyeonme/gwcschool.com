@@ -255,6 +255,14 @@
         min-height: 60vh;
     }
 
+    @include respond(phone-land) {
+        min-height: 100vh;
+    }
+
+    @include respond(smallPhone-land) {
+        min-height: 100vh;
+    }
+
     @include respond(phone) {
         min-height: 45vh;
     }

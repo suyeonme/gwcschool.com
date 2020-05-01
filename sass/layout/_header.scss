@@ -19,8 +19,17 @@
             min-height: 110vh; 
         }
 
+
+        @include respond(phone-land) {
+            min-height: 130vh; 
+        }
+
         @include respond(phone) {
             min-height: 71vh; 
+        }
+
+        @include respond(smallPhone-land) {
+            min-height: 130vh;
         }
         
         @include respond(small-phone) {
@@ -56,6 +65,14 @@
                 @include respond(desktop) {
                     font-size: 4.5rem;
                 }
+
+                @include respond(phone-land) {
+                    font-size: 3rem;
+                }
+
+                @include respond(smallPhone-land) {
+                    font-size: 3rem;
+                }
             }
 
             &--2 {
@@ -66,56 +83,14 @@
                 @include respond(phone) {
                     font-size: 9rem;
                 }
-            }
-        }
-    }
 
-    // ABOUT
-    &-about {
-        background-image: url(../images/about-header.jpg);
-        @include subHeader;
+                @include respond(phone-land) {
+                    font-size: 5rem;
+                }
 
-        // MEDIA QUERY 
-        @include respond(desktop) {
-            height: 70vh;
-        }
-
-        @include respond(tab-port) {
-            height: 70vh;
-        }
-
-        @include respond(phone) {
-            height: 45vh;
-        }
-
-        @include respond(small-phone) {
-            height: 40vh;
-        }
-
-        &__text {
-            line-height: 1.5;
-            padding-left: 8rem;
-
-            span {
-                color: $color-green-1;
-            }
-
-            @include respond(phone) {
-                padding-left: 0;
-            }
-        }
-
-        &__textBox {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-
-            @include respond(phone) {
-                left: 10em
-            }
-
-            @include respond(small-phone) {
-                left: 15em
+                @include respond(smallPhone-land) {
+                    font-size: 5rem;
+                }
             }
         }
     }
@@ -135,13 +110,35 @@
                 font-size: 9rem;
                 font-weight: 900;
                 top: 40%;
+
+                @include respond(phone-land) {
+                    font-size: 5rem;
+                }
+
+                @include respond(smallPhone-land) {
+                    font-size: 5rem;
+                }
             }
 
             &--ko {
                 font-family: $font-primary-ko;
                 font-size: 3rem;
                 top: 58%;
+
+                @include respond(phone-land) {
+                    font-size: 2.3rem;
+                }
+
+                @include respond(smallPhone-land) {
+                    font-size: 2.3rem;
+                    top: 60%;
+                }
             }
+        }
+
+        &-about {
+            background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../images/about-header.jpg);
+            @include subHeader;
         }
 
         &-barista {

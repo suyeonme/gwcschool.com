@@ -65,13 +65,34 @@ p {
     color: $color-green-2;
     font-family: $font-primary-ko;
 
+    &--review {
+
+        @include respond(tab-land) {
+            font-size: 4rem !important;
+            margin: 8rem 0 3rem 0 !important;
+        }
+
+        @include respond(phone) {
+            font-size: 3rem !important;
+            margin: 8rem 0 3rem 0 !important;
+        }
+
+        @include respond(small-phone) {
+            font-size: 5rem !important;
+        }
+    }
+
     @include respond(tab-land) {
         text-align: center;
         font-size: 6rem;
-        margin: 5rem 0;
+        //margin: 5rem 0;
     }
 
     @include respond(phone) {
+        margin: 8rem 0;
+    }
+
+    @include respond(smallPhone-land) {
         margin: 8rem 0;
     }
 }
