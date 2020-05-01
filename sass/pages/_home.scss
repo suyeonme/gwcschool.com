@@ -7,9 +7,17 @@
     background-size: cover;
     color: $color-white;
     text-align: center;
-    @include flex-col-center;
-    align-items: center;
     padding: 0 25rem;
+    display: flex;
+    align-items: center;
+
+    // IE for flexBox
+    &::after {
+        content: '';
+        min-height: inherit;
+        font-size: 0;
+    }
+
 
     @include respond(desktop) {
         min-height: 50vh;
@@ -242,6 +250,7 @@
     min-height: 110vh;
     background-color: $color-beige-2;
     position: relative;
+    overflow: hidden;
 
     @include respond(desktop) {
         min-height: 70vh;
@@ -295,53 +304,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-    }
-}
-
-
-.gallery {
-
-    &__container {
-
-        &--1 {
-            display: flex;
-            justify-content: center;
-        }
-
-        &--2 {
-            position: relative;
-        }
-    }
-
-    &__image-container {
-
-        &--1 {
-            width: 35%;
-            margin-right: 10rem;
-        }
-
-        &--2 {
-            width: 45%;
-            align-self: flex-end;
-        }
-
-        &--3 {
-            width: 65%;
-            margin-left: 9rem;
-        }
-
-        &--4 {
-            width: 25%;
-            position: absolute;
-            bottom: -5rem;
-            right: 18rem;
-        }
-    }
-
-    &__img {
-        width: 100%;
-        height: auto;
-        box-shadow: $shadow-1;
     }
 }
 

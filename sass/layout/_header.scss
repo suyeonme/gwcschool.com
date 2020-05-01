@@ -76,7 +76,7 @@
             }
 
             &--2 {
-                font-size: 10.5rem;
+                font-size: 9.5rem;
                 letter-spacing: 10px; 
                 margin: 0;
 
@@ -97,33 +97,32 @@
 
     &-sub {
 
-        &__text {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        &__textBox {
+            @include block-center;
+        }
 
-            @include respond(desktop) {
-                text-align: center;
-            }
+        &__text {
+            color: $color-beige;
+            text-align: center;
 
             &--en {
                 font-size: 9rem;
                 font-weight: 900;
-                top: 40%;
 
-                @include respond(phone-land) {
-                    font-size: 5rem;
-                }
+                display: block;
+                margin: 0;
+                font-family: $font-primary-en;
+                font-weight: 800;
 
                 @include respond(smallPhone-land) {
-                    font-size: 5rem;
+                    font-size: 7rem;
                 }
             }
 
             &--ko {
                 font-family: $font-primary-ko;
                 font-size: 3rem;
-                top: 58%;
+                margin: 0;
 
                 @include respond(phone-land) {
                     font-size: 2.3rem;
@@ -131,10 +130,10 @@
 
                 @include respond(smallPhone-land) {
                     font-size: 2.3rem;
-                    top: 60%;
                 }
             }
         }
+        
 
         &-about {
             background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../images/about-header.jpg);
@@ -162,8 +161,6 @@
         }
     }
 }
-
-
 
 .navbar {
     position: fixed;
@@ -230,8 +227,8 @@
 
         &-container {
             @include flex-col-center;
-            width: 6rem;
-            height: 6rem;
+            width: 5.5rem;
+            height: 5.5rem;
         }
 
         &-icon {
@@ -241,7 +238,7 @@
             &::after {
                 position: absolute;
                 display: inline-block;
-                left: 1.2rem;
+                left: 1rem;
                 width: 3.5rem;
                 height: .4rem;
                 background-color: $color-orange;

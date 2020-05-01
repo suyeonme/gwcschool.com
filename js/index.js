@@ -1,3 +1,4 @@
+
 /////////////////////////////////////
 // NAVIGATION TOGGLE
 function show() {
@@ -23,7 +24,6 @@ $(window).ready(function () {
 
 /////////////////////////////////////
 // KAKAO MAP
-
 new daum.roughmap.Lander({
     "timestamp": "1587986189284",
     "key": "y5rn"
@@ -99,3 +99,5 @@ $('#wp-19').waypoint(function (direction) {
 }, {
     offset: '60%'
 });
+
+

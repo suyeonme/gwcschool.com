@@ -3,7 +3,6 @@
     z-index: 400;
     width: 100%;
     height: 100vh;
-    //overflow: hidden;
     background-color: $color-beige-2;
     color: $color-black;
 
@@ -74,7 +73,7 @@
 
         @include respond(smallPhone-land) {
             height: auto;
-            padding-top: 22rem;
+            padding-top: 14rem;
         }
     }
 
@@ -93,7 +92,7 @@
         list-style: none;
 
         &:not(:last-child) {
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
 
             @include respond(phone) {
                 margin-bottom: 7rem;

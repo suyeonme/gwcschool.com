@@ -1,7 +1,8 @@
+
 .message {
     width: 100%;
     height: auto;
-    min-height: 100vh;
+    min-height: 150vh;
     position: relative;
 
     @include respond(desktop) {
@@ -134,8 +135,10 @@
             }
         }
     }
+}
 
-    &__cats {
+
+.cats {
         width: 35%;
         margin-left: auto;
         margin-right: 10rem;
@@ -181,7 +184,6 @@
             border-radius: 50%;
         }
     }
-}
 
 .about-quote {
 

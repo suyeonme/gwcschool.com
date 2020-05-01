@@ -25,7 +25,7 @@
     background-position: center;
 
     @include respond(phone-land) {
-        min-height: 100vh;
+        min-height: 80vh;
     }
 
     @include respond(phone) {
@@ -33,7 +33,7 @@
     }
 
     @include respond(smallPhone-land) {
-        min-height: 100vh;
+        min-height: 80vh;
     }
 }
 

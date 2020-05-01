@@ -63,9 +63,7 @@
     }
 
     &__icon {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 1rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -104,6 +102,11 @@
         &:hover { 
             background-size: 110%;  
 
+            // IE
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                background-size: cover;
+            }
+
             @include respond(desktop) {
                 background-size: cover;
             }
@@ -141,6 +144,12 @@
         h2 {
             font-family: $font-secondary-ko;
             font-size: 5rem;
+
+            // IE
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                font-family: $font-primary-ko;
+                font-weight: 300;
+            }
 
             @include respond(phone-land) {
                 font-size: 4rem;
@@ -284,10 +293,13 @@
     }
 
     &__icon {                                          
-        width: 3rem;
-        height: 3rem;
-        fill: $color-brown;
-        &--wood { fill: $color-green-3; }
+        font-size: 3rem;
+        color: $color-brown;
+
+        &--wood { 
+            font-size: 4rem;
+            color: $color-green-3;
+        }
     }
 }
 
@@ -397,7 +409,7 @@
 
         h2 {
             font-weight: 100;
-            font-size: 5rem;
+            font-size: 4.5rem;
             margin-bottom: 7rem;
 
             @include respond(phone) {
@@ -561,7 +573,7 @@
     &__img { width: 100%; }
 
     p {
-        font-family: $font-secondary-ko;
+        font-weight: 300;
         margin: 0;
     }
 }
