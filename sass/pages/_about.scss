@@ -4,6 +4,7 @@
     height: auto;
     min-height: 150vh;
     position: relative;
+    overflow: hidden;
 
     @include respond(desktop) {
         min-height: 50vh;

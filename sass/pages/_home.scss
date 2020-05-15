@@ -156,7 +156,7 @@
 
         h2 {
             span {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 font-weight: 300;
                 margin-left: 2rem;
             }
@@ -307,3 +307,40 @@
     }
 }
 
+.event {
+    text-align: center;
+
+    &__row {
+        overflow: hidden;
+        width: 100%;
+        padding: 0 10rem;
+        display: flex;
+
+        @include respond(desktop) {
+            padding: 0 3rem;
+        }
+
+        @include respond(phone) {
+            padding: 0;
+        }
+    }
+
+    &__col {
+        padding: 1rem;
+
+        @include respond(phone) {
+            padding: 0 .2rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__hidden {
+        @include respond(tab-land) {
+            display: none;
+            padding: 0;
+            }
+        }
+}

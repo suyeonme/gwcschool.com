@@ -1738,31 +1738,6 @@ p {
     width: 100%;
     height: 100%; }
 
-.event {
-  text-align: center; }
-  .event__row {
-    overflow: hidden;
-    width: 100%;
-    padding: 0 10rem;
-    display: flex; }
-    @media only screen and (max-width: 75em) {
-      .event__row {
-        padding: 0 3rem; } }
-    @media only screen and (max-width: 30em) {
-      .event__row {
-        padding: 0; } }
-  .event__col {
-    padding: 1rem; }
-    @media only screen and (max-width: 30em) {
-      .event__col {
-        padding: 0 .2rem; } }
-  .event__img {
-    width: 100%; }
-  @media only screen and (max-width: 62em) {
-    .event__hidden {
-      display: none;
-      padding: 0; } }
-
 .woodcraft-description {
   position: relative;
   text-align: center;

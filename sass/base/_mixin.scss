@@ -18,6 +18,8 @@
 }
 
 @mixin subHeader {
+    width: 100%;
+    overflow: hidden;
     position: relative;
     height: auto;
     min-height: 80vh;

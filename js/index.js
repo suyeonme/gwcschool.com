@@ -1,4 +1,3 @@
-
 /////////////////////////////////////
 // NAVIGATION TOGGLE
 function show() {
@@ -29,7 +28,6 @@ new daum.roughmap.Lander({
     "key": "y5rn"
 }).render();
 
-
 /////////////////////////////////////
 // WAYPOINTS
 $('#wp-1').waypoint(function (direction) {
@@ -44,7 +42,6 @@ $('#wp-2').waypoint(function (direction) {
     offset: '80%'
 });
 
-// Barista
 $('#wp-3').waypoint(function (direction) {
     $('#wp-3').addClass('animated fadeIn');
 }, {
@@ -75,7 +72,7 @@ $('#wp-7').waypoint(function (direction) {
     offset: '60%'
 });
 
-// fadeInUp
+// fade InUp
 $('#wp-16').waypoint(function (direction) {
     $('#wp-16').addClass('animated fadeInUp');
 }, {
