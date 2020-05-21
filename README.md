@@ -1,2 +1,2 @@
 # Wood&coffee school
-This is a website of Wood&coffee school located in Gokseong in Korea
+This is a website of Wood&coffee school located in Gokseong, South Korea
