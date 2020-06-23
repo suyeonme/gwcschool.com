@@ -1,2 +1,2 @@
 # coffee-wood-school
-coffee-wood-school in Gokseong
+Woodcraft&coffee schoool located in Gokseong.
