@@ -1,0 +1,53 @@
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import { useIntersection } from 'react-use';
+
+import { Container } from 'styles/styles';
+import { slideImg } from 'animations/animations';
+
+const ImgWrapper = styled.div`
+  width: 70%;
+  height: auto;
+  margin-bottom: 13rem;
+  margin-top: 10rem;
+  margin-left: ${(props) => props.align === 'right' && 'auto'};
+  transform: ${(props) =>
+    props.align === 'left' ? `translateX(-80px)` : `translateX(80px)`};
+`;
+
+const Image = ({ el }) => {
+  const sectionRef = useRef(null);
+  const imgRef = useRef(null);
+
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.8,
+  });
+
+  useEffect(() => {
+    if (intersection && intersection.isIntersecting) {
+      slideImg(imgRef.current);
+    }
+  }, [intersection]);
+
+  return (
+    <div ref={sectionRef}>
+      <ImgWrapper align={el.align} ref={imgRef}>
+        <img src={el.img} alt={el.alt} />
+      </ImgWrapper>
+    </div>
+  );
+};
+
+const ImageGallery = ({ arr }) => {
+  return (
+    <Container>
+      {arr.map((el, i) => (
+        <Image key={i} el={el} />
+      ))}
+    </Container>
+  );
+};
+
+export default ImageGallery;

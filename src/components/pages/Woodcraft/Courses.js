@@ -1,0 +1,94 @@
+import React from 'react';
+import styled from 'styled-components';
+
+import { woodObj } from 'components/Course/CourseObj';
+import Course from 'components/Course/Course';
+import { Container, Table } from 'components/Course/CourseStyles';
+import { H3Category } from 'styles/styles';
+
+const CourseWrapper = styled.section`
+  width: 100%;
+  height: auto;
+  margin-top: 6rem;
+`;
+
+const Wrapper = styled(Container)`
+  p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+`;
+
+const TableWrapper = styled(Table)`
+  td {
+    padding: 2rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+`;
+
+const Syllabus = () => {
+  const tableArr = [
+    {
+      th: ['1회차', '2회차', '3회차', '4회차'],
+      td: [
+        '원목 재료 지식',
+        '자연목 가공 과정',
+        'DIY 공구 기술',
+        '가구 제작 기술',
+      ],
+    },
+    {
+      th: ['5회차', '6회차', '7회차', ''],
+      td: ['스카시 기술', '양각 음각 기술', '친환경 도료 기술', ''],
+    },
+  ];
+
+  return (
+    <Wrapper>
+      <H3Category align="center">
+        <span>DIY 목공예</span> 커리큘럼
+      </H3Category>
+      <TableWrapper>
+        {tableArr.map((a, i) => (
+          <React.Fragment key={i}>
+            <thead>
+              <tr>
+                {a.th.map((th, i) => (
+                  <th key={i}>{th}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {a.td.map((td, i) => (
+                  <td key={i}>
+                    <h5>{td}</h5>
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </React.Fragment>
+        ))}
+      </TableWrapper>
+      <p>
+        <span>준비물:</span> &nbsp; 앞치마, 장갑, 편한 신발, 마스크
+      </p>
+    </Wrapper>
+  );
+};
+
+const Courses = () => {
+  return (
+    <CourseWrapper>
+      <Course obj={woodObj} />
+      <Syllabus />
+    </CourseWrapper>
+  );
+};
+
+export default Courses;
