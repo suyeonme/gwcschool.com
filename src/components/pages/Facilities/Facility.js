@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
+import Image from 'components/Image/Image';
+
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
@@ -82,7 +84,7 @@ const Facility = ({ facility, setBgColor }) => {
           {info2 && <span>{info2}</span>}
         </TextWrapper>
         <ImgWrapper align={align}>
-          <img src={img} alt={alt} />
+          <Image filename={img} alt={alt} />
         </ImgWrapper>
       </Wrapper>
     );
@@ -92,7 +94,7 @@ const Facility = ({ facility, setBgColor }) => {
     return (
       <Wrapper align={align} ref={sectionRef}>
         <ImgWrapper align={align}>
-          <img src={img} alt={alt} />
+          <Image filename={img} alt={alt} />
         </ImgWrapper>
         <TextWrapper align={align}>
           <h2>{title}</h2>

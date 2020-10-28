@@ -1,5 +1,5 @@
 /*global kakao */
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -10,7 +10,7 @@ const MapContainer = styled.div`
 
 const KaKaoMap = ({ lat, lng }) => {
   const createMarker = useCallback(
-    map => {
+    (map) => {
       const markerPosition = new kakao.maps.LatLng(lat, lng);
       const marker = new kakao.maps.Marker({
         position: markerPosition,
@@ -18,7 +18,7 @@ const KaKaoMap = ({ lat, lng }) => {
 
       marker.setMap(map);
     },
-    [lat, lng]
+    [lat, lng],
   );
 
   useEffect(() => {

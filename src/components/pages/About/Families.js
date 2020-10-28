@@ -2,9 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
-import mickey from 'assets/images/cat-1.jpg';
-import cookie from 'assets/images/cat-2.jpg';
-import wood from 'assets/images/dog.jpg';
+import Image from 'components/Image/Image';
 import { Container, H3Category } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
@@ -60,9 +58,9 @@ const Families = () => {
   });
 
   const imgArr = [
-    { img: mickey, name: '미 키' },
-    { img: cookie, name: '쿠 키' },
-    { img: wood, name: '우 드' },
+    { img: 'cat-1.jpg', name: '미 키' },
+    { img: 'cat-2.jpg', name: '쿠 키' },
+    { img: 'dog.jpg', name: '우 드' },
   ];
 
   return (
@@ -73,7 +71,10 @@ const Families = () => {
       <ItemContainer>
         {imgArr.map((img, i) => (
           <figure key={i} id="family">
-            <img src={img.img} alt={`곡성 목공예&커피체험관 ${img.name}`} />
+            <Image
+              filename={img.img}
+              alt={`곡성 목공예&커피체험관 ${img.name}`}
+            />
             <figcaption>{img.name}</figcaption>
           </figure>
         ))}

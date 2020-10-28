@@ -1,18 +1,23 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
-const Container = styled(BackgroundImage)`
+export const ImageWrapper = styled.div`
   width: 100%;
-  height: auto;
-  min-height: ${(props) => props.height};
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 100%;
+
+  img {
+    transform: scale(1);
+    transition: all 0.7s !important;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 `;
 
-const BgImage = (props) => (
+const Image = (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -22,8 +27,8 @@ const BgImage = (props) => (
               relativePath
               name
               childImageSharp {
-                fluid(quality: 100, maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid_withWebp
+                fluid(maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -40,14 +45,9 @@ const BgImage = (props) => (
         return null;
       }
 
-      return (
-        <Container
-          fluid={image.node.childImageSharp.fluid}
-          height={props.height}
-        />
-      );
+      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />;
     }}
   />
 );
 
-export default BgImage;
+export default Image;

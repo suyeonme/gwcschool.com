@@ -4,11 +4,12 @@ import { useIntersection } from 'react-use';
 import {
   Wrapper,
   Col,
-  Img,
+  ImgWrapper,
   Icon,
   TitleWrapper,
   Recommendation,
 } from 'components/Course/CourseStyles';
+import Image from 'components/Image/Image';
 import thumbIcon from 'assets/icons/thumb.svg';
 import { H2Title } from 'styles/styles';
 import { reveal } from 'animations/animations';
@@ -50,10 +51,14 @@ const Course = ({ obj }) => {
               {title.subTitle}
             </H2Title>
           </TitleWrapper>
-          <Img src={img.img1} alt={img.alt} ref={leftImgRef} />
+          <ImgWrapper ref={leftImgRef}>
+            <Image filename={img.img1} alt={img.alt} />
+          </ImgWrapper>
         </Col>
         <Col ref={sectionRef}>
-          <Img src={img.img2} alt={img.alt} ref={rightImgRef} />
+          <ImgWrapper ref={rightImgRef}>
+            <Image filename={img.img2} alt={img.alt} />
+          </ImgWrapper>
           <p>{title.des}</p>
           <ul>
             {info.map((i, index) => (
@@ -80,7 +85,9 @@ const Course = ({ obj }) => {
     return (
       <Wrapper id={id && id}>
         <Col ref={sectionRef}>
-          <Img src={img.img2} alt={img.alt} ref={rightImgRef} />
+          <ImgWrapper ref={rightImgRef}>
+            <Image filename={img.img2} alt={img.alt} />
+          </ImgWrapper>
           <p>{title.des}</p>
           <ul>
             {info.map((i, index) => (
@@ -107,7 +114,9 @@ const Course = ({ obj }) => {
               {title.subTitle}
             </H2Title>
           </TitleWrapper>
-          <Img src={img.img1} alt={img.alt} ref={leftImgRef} />
+          <ImgWrapper ref={leftImgRef}>
+            <Image filename={img.img1} alt={img.alt} />
+          </ImgWrapper>
         </Col>
       </Wrapper>
     );

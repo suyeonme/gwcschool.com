@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
+import Image from 'components/Image/Image';
 import { Container } from 'styles/styles';
 import { slideImg } from 'animations/animations';
 
@@ -15,7 +16,7 @@ const ImgWrapper = styled.div`
     props.align === 'left' ? `translateX(-80px)` : `translateX(80px)`};
 `;
 
-const Image = ({ el }) => {
+const Img = ({ el }) => {
   const sectionRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -34,7 +35,7 @@ const Image = ({ el }) => {
   return (
     <div ref={sectionRef}>
       <ImgWrapper align={el.align} ref={imgRef}>
-        <img src={el.img} alt={el.alt} />
+        <Image filename={el.img} alt={el.alt} />
       </ImgWrapper>
     </div>
   );
@@ -44,7 +45,7 @@ const ImageGallery = ({ arr }) => {
   return (
     <Container>
       {arr.map((el, i) => (
-        <Image key={i} el={el} />
+        <Img key={i} el={el} />
       ))}
     </Container>
   );

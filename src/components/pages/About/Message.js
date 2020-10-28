@@ -2,8 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
+import Image from 'components/Image/Image';
 import textbgImg from 'assets/images/profile-background.jpg';
-import profileImg from 'assets/images/profile.jpg';
 import { Container, H3Category } from 'styles/styles';
 import { reveal, slideImg } from 'animations/animations';
 
@@ -97,7 +97,10 @@ const Message = () => {
           <H3Category align="left" ref={titleRef}>
             <span>곡성 목공예&커피체험관</span> 소개
           </H3Category>
-          <img src={profileImg} alt="곡성 목공예커피체험관 김광수관장" />
+          <Image
+            filename="profile.jpg"
+            alt="곡성 목공예커피체험관 김광수관장"
+          />
         </ImgWrapper>
         <TextWrapper bgImg={textbgImg}>
           <h3 ref={subTitleRef}>

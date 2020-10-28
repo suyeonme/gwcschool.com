@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { useIntersection } from 'react-use';
 
 import { woodObj } from 'components/Course/CourseObj';
 import Course from 'components/Course/Course';
 import { Container, Table } from 'components/Course/CourseStyles';
 import { H3Category } from 'styles/styles';
+import { reveal } from 'animations/animations';
 
 const CourseWrapper = styled.section`
   width: 100%;
@@ -32,6 +34,22 @@ const TableWrapper = styled(Table)`
 `;
 
 const Syllabus = () => {
+  const sectionRef = useRef(null);
+  const titleRef = useRef(null);
+  const tableRef = useRef(null);
+
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (intersection && intersection.isIntersecting) {
+      reveal(0.2, [titleRef.current, tableRef.current]);
+    }
+  }, [intersection]);
+
   const tableArr = [
     {
       th: ['1회차', '2회차', '3회차', '4회차'],
@@ -49,11 +67,11 @@ const Syllabus = () => {
   ];
 
   return (
-    <Wrapper>
-      <H3Category align="center">
+    <Wrapper ref={sectionRef}>
+      <H3Category align="center" ref={titleRef}>
         <span>DIY 목공예</span> 커리큘럼
       </H3Category>
-      <TableWrapper>
+      <TableWrapper ref={tableRef}>
         {tableArr.map((a, i) => (
           <React.Fragment key={i}>
             <thead>

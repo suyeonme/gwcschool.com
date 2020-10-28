@@ -77,9 +77,8 @@ export const Col = styled.div`
   }
 `;
 
-export const Img = styled.img`
+export const ImgWrapper = styled.div`
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-
   transform: translateY(200px);
   opacity: 0;
 `;

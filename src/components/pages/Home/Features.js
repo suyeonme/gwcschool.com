@@ -2,10 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
-import woodImg from 'assets/images/woodcraft.jpg';
-import baristaImg from 'assets/images/barista.jpg';
-import { Container, H3Category } from 'styles/styles';
+import Image from 'components/Image/Image';
 import { PrimaryBtn } from 'components/Button/Button';
+import { Container, H3Category } from 'styles/styles';
 import { reveal, slideImg } from 'animations/animations';
 
 const Wrapper = styled.div`
@@ -119,7 +118,7 @@ const Feature = ({ feature }) => {
           <span>{titleKo} </span> 체험 및 자격증
         </H3Category>
         <Gradient align={align} />
-        <img src={img} alt={category} />
+        <Image filename={img} alt={category} />
       </ImgContainer>
       <TextContainer align={align}>
         <h2 ref={titleRef}>
@@ -156,7 +155,7 @@ const Features = () => {
       category: `목공예 체험 및 자격증`,
       titleEn: 'Woodcraft',
       titleKo: '목공예',
-      img: woodImg,
+      img: 'woodcraft.jpg',
       des: `디지털의 홍수 속에서 살아가는 우리의 감성이 점점 메말라갑니다. 편리한 플라스틱이 집안을 점령하고 있는 요즘, 목공예를 통해 아날로그적 예술가가 되어보세요.`,
       path: '/woodcraft',
       align: 'left',
@@ -165,7 +164,7 @@ const Features = () => {
       category: `바리스타 체험 및 자격증`,
       titleEn: 'Barista',
       titleKo: '바리스타',
-      img: baristaImg,
+      img: 'barista.jpg',
       des:
         '오늘날 커피의 대중화에도 불구하고 제대로 맛있는 커피를 맛보기가 힘든 것은 사실입니다. 나만의 커피를 직접 만들고 심도 있게 커피를 즐겨보세요.',
       path: '/barista',

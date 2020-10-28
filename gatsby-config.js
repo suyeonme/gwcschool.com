@@ -29,13 +29,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/assets/images/`
-      }
-    },
-    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'http://www.gwcschool.com',
@@ -58,6 +51,13 @@ module.exports = {
       options: {
         lang: 'ko',
       },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images/`
+      }
     },
     {
       resolve: `gatsby-plugin-layout`,

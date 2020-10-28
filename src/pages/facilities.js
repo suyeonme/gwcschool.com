@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import img1 from 'assets/images/facility-1.jpg';
-import img2 from 'assets/images/facility-2.jpg';
-import img3 from 'assets/images/facility-3.jpg';
-import img4 from 'assets/images/facility-4.jpg';
 import Facility from 'components/pages/Facilities/Facility';
 
 const Container = styled.section`
@@ -21,7 +17,7 @@ const Facilities = () => {
   const facilites = [
     {
       title: 'Outdoor',
-      img: img1,
+      img: 'facility-1.jpg',
       alt: '곡성 목공예커피체험관 야외 캠핑',
       des:
         '해가 저물면 야외에서 사랑하는 사람들과 함께 캠핑을 즐겨보세요. 야외 바베큐장과 다양한 텐트가 준비되어 있습니다.',
@@ -32,7 +28,7 @@ const Facilities = () => {
     },
     {
       title: 'Rooms',
-      img: img2,
+      img: 'facility-2.jpg',
       alt: '곡성 목공예커피체험관 민박',
       des: '편히 쉬어가실 수 있는 아늑한 민박 3개동이 준비되어 있습니다.',
       info1: '민박 숙박은 문의',
@@ -42,7 +38,7 @@ const Facilities = () => {
     },
     {
       title: 'Seminar hall',
-      img: img3,
+      img: 'facility-3.jpg',
       alt: '곡성 목공예커피체험관 세미나장',
       des:
         '세미나장에서 체험활동 및 워크샵등 다양한 활동을 진행하실 수 있습니다.',
@@ -51,7 +47,7 @@ const Facilities = () => {
     },
     {
       title: 'Art gallery',
-      img: img4,
+      img: 'facility-4.jpg',
       alt: '곡성 목공예커피체험관 서예관',
       des:
         '운암 조용민 선생님의 제자가 직접 가르치는 아름다운 서예를 체험해보세요.',

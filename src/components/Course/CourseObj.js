@@ -1,15 +1,8 @@
-import baristaImg1 from 'assets/images/barista-1.jpg';
-import baristaImg2 from 'assets/images/barista-2.jpg';
-import baristaImg3 from 'assets/images/barista-3.jpg';
-import baristaImg4 from 'assets/images/barista-4.jpg';
-import woodImg1 from 'assets/images/wood-2.jpg';
-import woodImg2 from 'assets/images/wood-3.jpg';
-
 export const baristaObj = {
   id: 'course-barista',
   img: {
-    img1: baristaImg3,
-    img2: baristaImg4,
+    img1: 'barista-3.jpg',
+    img2: 'barista-4.jpg',
     alt: '핸드드립 전문가 및 바리스타 2급 자격 검정',
   },
   title: {
@@ -37,8 +30,8 @@ export const baristaObj = {
 export const handDripObj = {
   id: 'course-handDrip',
   img: {
-    img1: baristaImg1,
-    img2: baristaImg2,
+    img1: 'barista-1.jpg',
+    img2: 'barista-2.jpg',
     alt: '핸드드립 취미 및 심화 과정',
   },
   title: {
@@ -65,8 +58,8 @@ export const handDripObj = {
 
 export const woodObj = {
   img: {
-    img1: woodImg1,
-    img2: woodImg2,
+    img1: 'wood-2.jpg',
+    img2: 'wood-3.jpg',
     alt: '목공예 DIY 체험 및 자격증 취득',
   },
   title: {
