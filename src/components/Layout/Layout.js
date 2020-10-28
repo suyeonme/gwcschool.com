@@ -70,6 +70,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: inherit; 
     font-size: inherit;
     outline: none; 
+    cursor: pointer;
+    border: none;
     background-color: transparent;
   }
 
