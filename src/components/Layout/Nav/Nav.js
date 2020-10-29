@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { Transition } from 'react-transition-group';
 
+import { BgWrapper } from 'styles/styles';
 import BgImage from 'components/BgImage/BgImage';
 import { showNav, hideNav } from 'animations/animations';
 
@@ -35,6 +36,15 @@ const Wrapper = styled.div`
   height: 100%;
   z-index: 800;
   opacity: 0;
+  overflow: auto;
+
+  @media screen and (max-width: 36rem) {
+    flex-direction: column;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    flex-direction: row;
+  }
 `;
 
 const ItemsWrapper = styled.div`
@@ -44,9 +54,17 @@ const ItemsWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   z-index: 800;
   background-color: #eeebe5;
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    padding: 0 3rem;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 100%;
+    padding: 3rem;
+  }
 `;
 
 const Items = styled.ul`
@@ -57,14 +75,60 @@ const Items = styled.ul`
     font-weight: 700;
     text-transform: uppercase;
 
-    &:not(:last-child) {
-      margin-bottom: 2rem;
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1.3rem;
     }
 
-    span {
+    @media screen and (max-width: 36rem) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 36rem) {
       font-size: 1.1rem;
-      font-weight: 300;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 1.3rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+
+      @media screen and (max-width: 36rem) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  span {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-left: 2rem;
+
+    @media screen and (max-width: 64rem) {
+      display: block;
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      display: inline;
       margin-left: 2rem;
+      margin-top: 0;
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 36rem) {
+      font-size: 0.8rem;
+      margin-left: 1rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.8rem;
     }
   }
 `;
@@ -78,6 +142,20 @@ const StyledLink = styled(Link).attrs({ activeClassName })`
   &:hover {
     color: #be7e64;
     transition: color 0.3s ease-in;
+  }
+`;
+
+const BgContainer = styled(BgWrapper)`
+  @media screen and (max-width: 64rem) {
+    width: 50%;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 100%;
   }
 `;
 
@@ -118,7 +196,9 @@ const Nav = ({ show, setShow }) => {
       <Container ref={containerRef}>
         <Overlay ref={circleRef} />
         <Wrapper ref={wrapperRef}>
-          <BgImage height="100%" filename="nav.jpg" />
+          <BgContainer>
+            <BgImage height="100%" filename="nav.jpg" />
+          </BgContainer>
           <ItemsWrapper>
             <Items ref={linkRef}>
               {items.map((item, index) => (

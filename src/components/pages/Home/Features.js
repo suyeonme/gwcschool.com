@@ -11,9 +11,22 @@ const Wrapper = styled.div`
   position: relative;
   padding: 6rem 0;
 
+  @media screen and (max-width: 36rem) {
+    padding: 4rem 0;
+  }
+
+  @media screen and (max-width: 20rem) {
+    padding: 3rem 0;
+  }
+    }
+
   &:last-child {
-    padding: 10rem 0 6rem;
+    margin-top: 4rem;
     margin-bottom: 2.5rem;
+
+    @media screen and (max-width: 36rem) {
+      margin-top: 0;
+    }
   }
 `;
 
@@ -24,6 +37,18 @@ const ImgContainer = styled.div`
   margin-left: ${(props) => props.align === 'right' && 'auto'};
   transform: ${(props) =>
     props.align === 'left' ? `translateX(-60px)` : `translateX(60px)`};
+
+  @media screen and (max-width: 48rem) {
+    width: calc(100% - 2.5rem);
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: calc(100% - 1.5rem);
+  }
+
+  @media screen and (max-width: 20rem) {
+    width: calc(100% - 1rem);
+  }
 
   img {
     position: relative;
@@ -40,6 +65,30 @@ const Gradient = styled.div`
   bottom: -2.5rem;
   right: ${(props) => props.align === 'right' && '2.5rem'};
   left: ${(props) => props.align === 'left' && '2.5rem'};
+
+  @media screen and (max-width: 64rem) {
+    height: 28rem;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    height: 20rem;
+  }
+
+  @media screen and (max-width: 48rem) {
+    height: 20rem;
+    width: calc(100% + 2.5rem);
+    right: ${(props) => props.align === 'right' && 0};
+    left: ${(props) => props.align === 'left' && 0};
+  }
+
+  @media screen and (max-width: 36rem) {
+    height: 15rem;
+    bottom: -1.5rem;
+  }
+
+  @media screen and (max-width: 20rem) {
+    height: 11rem;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -60,6 +109,35 @@ const TextContainer = styled.div`
   right: ${(props) => props.align === 'left' && '10rem'};
   left: ${(props) => props.align === 'right' && '10rem'};
 
+  @media screen and (max-width: 64rem) {
+    width: 26rem;
+    min-height: 24rem;
+    right: ${(props) => props.align === 'left' && '3rem'};
+    left: ${(props) => props.align === 'right' && '3rem'};
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    min-height: auto;
+    width: 20rem;
+    padding: 2rem;
+  }
+
+  @media screen and (max-width: 48rem) {
+    position: static;
+    transform: translateY(2.5rem);
+    width: 100%;
+  }
+
+  @media screen and (max-width: 36rem) {
+    transform: translateY(1.5rem);
+    min-height: auto;
+    padding: 3rem 2rem;
+  }
+
+  @media screen and (max-width: 20rem) {
+    padding: 2rem;
+  }
+
   h2,
   p {
     transform: translateY(50px);
@@ -72,10 +150,34 @@ const TextContainer = styled.div`
     font-weight: 700;
     margin-bottom: 1.3rem;
 
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 1.3rem;
+    }
+
     span {
       font-size: 1.2rem;
       font-weight: 300;
       margin-left: 1.5rem;
+
+      @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+        font-size: 1rem;
+      }
+
+      @media screen and (max-width: 36rem) {
+        font-size: 1rem;
+      }
+
+      @media screen and (max-width: 20rem) {
+        font-size: 0.8rem;
+      }
     }
   }
 

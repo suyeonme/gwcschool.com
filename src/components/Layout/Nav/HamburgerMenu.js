@@ -11,12 +11,25 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 900;
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    width: 58px;
+    height: 58px;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 48px;
+    height: 48px;
+  }
+
+  @media screen and (max-width: 20rem) {
+    width: 45px;
+    height: 45px;
+  }
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  width: 80%;
-  height: 80%;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -34,6 +47,11 @@ const Hamburger = styled.div`
     background-color: #be7e64;
     border-radius: 3rem;
     transition: all 0.3s ease-in;
+
+    @media screen and (max-width: 36rem) {
+      width: 25px;
+      height: 4px;
+    }
   }
 
   &::before,

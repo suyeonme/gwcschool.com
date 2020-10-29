@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
 import BgImage from 'components/BgImage/BgImage';
-import { Container } from 'styles/styles';
+import { Container, BgWrapper } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
 const Wrapper = styled(Container)`
@@ -18,6 +18,14 @@ const TextWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  @media screen and (max-width: 64rem) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 90%;
+  }
 
   h2,
   p {
@@ -34,11 +42,37 @@ const TextWrapper = styled.div`
     font-size: 2.2rem;
     margin-bottom: 2rem;
     color: #aa9995;
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1.4rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 1.1rem;
+    }
   }
 
   p {
     font-size: 1.1rem;
     line-height: 2.5;
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      line-height: 2.3;
+      font-size: 0.8rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      line-height: 2.3;
+      font-size: 0.8rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.65rem;
+    }
 
     span {
       display: block;
@@ -46,6 +80,19 @@ const TextWrapper = styled.div`
       font-size: 1.5rem;
       margin-top: 2rem;
       font-weight: 300;
+
+      @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+        font-size: 1.1rem;
+      }
+
+      @media screen and (max-width: 36rem) {
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      @media screen and (max-width: 20rem) {
+        font-size: 0.75rem;
+      }
     }
   }
 `;
@@ -59,6 +106,47 @@ const QuotationMark = styled.span`
   color: #a4a89a;
   opacity: 0.2;
   transform: rotate(5deg);
+
+  @media screen and (max-width: 64rem) {
+    font-size: 20rem;
+  }
+
+  @media screen and (max-width: 48rem) {
+    font-size: 17rem;
+  }
+
+  @media screen and (max-width: 36rem) {
+    font-size: 10rem;
+    left: 1.5rem;
+  }
+`;
+
+const BgContainer = styled(BgWrapper)`
+  height: 70vh;
+
+  @media screen and (max-width: 64rem) {
+    height: 50vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 64rem) {
+    height: 70vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    height: 90vh;
+  }
+
+  @media screen and (max-width: 48rem) {
+    height: 70vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    height: 90vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    height: 100vh;
+  }
 `;
 
 const AboutSchool = () => {
@@ -78,7 +166,9 @@ const AboutSchool = () => {
 
   return (
     <Wrapper ref={sectionRef}>
-      <BgImage filename="school.jpg" height="70vh" />
+      <BgContainer>
+        <BgImage filename="school.jpg" height="100%" />
+      </BgContainer>
       <TextWrapper>
         <h2 id="aboutSchool">박사골 오감만족관은,</h2>
         <p id="aboutSchool">

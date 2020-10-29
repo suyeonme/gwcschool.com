@@ -78,6 +78,18 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-size: 1.1rem;
     line-height: 2;
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.7rem;
+    }
   }
 
   span {

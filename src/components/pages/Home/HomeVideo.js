@@ -13,12 +13,28 @@ const VideoContainer = styled(Container)`
   align-items: center;
   overflow: hidden;
   padding: 6rem 0;
+
+  @media screen and (max-width: 36rem) {
+    padding: 4rem 0;
+  }
+
+  @media screen and (max-width: 20rem) {
+    padding: 3rem 0;
+  }
 `;
 
 const Wrapper = styled.div`
   width: 60%;
   border-radius: 7px;
   overflow: hidden;
+
+  @media screen and (max-width: 36rem) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 20rem) {
+    width: 90%;
+  }
 `;
 
 const Youtube = styled.div`

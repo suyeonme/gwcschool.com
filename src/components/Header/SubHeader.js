@@ -23,11 +23,52 @@ const TextWrapper = styled.div`
     font-size: 5.8rem;
     margin-bottom: 1.3rem;
     font-weight: 900;
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 3.8rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+      font-size: 4.8rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 48rem) {
+      font-size: 3.8rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 3.3rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 2.8rem;
+    }
   }
 
   h2 {
     font-size: 1.9rem;
     font-weight: 100;
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 48rem) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 1rem;
+    }
   }
 `;
 

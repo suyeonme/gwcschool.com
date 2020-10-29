@@ -6,19 +6,26 @@ import next from 'assets/icons/arrow-next.svg';
 
 const Container = styled.div`
   position: relative;
-  width: calc(290px * 4);
+  width: 90%;
   height: auto;
   margin: 0 auto;
   overflow: hidden;
-
   transform: translateY(50px);
   opacity: 0;
 `;
 
 const SliderContainer = styled.div`
-  width: 290px;
-  height: 290px;
+  width: 25%;
+  height: auto;
   display: flex;
+
+  @media screen and (max-width: 48rem) {
+    width: 33.333333%;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 100%;
+  }
 `;
 
 const Button = styled.button`
@@ -36,6 +43,11 @@ const Button = styled.button`
   right: ${(props) => props.direction === 'next' && '1%'};
   z-index: 200;
 
+  @media screen and (max-width: 20rem) {
+    width: 40px;
+    height: 40px;
+  }
+
   img {
     width: 25%;
     height: 25%;
@@ -45,17 +57,16 @@ const Button = styled.button`
 const Btn = ({ direction, onClick, img }) => {
   return (
     <Button onClick={onClick} direction={direction}>
-      <img src={img} />
+      <img src={img} alt="이미지 슬라이더 버튼" />
     </Button>
   );
 };
 
 const Carousel = forwardRef((props, ref) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [totalSlide, setTotalSlide] = useState(4);
   const slideRef = useRef(null);
-
   const { arr } = props;
-  const totalSlide = 4;
 
   const handleNext = () => {
     if (currentSlide >= totalSlide) {
@@ -77,6 +88,16 @@ const Carousel = forwardRef((props, ref) => {
     slideRef.current.style.transition = 'all 0.5s ease-in-out';
     slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
   }, [currentSlide]);
+
+  useEffect(() => {
+    const vw = window.innerWidth;
+
+    if (768 <= vw && vw < 1024) {
+      setTotalSlide(5);
+    } else if (320 <= vw && vw < 768) {
+      setTotalSlide(7);
+    }
+  }, []);
 
   return (
     <Container ref={ref}>

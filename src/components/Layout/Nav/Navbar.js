@@ -19,16 +19,12 @@ const NavbarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 75em) {
-    padding: 5rem;
+  @media screen and (max-width: 36rem) {
+    padding: 3rem 1rem;
   }
 
-  @media screen and (max-width: 30em) {
-    padding: 3rem;
-  }
-
-  @media screen and (max-width: 20em) {
-    padding: 5rem;
+  @media screen and (max-width: 20rem) {
+    padding: 1rem;
   }
 `;
 
@@ -37,6 +33,18 @@ const LogoContainer = styled.div`
   height: auto;
   position: relative;
   z-index: 900;
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    width: 110px;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 80px;
+  }
+
+  @media screen and (max-width: 20rem) {
+    width: 70px;
+  }
 `;
 
 const Logo = styled.img`

@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
-// import Image from 'components/Image/Image';
 import img1 from 'assets/images/event-1.jpg';
 import img2 from 'assets/images/event-2.jpg';
 import img3 from 'assets/images/event-3.jpg';

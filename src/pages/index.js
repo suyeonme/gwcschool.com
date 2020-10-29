@@ -16,7 +16,6 @@ const Home = () => {
       <HomeVideo />
       <Features />
       <FixedImg bgImg={fixedImg} />
-      {/* <Carousel /> */}
       <ImageSlide />
     </>
   );

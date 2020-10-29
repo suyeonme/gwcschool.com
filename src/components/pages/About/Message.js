@@ -15,8 +15,29 @@ const Wrapper = styled(Container)`
 
 const ContentWrapper = styled.div`
   width: 90%;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   position: relative;
+
+  @media screen and (max-width: 64rem) {
+    min-height: 55vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 64rem) {
+    min-height: 100vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    min-height: 120vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    min-height: 100vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    min-height: 100vh;
+  }
 `;
 
 const ImgWrapper = styled.div`
@@ -26,6 +47,40 @@ const ImgWrapper = styled.div`
   z-index: 200;
   top: 50%;
   transform: translateY(-50%) translateX(-5%);
+
+  @media screen and (max-width: 64rem) {
+    width: 49%;
+    transform: translateY(-50%) translateX(-5%);
+  }
+
+  @media screen and (max-width: 48rem) {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    transform: translateY(0) translateX(0);
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    width: 49%;
+    height: auto;
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    transform: translateY(-50%) translateX(-5%);
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 100%;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    width: 49%;
+    height: auto;
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    transform: translateY(-50%) translateX(-5%);
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -47,16 +102,92 @@ const TextWrapper = styled.div`
   color: #352825;
   align-self: flex-start;
 
+  @media screen and (max-width: 64rem) {
+    width: 53%;
+    padding: 4rem;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    padding: 3rem;
+  }
+
+  @media screen and (max-width: 48rem) {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    transform: translateY(0);
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    width: 53%;
+    position: absolute;
+    right: 0;
+    top: 53%;
+    margin: 0;
+    padding: 2.5rem 2.5rem 2.5rem 3rem;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (max-width: 36rem) {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    width: 53%;
+    position: absolute;
+    right: 0;
+    top: 53%;
+    margin: 0;
+    padding: 2.5rem 2.5rem 2.5rem 3rem;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    padding: 2rem 2rem 2rem 2.5rem;
+  }
+
   h3 {
     font-size: 1.6rem;
     font-weight: 400;
-
     opacity: 0;
     transform: translateY(60px);
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1.15rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 48rem) {
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1.15rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 36rem) {
+      font-size: 0.9rem;
+    }
 
     span {
       font-size: 1.2rem;
       font-weight: 300;
+
+      @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+        font-size: 0.9rem;
+      }
+
+      @media screen and (orientation: landscape) and (max-width: 48rem) {
+        font-size: 0.75rem;
+      }
+
+      @media screen and (max-width: 36rem) {
+        font-size: 0.9rem;
+      }
+
+      @media screen and (orientation: landscape) and (max-width: 36rem) {
+        font-size: 0.7rem;
+      }
     }
   }
 
@@ -64,9 +195,28 @@ const TextWrapper = styled.div`
     font-size: 1.1rem;
     line-height: 2.5;
     padding-top: 2rem;
-
     opacity: 0;
     transform: translateY(60px);
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 0.8rem;
+      padding-top: 1.5rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 48rem) {
+      font-size: 0.75rem;
+      padding-top: 1rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 0.8rem;
+      padding-top: 1.5rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 36rem) {
+      font-size: 0.7rem;
+      padding-top: 1rem;
+    }
   }
 `;
 
