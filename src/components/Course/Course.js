@@ -8,10 +8,10 @@ import {
   Icon,
   TitleWrapper,
   Recommendation,
+  Title,
 } from 'components/Course/CourseStyles';
 import Image from 'components/Image/Image';
 import thumbIcon from 'assets/icons/thumb.svg';
-import { H2Title } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
 const Course = ({ obj }) => {
@@ -22,6 +22,10 @@ const Course = ({ obj }) => {
   const subTitleRef = useRef(null);
   const leftImgRef = useRef(null);
   const rightImgRef = useRef(null);
+
+  const textRef = useRef(null);
+  const firListRef = useRef(null);
+  const secListRef = useRef(null);
 
   const intersection = useIntersection(sectionRef, {
     root: null,
@@ -36,20 +40,23 @@ const Course = ({ obj }) => {
         titleRef.current,
         rightImgRef.current,
         leftImgRef.current,
+        textRef.current,
+        firListRef.current,
+        secListRef.current,
       ]);
     }
   }, [intersection]);
 
   if (align === 'right') {
     return (
-      <Wrapper id={id && id}>
+      <Wrapper id={id && id} align={align}>
         <Col>
           <TitleWrapper align={align}>
             <h5 ref={subTitleRef}>{title.level}</h5>
-            <H2Title align={align} ref={titleRef}>
+            <Title align={align} ref={titleRef}>
               <span>{title.title}</span>
               {title.subTitle}
-            </H2Title>
+            </Title>
           </TitleWrapper>
           <ImgWrapper ref={leftImgRef}>
             <Image filename={img.img1} alt={img.alt} />
@@ -59,15 +66,15 @@ const Course = ({ obj }) => {
           <ImgWrapper ref={rightImgRef}>
             <Image filename={img.img2} alt={img.alt} />
           </ImgWrapper>
-          <p>{title.des}</p>
-          <ul>
+          <p ref={textRef}>{title.des}</p>
+          <ul ref={firListRef}>
             {info.map((i, index) => (
               <li key={index}>
                 <span>{i.key}:</span> &nbsp; {i.value}
               </li>
             ))}
           </ul>
-          <Recommendation>
+          <Recommendation ref={secListRef}>
             <h4>
               <Icon src={thumbIcon} alt="이런분들께 추천 드려요" />
               이런분들께 추천 드려요!
@@ -83,20 +90,20 @@ const Course = ({ obj }) => {
 
   if (align === 'left') {
     return (
-      <Wrapper id={id && id}>
+      <Wrapper id={id && id} align={align}>
         <Col ref={sectionRef}>
           <ImgWrapper ref={rightImgRef}>
             <Image filename={img.img2} alt={img.alt} />
           </ImgWrapper>
-          <p>{title.des}</p>
-          <ul>
+          <p ref={textRef}>{title.des}</p>
+          <ul ref={firListRef}>
             {info.map((i, index) => (
               <li key={index}>
                 <span>{i.key}:</span> &nbsp; {i.value}
               </li>
             ))}
           </ul>
-          <Recommendation>
+          <Recommendation ref={secListRef}>
             <h4>
               <Icon src={thumbIcon} alt="이런분들께 추천 드려요" />
               이런분들께 추천 드려요!
@@ -109,10 +116,10 @@ const Course = ({ obj }) => {
         <Col>
           <TitleWrapper align={align}>
             <h5 ref={subTitleRef}>{title.level}</h5>
-            <H2Title align={align} ref={titleRef}>
+            <Title align={align} ref={titleRef}>
               <span>{title.title}</span>
               {title.subTitle}
-            </H2Title>
+            </Title>
           </TitleWrapper>
           <ImgWrapper ref={leftImgRef}>
             <Image filename={img.img1} alt={img.alt} />

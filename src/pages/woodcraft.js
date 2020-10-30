@@ -2,7 +2,7 @@ import React from 'react';
 
 import Description from 'components/pages/Woodcraft/Description';
 import OnedayClass from 'components/pages/Woodcraft/OnedayClass';
-import Courses from 'components/pages/Woodcraft/Courses';
+// import Courses from 'components/pages/Woodcraft/Courses';
 import CraftGallery from 'components/pages/Woodcraft/CraftGallery';
 import Benefits from 'components/pages/Woodcraft/Benefits';
 
@@ -29,7 +29,7 @@ const Woodcraft = () => {
     <>
       <Description />
       <OnedayClass />
-      <Courses />
+      {/* <Courses /> */}
       <CraftGallery />
       <Benefits />
       <ImageGallery arr={imgGalleryArr} />

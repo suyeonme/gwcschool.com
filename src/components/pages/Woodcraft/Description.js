@@ -6,21 +6,71 @@ import bgImg from 'assets/images/wood-fixed-1.jpg';
 import { FixedImg } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
-const BgImg = styled(FixedImg)`
+// const BgImg = styled(FixedImg)`
+//   height: 65vh;
+//   background-size: contain;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 6rem 0;
+
+//   p {
+//     font-family: 'Song Myung';
+//     font-size: 2.2rem;
+//     color: white;
+
+//     opacity: 0;
+//     transform: translateY(60px);
+//   }
+// `;
+
+const BgImg = styled.section`
   height: 65vh;
-  background-size: contain;
+  background: url(${(props) => props.bgImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 6rem 0;
 
+  @media screen and (max-width: 64rem) {
+    height: 40vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 64rem) {
+    height: 65vh;
+  }
+
   p {
     font-family: 'Song Myung';
     font-size: 2.2rem;
     color: white;
-
     opacity: 0;
     transform: translateY(60px);
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 48rem) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1.3rem;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 1.1rem;
+    }
   }
 `;
 

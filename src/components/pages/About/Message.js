@@ -11,6 +11,10 @@ const Wrapper = styled(Container)`
   padding: 6rem 0 7rem;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 36rem) {
+    padding: 4rem 0;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -36,7 +40,7 @@ const ContentWrapper = styled.div`
   }
 
   @media screen and (orientation: landscape) and (max-width: 36rem) {
-    min-height: 100vh;
+    min-height: 150vh;
   }
 `;
 
@@ -163,6 +167,7 @@ const TextWrapper = styled.div`
 
     @media screen and (max-width: 36rem) {
       font-size: 1.15rem;
+      text-align: center;
     }
 
     @media screen and (orientation: landscape) and (max-width: 36rem) {
@@ -220,6 +225,12 @@ const TextWrapper = styled.div`
   }
 `;
 
+const Title = styled(H3Category)`
+  @media screen and (max-width: 36rem) {
+    text-align: center;
+  }
+`;
+
 const Message = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
@@ -244,9 +255,9 @@ const Message = () => {
     <Wrapper ref={sectionRef}>
       <ContentWrapper>
         <ImgWrapper ref={imgRef}>
-          <H3Category align="left" ref={titleRef}>
-            <span>곡성 목공예&커피체험관</span> 소개
-          </H3Category>
+          <Title align="left" ref={titleRef}>
+            곡성 목공예&커피체험관 <span>소개</span>
+          </Title>
           <Image
             filename="profile.jpg"
             alt="곡성 목공예커피체험관 김광수관장"

@@ -14,6 +14,18 @@ const DesWrapper = styled.div`
   position: relative;
   padding: 6rem 3rem;
 
+  @media screen and (max-width: 48rem) {
+    padding: 6rem 1rem;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    padding: 4rem 1rem 3rem;
+  }
+
+  @media screen and (max-width: 36rem) {
+    padding: 4rem 1rem 3rem;
+  }
+
   img {
     position: absolute;
     top: 5rem;
@@ -22,6 +34,16 @@ const DesWrapper = styled.div`
     height: 13rem;
     opacity: 0.5;
     z-index: -1;
+
+    @media screen and (max-width: 48rem) {
+      width: 10rem;
+      height: 10rem;
+      left: 5rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      left: 3rem;
+    }
   }
 
   h2 {
@@ -29,13 +51,36 @@ const DesWrapper = styled.div`
     font-weight: 400;
     text-align: center;
     line-height: 2;
-
     opacity: 0;
     transform: translateY(60px);
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.9rem;
+    }
 
     span {
       font-size: 1.5rem;
       font-weight: 700;
+
+      @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+        font-size: 1.2rem;
+      }
+
+      @media screen and (max-width: 48rem) {
+        font-size: 1.2rem;
+      }
+
+      @media screen and (max-width: 20rem) {
+        font-size: 1.05rem;
+      }
     }
   }
 `;
@@ -48,6 +93,29 @@ const CardsWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(60px);
+
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    flex-direction: row;
+    padding: 3rem 0;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 48rem) {
+    padding: 1rem 0 6rem;
+  }
+
+  @media screen and (max-width: 36rem) {
+    padding: 0.5rem 0 4rem;
+    flex-direction: column;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    flex-direction: row;
+    padding: 3rem 0;
+    width: 100%;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -58,6 +126,11 @@ const CardWrapper = styled.div`
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 
+  @media screen and (max-width: 36rem) {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
   &:hover {
     transform: translateY(-10px);
   }
@@ -65,17 +138,51 @@ const CardWrapper = styled.div`
   img {
     width: 28px;
     height: 28px;
+
+    @media screen and (orientation: landscape) and (max-width: 48rem) {
+      width: 23px;
+      height: 23px;
+    }
+
+    @media screen and (max-width: 20rem) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   h3 {
     font-size: 1.1rem;
     font-weight: 400;
     padding: 1.3rem 0 0.8rem;
+
+    @media screen and (orientation: landscape) and (max-width: 48rem) {
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 36rem) {
+      font-size: 0.8rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.9rem;
+    }
   }
 
   p {
     font-size: 0.9rem;
     line-height: 1.8;
+
+    @media screen and (orientation: landscape) and (max-width: 36rem) {
+      font-size: 0.75rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.8rem;
+    }
   }
 `;
 
@@ -102,7 +209,7 @@ const Certificate = () => {
 
   useEffect(() => {
     if (intersection && intersection.isIntersecting) {
-      reveal(0.4, [titleRef.current, subTitleRef.current]);
+      reveal(0.4, [titleRef.current, subTitleRef.current, '#certificate']);
     }
   }, [intersection]);
 
@@ -145,7 +252,7 @@ const Certificate = () => {
         <H3Category align="center" ref={subTitleRef}>
           다양한 바리스타 체험을 즐겨보세요
         </H3Category>
-        <CardsWrapper>
+        <CardsWrapper id="certificate">
           {cards.map((card, i) => (
             <Card icon={card.icon} title={card.title} des={card.des} key={i} />
           ))}

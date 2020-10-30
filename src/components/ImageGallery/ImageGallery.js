@@ -14,6 +14,18 @@ const ImgWrapper = styled.div`
   margin-left: ${(props) => props.align === 'right' && 'auto'};
   transform: ${(props) =>
     props.align === 'left' ? `translateX(-80px)` : `translateX(80px)`};
+
+  @media screen and (max-width: 36rem) {
+    width: 100%;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    width: 70%;
+    margin-bottom: 13rem;
+    margin-top: 10rem;
+  }
 `;
 
 const Img = ({ el }) => {

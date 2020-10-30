@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-// Orange: #BE7E64
-// Beige: #efebe6
-// Green:  #394744;
-
 export const Container = styled.section`
   width: 100%;
   height: auto;

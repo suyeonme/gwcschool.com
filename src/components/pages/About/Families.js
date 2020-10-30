@@ -18,6 +18,20 @@ const ItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: 48rem) {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    width: 45%;
+    margin: 0 0 0 auto;
+  }
+
   figure {
     width: 26%;
     height: 26%;
@@ -34,11 +48,21 @@ const ItemContainer = styled.div`
     text-align: center;
     font-size: 1rem;
     margin-top: 1rem;
+
+    @media screen and (max-width: 36rem) {
+      font-size: 0.85rem;
+    }
   }
 `;
 
 const Title = styled(H3Category)`
-  text-align: right;
+  @media screen and (max-width: 36rem) {
+    text-align: center;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    text-align: right;
+  }
 `;
 
 const Families = () => {
@@ -66,7 +90,7 @@ const Families = () => {
   return (
     <Wrapper ref={sectionRef}>
       <Title align="right" ref={titleRef}>
-        패밀리
+        곡성 목공예&커피체험관 <span>패밀리</span>
       </Title>
       <ItemContainer>
         {imgArr.map((img, i) => (

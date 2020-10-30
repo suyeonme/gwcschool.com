@@ -15,18 +15,57 @@ const TextWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 48rem) {
+    padding: 10rem 0;
+  }
+
+  @media screen and (max-width: 36rem) {
+    padding: 8rem 0;
+  }
+
+  @media screen and (max-width: 36rem) {
+    padding: 6rem 0;
+  }
+
   p {
     font-size: 1.5rem;
     font-weight: 100;
-
     transform: translateY(50px);
     opacity: 0;
+
+    @media screen and (max-width: 48rem) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.9rem;
+    }
 
     span {
       display: block;
       font-size: 1rem;
       margin-top: 1.5rem;
       font-weight: 300;
+
+      @media screen and (max-width: 36rem) {
+        font-size: 0.9rem;
+      }
+
+      @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+        font-size: 0.9rem;
+      }
+
+      @media screen and (max-width: 20rem) {
+        font-size: 0.75rem;
+      }
     }
   }
 `;
