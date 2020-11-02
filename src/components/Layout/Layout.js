@@ -60,6 +60,21 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  li {
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.7rem;
+    }
+  }
+
   img, video {
     width: 100%;
     height: 100%;
@@ -75,9 +90,8 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
   }
 
-  p {
+  p, a {
     font-size: 1.1rem;
-    line-height: 2;
 
     @media screen and (max-width: 48rem) {
       font-size: 1rem;
@@ -94,6 +108,10 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 20rem) {
       font-size: 0.7rem;
     }
+  }
+
+  p {
+    line-height: 2;
   }
 
   span {

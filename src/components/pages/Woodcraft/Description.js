@@ -3,26 +3,7 @@ import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
 import bgImg from 'assets/images/wood-fixed-1.jpg';
-import { FixedImg } from 'styles/styles';
 import { reveal } from 'animations/animations';
-
-// const BgImg = styled(FixedImg)`
-//   height: 65vh;
-//   background-size: contain;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 6rem 0;
-
-//   p {
-//     font-family: 'Song Myung';
-//     font-size: 2.2rem;
-//     color: white;
-
-//     opacity: 0;
-//     transform: translateY(60px);
-//   }
-// `;
 
 const BgImg = styled.section`
   height: 65vh;
@@ -36,10 +17,23 @@ const BgImg = styled.section`
   margin: 6rem 0;
 
   @media screen and (max-width: 64rem) {
-    height: 40vh;
+    height: 30vh;
   }
 
   @media screen and (orientation: landscape) and (max-width: 64rem) {
+    height: 40vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    height: 65vh;
+  }
+
+  @media screen and (max-width: 36rem) {
+    height: 40vh;
+    margin: 4rem 0;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
     height: 65vh;
   }
 

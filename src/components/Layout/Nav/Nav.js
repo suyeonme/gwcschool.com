@@ -71,6 +71,20 @@ const Items = styled.ul`
   width: 100%;
 
   li {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+
+      @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+        margin-bottom: 1.5rem;
+      }
+
+      @media screen and (max-width: 36rem) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  a {
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -90,14 +104,6 @@ const Items = styled.ul`
     @media screen and (max-width: 20rem) {
       font-size: 1.3rem;
     }
-
-    &:not(:last-child) {
-      margin-bottom: 2rem;
-
-      @media screen and (max-width: 36rem) {
-        margin-bottom: 1.5rem;
-      }
-    }
   }
 
   span {
@@ -105,13 +111,18 @@ const Items = styled.ul`
     font-weight: 300;
     margin-left: 2rem;
 
-    @media screen and (max-width: 64rem) {
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 48rem) {
       display: block;
       margin-left: 0;
       margin-top: 0.5rem;
+      font-size: 1.1rem;
     }
 
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    @media screen and (orientation: landscape) and (max-width: 48rem) {
       display: inline;
       margin-left: 2rem;
       margin-top: 0;
@@ -123,7 +134,7 @@ const Items = styled.ul`
     }
 
     @media screen and (orientation: landscape) and (max-width: 36rem) {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       margin-left: 1rem;
     }
 

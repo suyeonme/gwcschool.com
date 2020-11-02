@@ -22,14 +22,18 @@ export const Container = styled.div`
 
   @media screen and (max-width: 36rem) {
     padding: 0 1.5rem;
+    margin-bottom: 4rem;
   }
 `;
 
 export const Table = styled.div`
-  display: flex;
   width: 100%;
   transform: translateY(200px);
   opacity: 0;
+`;
+
+export const TableRow = styled.div`
+  display: flex;
 
   @media screen and (max-width: 36rem) {
     flex-direction: column;
@@ -132,10 +136,6 @@ export const Wrapper = styled.div`
   @media screen and (orientation: landscape) and (max-width: 36rem) {
     flex-direction: row;
     padding: 6rem 1rem;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
-    padding: 4rem 1rem;
   }
 `;
 

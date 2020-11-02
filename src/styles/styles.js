@@ -19,13 +19,13 @@ export const H2Title = styled.h2`
   font-size: 2.4rem;
   font-weight: 100;
   line-height: 1.3;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   text-align: ${(props) => props.align};
   opacity: 0;
   transform: translateY(60px);
 
   @media screen and (max-width: 64rem) {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   @media screen and (max-width: 48rem) {
@@ -34,10 +34,11 @@ export const H2Title = styled.h2`
 
   @media screen and (max-width: 36rem) {
     font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 
   @media screen and (max-width: 20rem) {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   span {

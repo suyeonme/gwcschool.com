@@ -21,16 +21,67 @@ const Wrapper = styled(Container)`
   height: 90vh;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 64rem) {
+    height: 50vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 64rem) {
+    height: 90vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    height: auto;
+    min-height: 90vh;
+    padding: 4rem 0;
+  }
+
+  @media screen and (max-width: 48rem) {
+    height: 65vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    height: auto;
+  }
+
+  @media screen and (max-width: 36rem) {
+    height: auto;
+    min-height: 100vh;
+    padding: 4rem 0;
+  }
 `;
 
 const CardsWrapper = styled.div`
+  width: 75%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  margin: 0 auto;
   margin-top: 1rem;
+
+  @media screen and (max-width: 64rem) {
+    width: 85%;
+  }
+
+  @media screen and (max-width: 48rem) {
+    width: 95%;
+  }
+
+  @media screen and (max-width: 36rem) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+  }
 `;
 
 const CardWrapper = styled.div`
-  width: 20%;
+  width: 25%;
   text-align: center;
   background-color: white;
   padding: 2rem;
@@ -38,8 +89,26 @@ const CardWrapper = styled.div`
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 
-  &:not(:last-child) {
-    margin-right: 3rem;
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 48rem) {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 20rem) {
+    margin-bottom: 1rem;
   }
 
   &:hover {
@@ -49,16 +118,41 @@ const CardWrapper = styled.div`
   img {
     width: 35px;
     height: 35px;
+
+    @media screen and (max-width: 36rem) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media screen and (max-width: 20rem) {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   h4 {
     font-size: 1.2rem;
     font-weight: 400;
     margin-top: 1rem;
+
+    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+      font-size: 0.85rem;
+    }
   }
 
   p {
-    font-size: 1rem;
     line-height: 1.5;
     margin-top: 1rem;
   }

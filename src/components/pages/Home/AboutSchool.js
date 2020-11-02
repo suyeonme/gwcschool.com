@@ -141,12 +141,12 @@ const BgContainer = styled(BgWrapper)`
   }
 
   @media screen and (orientation: landscape) and (max-width: 48rem) {
-    height: 90vh;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
     height: 100vh;
   }
+
+  ${'' /* @media screen and (orientation: landscape) and (max-width: 36rem) {
+    height: 100vh;
+  } */}
 `;
 
 const AboutSchool = () => {

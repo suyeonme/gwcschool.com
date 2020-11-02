@@ -58,7 +58,7 @@ const ImgContainer = styled.div`
 
 const Gradient = styled.div`
   width: 100%;
-  height: 38rem;
+  height: 90%;
   background: linear-gradient(to right bottom, #fdfcfb, #e2d1c3);
   z-index: 100;
   position: absolute;
@@ -66,28 +66,15 @@ const Gradient = styled.div`
   right: ${(props) => props.align === 'right' && '2.5rem'};
   left: ${(props) => props.align === 'left' && '2.5rem'};
 
-  @media screen and (max-width: 64rem) {
-    height: 28rem;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    height: 20rem;
-  }
-
   @media screen and (max-width: 48rem) {
-    height: 20rem;
     width: calc(100% + 2.5rem);
     right: ${(props) => props.align === 'right' && 0};
     left: ${(props) => props.align === 'left' && 0};
   }
 
   @media screen and (max-width: 36rem) {
-    height: 15rem;
+    height: 80%;
     bottom: -1.5rem;
-  }
-
-  @media screen and (max-width: 20rem) {
-    height: 11rem;
   }
 `;
 

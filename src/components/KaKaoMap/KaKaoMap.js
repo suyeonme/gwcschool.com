@@ -6,6 +6,30 @@ import PropTypes from 'prop-types';
 const MapContainer = styled.div`
   width: 50%;
   height: 40vh;
+
+  @media screen and (max-width: 64rem) {
+    height: 20vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 64rem) {
+    height: 30vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    height: 40vh;
+  }
+
+  @media screen and (max-width: 48rem) {
+    height: 30vh;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 100%;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    height: 50vh;
+  }
 `;
 
 const KaKaoMap = ({ lat, lng }) => {

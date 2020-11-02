@@ -28,12 +28,12 @@ const StyledLink = styled(Link)`
   }
 
   @media screen and (max-width: 36rem) {
-    padding: 0.8rem 2.6rem;
+    padding: 0.6rem 2.4rem;
     font-size: 0.7rem;
   }
 
   @media screen and (max-width: 20rem) {
-    padding: 0.6rem 2.4rem;
+    padding: 0.4rem 2rem;
     font-size: 0.5rem;
   }
 

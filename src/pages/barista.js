@@ -31,7 +31,7 @@ const Barista = () => {
       <Certificate />
       <FixedImg bgImg={fixedImg} />
       <Courses />
-      <ImageGallery arr={imgGalleryArr} />
+      <ImageGallery arr={imgGalleryArr} title="바리스타" />
       <Review arr={reviewArr} altTag="바리스타 체험 및 활동" />
     </>
   );

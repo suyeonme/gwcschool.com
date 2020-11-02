@@ -6,6 +6,7 @@ import Course from 'components/Course/Course';
 import {
   Container,
   Table,
+  TableRow,
   Cell,
   Head,
   Body,
@@ -55,15 +56,17 @@ const Syllabus = () => {
         <span>핸드드립 취미&심화과정</span> 커리큘럼
       </H3Category>
       <Table ref={tableRef}>
-        {arr.map((el, i) => (
-          <Cell key={i}>
-            <Head>{el.th}</Head>
-            <Body>
-              <h5>{el.title}</h5>
-              <p>{el.des}</p>
-            </Body>
-          </Cell>
-        ))}
+        <TableRow>
+          {arr.map((el, i) => (
+            <Cell key={i}>
+              <Head>{el.th}</Head>
+              <Body>
+                <h5>{el.title}</h5>
+                <p>{el.des}</p>
+              </Body>
+            </Cell>
+          ))}
+        </TableRow>
       </Table>
     </Container>
   );

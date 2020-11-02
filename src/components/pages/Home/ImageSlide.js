@@ -17,6 +17,14 @@ import { reveal } from 'animations/animations';
 
 const Wrapper = styled(Container)`
   padding: 6rem 0;
+
+  @media screen and (max-width: 36rem) {
+    padding: 4rem 0;
+  }
+
+  @media screen and (max-width: 20rem) {
+    padding: 3rem 0;
+  }
 `;
 
 const TextWrapper = styled.div`

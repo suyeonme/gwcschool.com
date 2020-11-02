@@ -24,24 +24,28 @@ const TextWrapper = styled.div`
     margin-bottom: 1.3rem;
     font-weight: 900;
 
+    @media screen and (max-width: 64rem) {
+      font-size: 4.8rem;
+    }
+
     @media screen and (orientation: landscape) and (max-width: 50.75rem) {
       font-size: 3.8rem;
     }
 
     @media screen and (max-width: 48rem) {
-      font-size: 4.8rem;
+      font-size: 4rem;
     }
 
     @media screen and (orientation: landscape) and (max-width: 48rem) {
-      font-size: 3.8rem;
+      font-size: 3rem;
     }
 
     @media screen and (max-width: 36rem) {
-      font-size: 3.3rem;
+      font-size: 3rem;
     }
 
     @media screen and (max-width: 20rem) {
-      font-size: 2.8rem;
+      font-size: 2rem;
     }
   }
 

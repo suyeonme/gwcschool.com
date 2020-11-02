@@ -4,58 +4,105 @@ import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
 import greenIcon from 'assets/icons/green.svg';
-import { Container } from 'styles/styles';
+import { Container, H3Category, H2Title } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
 const Wrapper = styled(Container)`
   display: flex;
   align-items: center;
-  height: 100vh;
-  padding: 0 3rem;
+  height: auto;
+  padding: 6rem 3rem 3rem;
+
+  @media screen and (max-width: 48rem) {
+    flex-direction: column;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    flex-direction: row;
+    padding: 6rem 0 3rem;
+  }
+
+  @media screen and (max-width: 36rem) {
+    padding: 4rem 3rem 1rem;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    padding: 4rem 0 1rem;
+  }
+
+  @media screen and (max-width: 20rem) {
+    padding: 4rem 2rem 1rem;
+  }
 `;
 
 const ContentWrapper = styled.div`
   width: 50%;
   padding: 3rem;
 
-  h2 {
-    font-size: 2.5rem;
-    line-height: 1.5;
-    margin-bottom: 5rem;
-    color: #323d3b;
-
-    transform: translateY(50px);
-    opacity: 0;
-
-    span {
-      font-weight: 400;
-    }
+  @media screen and (max-width: 48rem) {
+    width: 100%;
+    padding: 0 3rem;
   }
 
-  h3 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
+  @media screen and (orientation: landscape) and (max-width: 48rem) {
+    padding: 3rem;
+    width: 50%;
   }
 
-  a {
-    font-size: 1.1rem;
-    line-height: 2;
+  @media screen and (max-width: 36rem) {
+    padding: 0;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    padding: 3rem;
   }
 
   img {
     width: 30px;
     height: 30px;
     margin-left: 1rem;
+
+    @media screen and (max-width: 48rem) {
+      width: 25px;
+      height: 25px;
+    }
+
+    @media screen and (max-width: 36rem) {
+      width: 18px;
+      height: 18px;
+    }
   }
 `;
 
 const Content = styled.div`
   transform: translateY(50px);
   opacity: 0;
+  margin-bottom: 3rem;
+`;
 
-  &:not(:last-child) {
-    margin-bottom: 3rem;
+const H3Title = styled(H3Category)`
+  transform: translateY(0);
+  opacity: 1;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  padding: 0;
+`;
+
+const Title = styled(H2Title)`
+  line-height: 1.5;
+  margin-bottom: 5rem;
+  color: #323d3b;
+
+  @media screen and (max-width: 48rem) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 36rem) {
+    margin-bottom: 4rem;
+  }
+
+  span {
+    font-weight: 400;
   }
 `;
 
@@ -132,15 +179,15 @@ const Information = ({ firArr, secArr }) => {
   return (
     <Wrapper ref={sectionRef}>
       <ContentWrapper>
-        <h2 ref={titleRef}>
+        <Title ref={titleRef}>
           천혜의 자연환경, <span>곡성 목공예&커피체험관</span>에서 잠시
           쉬어가세요
           <img src={greenIcon} alt="곡성 목공예&커피체험관" />
-        </h2>
+        </Title>
 
         {firArr.map((title, i) => (
           <Content key={i} id="contact-us">
-            <h3>{title}</h3>
+            <H3Title>{title}</H3Title>
             {content(title)}
           </Content>
         ))}
@@ -149,7 +196,7 @@ const Information = ({ firArr, secArr }) => {
       <ContentWrapper>
         {secArr.map((title, i) => (
           <Content key={i} id="contact-us">
-            <h3>{title}</h3>
+            <H3Title>{title}</H3Title>
             {content(title)}
           </Content>
         ))}

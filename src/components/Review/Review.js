@@ -8,6 +8,10 @@ import { reveal } from 'animations/animations';
 
 const Wrapper = styled(Container)`
   margin-bottom: 6rem;
+
+  @media screen and (max-width: 36rem) {
+    margin-bottom: 4rem;
+  }
 `;
 
 const Row = styled.div`

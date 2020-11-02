@@ -3,45 +3,24 @@ import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 
 import Image, { ImageWrapper } from 'components/Image/Image';
-import { Container } from 'styles/styles';
+import { Container, H2Title } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
-const Title = styled.h2`
-  font-size: 3rem;
-  font-weight: 100;
-  text-align: center;
-  margin: 1.3rem 0 3rem;
-  opacity: 0;
-  transform: translateY(60px);
-
-  @media screen and (max-width: 64rem) {
-    font-size: 2rem;
-  }
-
-  @media screen and (max-width: 36rem) {
-    font-size: 1.3rem;
-    margin: 1rem 0 3rem;
-  }
-
-  @media screen and (max-width: 20rem) {
-    font-size: 1rem;
-  }
-`;
-
 const SubTitle = styled.h3`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 100;
   letter-spacing: 2px;
   text-align: center;
+  margin-bottom: 1rem;
   opacity: 0;
   transform: translateY(60px);
 
-  @media screen and (max-width: 64rem) {
-    font-size: 1.3rem;
+  @media screen and (max-width: 48rem) {
+    font-size: 1.15rem;
   }
 
   @media screen and (max-width: 36rem) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   @media screen and (max-width: 20rem) {
@@ -55,74 +34,20 @@ const ImgWrapper = styled.div`
   display: flex;
   justify-content: space-around;
 
-  ${'' /* &:last-child {
-      display: none;
-    } */}
-
   @media screen and (max-width: 64rem) {
     width: 85%;
   }
 
-  @media screen and (max-width: 48rem) {
-    width: 90%;
-  }
-
   @media screen and (max-width: 36rem) {
-    ${'' /* flex-direction: column; */}
-    ${'' /* justify-content: center; */}
-    ${'' /* width: 85%; */}
-    width: 90%;
+    width: 95%;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
-    width: 90%;
-  }
+    div {
+      width: 30%;
+      height: 100%;
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  div {
-    overflow: hidden;
-    position: relative;
-    width: 300px;
-    height: 300px;
-
-    @media screen and (max-width: 64rem) {
-      width: 250px;
-      height: 250px;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      width: 200px;
-      height: 200px;
-    }
-
-    @media screen and (max-width: 48rem) {
-      width: 200px;
-      height: 200px;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 48rem) {
-      width: 180px;
-      height: 180px;
-    }
-
-    @media screen and (max-width: 36rem) {
-      ${'' /* width: 100%;
-      height: 100%; */}
-      width: 150px;
-      height: 150px;
-
-      ${
-        '' /* &:not(:last-child) {
-        margin-bottom: 2rem;
-
-        @media screen and (orientation: landscape) and (max-width: 36rem) {
-          margin-bottom: 0;
-        } */
-      }
+      div {
+        width: 100%;
       }
     }
   }
@@ -222,9 +147,9 @@ const OnedayClass = () => {
   return (
     <Container ref={sectionRef}>
       <SubTitle id="oneday-class">누구나 할 수 있는</SubTitle>
-      <Title id="oneday-class">
+      <H2Title id="oneday-class" align="center">
         DIY 목공예 <span>원데이 클래스</span>
-      </Title>
+      </H2Title>
       <ImgWrapper>
         {images.map((img, i) => (
           <ImageWrapper key={i}>
