@@ -28,16 +28,18 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     ${'' /* background attachment: fixed for edge */}
-    @supports (-ms-ime-align:auto) {
+    ${
+      '' /* @supports (-ms-ime-align:auto) {
       overflow: hidden;
       height: 100%; 
+    } */
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       ${'' /* background attachment: fixed for ie 11 */}
-      overflow: hidden;
+      ${'' /* overflow: hidden;
       height: 100%; 
-    }
+    } */}
   }
 
   body {
@@ -50,14 +52,14 @@ const GlobalStyle = createGlobalStyle`
 
     @supports (-ms-ime-align:auto) {
       ${'' /* background attachment: fixed for edge */}
-      overflow: auto;
-      height: 100%;
+      ${'' /* overflow: auto;
+      height: 100%; */}
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       ${'' /* background attachment: fixed for and ie 11 */}
-      overflow: auto;
-      height: 100%;
+      ${'' /* overflow: auto;
+      height: 100%; */}
     }
 
     @media screen and (max-width: 64rem) {
