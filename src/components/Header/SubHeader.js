@@ -104,12 +104,35 @@ const SubHeader = ({ path }) => {
   };
 
   let obj;
-  if (path === '/about') obj = aboutHeader;
-  if (path === '/barista') obj = baristaHeader;
-  if (path === '/woodcraft') obj = woodHeader;
-  if (path === '/facilities') obj = facilitiesHeader;
-  if (path === '/contact-us') obj = contactHeader;
+  // if (path === '/about') obj = aboutHeader;
+  // if (path === '/barista') obj = baristaHeader;
+  // if (path === '/woodcraft') obj = woodHeader;
+  // if (path === '/facilities') obj = facilitiesHeader;
+  // if (path === '/contact-us') obj = contactHeader;
+  // const { filename, title, subTitle } = obj;
+
+  switch (path) {
+    case '/about':
+      obj = aboutHeader;
+      break;
+    case '/barista':
+      obj = baristaHeader;
+      break;
+    case '/woodcraft':
+      obj = woodHeader;
+      break;
+    case '/facilities':
+      obj = facilitiesHeader;
+      break;
+    case '/contact-us':
+      obj = contactHeader;
+      break;
+    default:
+      return null;
+  }
+
   const { filename, title, subTitle } = obj;
+
   return (
     <Container>
       <BgImage filename={filename} height="80vh" />

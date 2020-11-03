@@ -84,9 +84,17 @@ export const FixedImg = styled.section`
     height: 50vh;
   }
 
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    height: 90vh;
+  }
+
   @media screen and (max-width: 36rem) {
     height: 40vh;
   } 
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    height: 90vh;
+  }
   
 `;
 

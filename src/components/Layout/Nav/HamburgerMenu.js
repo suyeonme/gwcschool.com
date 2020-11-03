@@ -2,38 +2,49 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: 63px;
-  height: 63px;
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+  cursor: pointer;
   border-radius: 50%;
   border: 3px solid #be7e64;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 900;
-
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    width: 58px;
-    height: 58px;
-  }
 
   @media screen and (max-width: 36rem) {
-    width: 48px;
-    height: 48px;
-  }
-
-  @media screen and (max-width: 20rem) {
-    width: 45px;
-    height: 45px;
+    right: 5%;
   }
 `;
 
 const Wrapper = styled.div`
   position: relative;
+  width: 63px;
+  height: 63px;
   border-radius: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+    width: 55px;
+    height: 55px;
+  }
+
+  @media screen and (max-width: 48rem) {
+    width: 55px;
+    height: 55px;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 45px;
+    height: 45px;
+  }
+
+  @media screen and (max-width: 20rem) {
+    width: 38px;
+    height: 38px;
+  }
 `;
 
 const Hamburger = styled.div`
@@ -41,7 +52,8 @@ const Hamburger = styled.div`
   &::before,
   &::after {
     position: absolute;
-    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
     width: 33px;
     height: 5px;
     background-color: #be7e64;
@@ -57,6 +69,7 @@ const Hamburger = styled.div`
   &::before,
   &::after {
     content: '';
+    left: ${(props) => (props.show ? 0 : '50%')};
   }
 
   & {
@@ -64,15 +77,29 @@ const Hamburger = styled.div`
   }
 
   &::before {
-    left: 0;
     top: ${(props) => (props.show ? 0 : '-0.7rem')};
     transform: ${(props) => props.show && `rotate(135deg)`};
+
+    @media screen and (max-width: 36rem) {
+      top: ${(props) => (props.show ? 0 : '-0.6rem')};
+    }
+
+    @media screen and (max-width: 20rem) {
+      top: ${(props) => (props.show ? 0 : '-0.55rem')};
+    }
   }
 
   &::after {
-    left: 0;
     top: ${(props) => (props.show ? 0 : '0.7rem')};
     transform: ${(props) => props.show && `rotate(-135deg)`};
+
+    @media screen and (max-width: 36rem) {
+      top: ${(props) => (props.show ? 0 : '0.6rem')};
+    }
+
+    @media screen and (max-width: 20rem) {
+      top: ${(props) => (props.show ? 0 : '0.55rem')};
+    }
   }
 `;
 

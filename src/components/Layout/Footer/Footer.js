@@ -2,8 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import logoIcon from 'assets/images/footer-logo.png';
-
 const Container = styled.footer`
   display: flex;
   flex-direction: column;
@@ -13,35 +11,13 @@ const Container = styled.footer`
   height: auto;
 `;
 
-const ImgWrapper = styled.div`
-  width: 7%;
-  overflow: hidden;
-  padding: 10rem 0;
-
-  @media screen and (max-width: 64rem) {
-    width: 9%;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    padding: 7rem 0;
-  }
-
-  @media screen and (max-width: 36rem) {
-    width: 15%;
-    padding: 7rem 0;
-  }
-
-  @media screen and (max-width: 20rem) {
-    width: 18%;
-  }
-`;
-
 const TextWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   text-align: center;
   width: 65%;
   margin: 0 auto;
+  padding: 3rem 0;
 
   @media screen and (max-width: 64rem) {
     width: 90%;
@@ -64,11 +40,15 @@ const TextCol = styled.div`
   width: 280px;
 
   @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    margin-bottom: 3rem;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
   }
 
   @media screen and (max-width: 48rem) {
-    margin-bottom: 3rem;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
   }
 
   @media screen and (max-width: 20rem) {
@@ -76,17 +56,17 @@ const TextCol = styled.div`
   }
 
   h4 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 200;
     text-transform: uppercase;
     margin-bottom: 1rem;
 
     @media screen and (max-width: 36rem) {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
 
     @media screen and (max-width: 20rem) {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
 
@@ -96,6 +76,10 @@ const TextCol = styled.div`
     font-weight: 300;
     letter-spacing: 2px;
 
+    @media screen and (max-width: 36rem) {
+      font-size: 0.9rem;
+    }
+
     @media screen and (max-width: 20rem) {
       font-size: 0.8rem;
     }
@@ -104,7 +88,6 @@ const TextCol = styled.div`
 
 const Copyright = styled.p`
   font-size: 0.6rem;
-  padding-top: 3rem;
   margin-bottom: 1rem;
   text-align: center;
 
@@ -156,9 +139,6 @@ const Footer = () => {
 
   return (
     <Container>
-      <ImgWrapper>
-        <img src={logoIcon} alt="곡성 목공예&커피체험관 로고" />
-      </ImgWrapper>
       <TextWrapper>
         {titles.map((title, i) => (
           <TextCol key={i}>

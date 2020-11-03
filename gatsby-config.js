@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: '곡성 목공예&커피체험관',
+    title: '곡성 목공예&커피체험관',
     description: '곡성 목공예&커피체험관, 바리스타자격시험, 목공예, 바리스타, 체험활동',
     keyword: '곡성 목공예&커피체험관, 곡성 목공예커피체험관, 곡성 오감만족관, 목공예커피체험, 오감만족관, 곡성 바리스타, 곡성 목공예',
     siteUrl: 'http://www.gwcschool.com',
@@ -35,8 +35,8 @@ module.exports = {
         sitemap: 'http://www.gwcschool.com/sitemap.xml',
         policy: [{
           userAgent: '*',
-          allow: '/index.html',
-          disallow: '/',
+          allow: '/$',
+          disallow: '/'
         }, ],
       },
     },

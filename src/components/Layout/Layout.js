@@ -26,6 +26,20 @@ const GlobalStyle = createGlobalStyle`
       box-sizing:border-box;
   }
 
+  html {
+    ${'' /* background attachment: fixed for edge */}
+    @supports (-ms-ime-align:auto) {
+      overflow: hidden;
+      height: 100%; 
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      ${'' /* background attachment: fixed for ie 11 */}
+      overflow: hidden;
+      height: 100%; 
+    }
+  }
+
   body {
     font-size: 62.5%; 
     font-family: 'Montserrat', 'Spoqa Han Sans';
@@ -33,6 +47,18 @@ const GlobalStyle = createGlobalStyle`
     color: black;
     background-color:#EEEBE5;
     overflow-x: hidden;
+
+    @supports (-ms-ime-align:auto) {
+      ${'' /* background attachment: fixed for edge */}
+      overflow: auto;
+      height: 100%;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      ${'' /* background attachment: fixed for and ie 11 */}
+      overflow: auto;
+      height: 100%;
+    }
 
     @media screen and (max-width: 64rem) {
       font-size: 56.25%;

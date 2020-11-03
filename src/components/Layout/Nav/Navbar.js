@@ -14,25 +14,21 @@ const NavbarContainer = styled.nav`
   left: 0;
   width: 100%;
   z-index: 900;
-  padding: 4.5rem 3rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 5rem 0 3rem;
 
   @media screen and (max-width: 36rem) {
     padding: 3rem 1rem;
-  }
-
-  @media screen and (max-width: 20rem) {
-    padding: 1rem;
   }
 `;
 
 const LogoContainer = styled.div`
   width: 130px;
   height: auto;
-  position: relative;
   z-index: 900;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
 
   @media screen and (orientation: landscape) and (max-width: 50.75rem) {
     width: 110px;
@@ -40,6 +36,7 @@ const LogoContainer = styled.div`
 
   @media screen and (max-width: 36rem) {
     width: 80px;
+    left: 5%;
   }
 
   @media screen and (max-width: 20rem) {

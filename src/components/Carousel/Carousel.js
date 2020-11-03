@@ -19,12 +19,20 @@ const SliderContainer = styled.div`
   height: auto;
   display: flex;
 
+  img {
+    min-width: 100%;
+  }
+
   @media screen and (max-width: 48rem) {
     width: 33.333333%;
   }
 
   @media screen and (max-width: 36rem) {
     width: 100%;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 36rem) {
+    width: 33.333333%;
   }
 `;
 
@@ -91,11 +99,21 @@ const Carousel = forwardRef((props, ref) => {
 
   useEffect(() => {
     const vw = window.innerWidth;
+    const isLandscape = window.matchMedia('(orientation: landscape)').matches;
+    const isPortrait = window.matchMedia('(orientation: portrait)').matches;
+    const mobilePort = 320 <= vw && vw < 768;
+    const mobileLand = 568 <= vw && vw < 812;
+    const tablet = 768 <= vw && vw < 1024;
 
-    if (768 <= vw && vw < 1024) {
-      setTotalSlide(5);
-    } else if (320 <= vw && vw < 768) {
+    if (isPortrait && mobilePort) {
+      // 1 image
       setTotalSlide(7);
+    } else if ((isLandscape && mobileLand) || (isPortrait && tablet)) {
+      // 3 images
+      setTotalSlide(5);
+    } else if (isLandscape && 812 <= vw) {
+      // 4 images
+      setTotalSlide(4);
     }
   }, []);
 
