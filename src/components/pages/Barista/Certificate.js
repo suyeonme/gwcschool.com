@@ -222,7 +222,7 @@ const Certificate = () => {
     {
       icon: handDrip,
       title: '핸드드립',
-      des: '여러가지 드리퍼를 사용하여 맛있는 커피를 추출해봅니다',
+      des: '여러가지 드리퍼를 사용하여 맛있는 커피를 추출해봅니다.',
     },
     {
       icon: coffeeCup,

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 const MapContainer = styled.div`
   width: 50%;
   height: 40vh;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
   @media screen and (max-width: 64rem) {
     height: 20vh;

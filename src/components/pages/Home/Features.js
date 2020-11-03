@@ -127,7 +127,7 @@ const TextContainer = styled.div`
   @media screen and (max-width: 36rem) {
     transform: translateY(1.5rem);
     min-height: auto;
-    padding: 3rem 2rem;
+    padding: 2rem;
   }
 
   @media screen and (orientation: landscape) and (max-width: 36rem) {
@@ -188,6 +188,10 @@ const TextContainer = styled.div`
 
   p {
     margin-bottom: 2rem;
+
+    @media screen and (max-width: 36rem) {
+      margin-bottom: 1.3 rem;
+    }
   }
 `;
 

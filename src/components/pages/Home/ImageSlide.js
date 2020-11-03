@@ -29,6 +29,10 @@ const Wrapper = styled(Container)`
 
 const TextWrapper = styled.div`
   margin-bottom: 3rem;
+
+  @media screen and (max-width: 36rem) {
+    margin-bottom: 0;
+  }
 `;
 
 const Title = styled(H2Title)`

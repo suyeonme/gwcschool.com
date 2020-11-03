@@ -73,10 +73,10 @@ export const H3Category = styled.h3`
 
 export const FixedImg = styled.section`
   background-image: url(${(props) => props.bgImg})};
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: cover;
+  ${'' /* background-attachment: fixed; */}
   width: 100%;
   height: 90vh;
 
@@ -94,7 +94,7 @@ export const FixedImg = styled.section`
 
   @media screen and (orientation: landscape) and (max-width: 36rem) {
     height: 90vh;
-  }
+  } 
   
 `;
 
