@@ -6,36 +6,12 @@ const StyledLink = styled(Link)`
   display: inline-block;
   color: ${(props) => props.color};
   border: 1px solid ${(props) => props.color};
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
-  padding: 1.3rem 3.1rem;
+  padding: 2rem 4.3rem;
   align-self: flex-start;
   opacity: 0;
   transform: translateY(60px);
-
-  @media screen and (max-width: 64rem) {
-    padding: 1rem 2.8rem;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    padding: 0.8rem 2.6rem;
-    font-size: 0.7rem;
-  }
-
-  @media screen and (max-width: 48rem) {
-    padding: 0.9rem 2.6rem;
-    font-size: 0.8rem;
-  }
-
-  @media screen and (max-width: 36rem) {
-    padding: 0.6rem 2.4rem;
-    font-size: 0.7rem;
-  }
-
-  @media screen and (max-width: 20rem) {
-    padding: 0.4rem 2rem;
-    font-size: 0.5rem;
-  }
 
   &:hover {
     background-color: ${(props) => props.color};
@@ -48,36 +24,12 @@ const LinkTag = styled.a`
   display: inline-block;
   color: ${(props) => props.color};
   border: 1px solid ${(props) => props.color};
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
-  padding: 1.3rem 3.1rem;
+  padding: 2rem 4.3rem;
   align-self: flex-start;
   opacity: 0;
   transform: translateY(60px);
-
-  @media screen and (max-width: 64rem) {
-    padding: 1rem 2.8rem;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    padding: 0.8rem 2.6rem;
-    font-size: 0.7rem;
-  }
-
-  @media screen and (max-width: 48rem) {
-    padding: 0.9rem 2.6rem;
-    font-size: 0.8rem;
-  }
-
-  @media screen and (max-width: 36rem) {
-    padding: 0.8rem 2.6rem;
-    font-size: 0.7rem;
-  }
-
-  @media screen and (max-width: 20rem) {
-    padding: 0.6rem 2.4rem;
-    font-size: 0.5rem;
-  }
 
   &:hover {
     background-color: ${(props) => props.color};

@@ -10,19 +10,15 @@ const Wrapper = styled(Container)`
   height: 70vh;
   position: relative;
 
-  @media screen and (max-width: 64rem) {
+  @media screen and (max-width: 1200px) {
     height: 40vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 64rem) {
-    height: 70vh;
-  }
-
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     height: 50vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 812px) {
     height: 80vh;
   }
 
@@ -36,7 +32,7 @@ const Wrapper = styled(Container)`
     opacity: 0;
     transform: translate(-50%, 60px);
 
-    @media screen and (max-width: 36rem) {
+    @media screen and (max-width: 576px) {
       width: 85%;
     }
   }

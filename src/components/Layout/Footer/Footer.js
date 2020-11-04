@@ -15,21 +15,15 @@ const TextWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   text-align: center;
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 6rem 0;
 
-  @media screen and (max-width: 64rem) {
+  @media (max-width: 1199.98px) {
     width: 90%;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  @media screen and (max-width: 48rem) {
+  @media (max-width: 767.98px) {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -39,50 +33,24 @@ const TextWrapper = styled.div`
 const TextCol = styled.div`
   width: 280px;
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+  @media (max-width: 991.98px) {
     &:not(:last-child) {
-      margin-bottom: 3rem;
+      margin-bottom: 5rem;
     }
-  }
-
-  @media screen and (max-width: 48rem) {
-    &:not(:last-child) {
-      margin-bottom: 3rem;
-    }
-  }
-
-  @media screen and (max-width: 20rem) {
-    padding: 0 2rem;
   }
 
   h4 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 200;
     text-transform: uppercase;
     margin-bottom: 1rem;
-
-    @media screen and (max-width: 36rem) {
-      font-size: 1.1rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 1rem;
-    }
   }
 
   p,
   a {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 300;
     letter-spacing: 2px;
-
-    @media screen and (max-width: 36rem) {
-      font-size: 0.9rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.8rem;
-    }
   }
 `;
 
@@ -92,7 +60,9 @@ const Copyright = styled.p`
   text-align: center;
 
   span {
-    display: block;
+    @media (max-width: 567.98px) {
+      display: block;
+    }
   }
 `;
 
@@ -148,8 +118,8 @@ const Footer = () => {
         ))}
       </TextWrapper>
       <Copyright>
-        COPYRIGHT &copy; 2020 곡성 목공예&커피체험관.{' '}
-        <span>ALL RIGHTS RESERVED.</span>
+        COPYRIGHT &copy; 2020 곡성 목공예&커피체험관.
+        <span> ALL RIGHTS RESERVED.</span>
       </Copyright>
     </Container>
   );

@@ -17,37 +17,27 @@ const Wrapper = styled(Container)`
     ${(props) => `url(${props.bgImg})`};
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  height: 90vh;
+  ${'' /* background-attachment: fixed; */}
+  min-height: 90vh;
+  height: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  @media screen and (max-width: 64rem) {
-    height: 50vh;
+  @media screen and (max-width: 1200px) {
+    min-height: 50vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 64rem) {
+  @media screen and (orientation: landscape) and (max-width: 1024px) {
     height: 90vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    height: auto;
-    min-height: 90vh;
-    padding: 4rem 0;
+  @media screen and (max-width: 768px) {
+    min-height: 65vh;
   }
 
-  @media screen and (max-width: 48rem) {
-    height: 65vh;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 48rem) {
-    height: auto;
-  }
-
-  @media screen and (max-width: 36rem) {
-    height: auto;
-    min-height: 100vh;
-    padding: 4rem 0;
+  @media screen and (max-width: 576px) {
+    min-height: 80vh;
   }
 `;
 
@@ -58,22 +48,22 @@ const CardsWrapper = styled.div`
   margin: 0 auto;
   margin-top: 1rem;
 
-  @media screen and (max-width: 64rem) {
+  @media screen and (max-width: 1200px) {
     width: 85%;
   }
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     width: 95%;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     flex-direction: row;
     justify-content: space-around;
     width: 95%;
@@ -89,26 +79,18 @@ const CardWrapper = styled.div`
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+  @media screen and (max-width: 812px) {
     width: 30%;
   }
 
-  @media screen and (max-width: 48rem) {
-    width: 30%;
-  }
-
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     width: 30%;
     margin-bottom: 0;
-  }
-
-  @media screen and (max-width: 20rem) {
-    margin-bottom: 1rem;
   }
 
   &:hover {
@@ -116,45 +98,20 @@ const CardWrapper = styled.div`
   }
 
   img {
-    width: 35px;
-    height: 35px;
-
-    @media screen and (max-width: 36rem) {
-      width: 30px;
-      height: 30px;
-    }
-
-    @media screen and (max-width: 20rem) {
-      width: 25px;
-      height: 25px;
-    }
+    width: 3rem;
+    height: 3rem;
   }
 
   h4 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 400;
-    margin-top: 1rem;
-
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 1rem;
-    }
-
-    @media screen and (max-width: 48rem) {
-      font-size: 1.1rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 1rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.85rem;
-    }
+    margin-top: 2rem;
   }
 
   p {
+    font-size: 1.5rem;
     line-height: 1.5;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
   div {

@@ -8,21 +8,16 @@ import Nav from 'components/Layout/Nav/Nav';
 
 const NavbarContainer = styled.nav`
   width: 100%;
-  height: 80px;
+  height: 13rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 900;
-  padding: 5rem 0 3rem;
-
-  @media screen and (max-width: 36rem) {
-    padding: 3rem 1rem;
-  }
 `;
 
 const LogoContainer = styled.div`
-  width: 130px;
+  width: 12rem;
   height: auto;
   z-index: 900;
   position: absolute;
@@ -30,17 +25,8 @@ const LogoContainer = styled.div`
   left: 3%;
   transform: translateY(-50%);
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    width: 110px;
-  }
-
-  @media screen and (max-width: 36rem) {
-    width: 80px;
+  @media (max-width: 575.98px) {
     left: 5%;
-  }
-
-  @media screen and (max-width: 20rem) {
-    width: 70px;
   }
 `;
 

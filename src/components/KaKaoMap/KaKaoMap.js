@@ -8,11 +8,11 @@ const MapContainer = styled.div`
   height: 40vh;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 64rem) {
+  @media screen and (max-width: 1200px) {
     height: 20vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 64rem) {
+  @media screen and (orientation: landscape) and (max-width: 1024px) {
     height: 30vh;
   }
 
@@ -20,15 +20,15 @@ const MapContainer = styled.div`
     height: 40vh;
   }
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     height: 30vh;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     height: 50vh;
   }
 `;

@@ -12,18 +12,7 @@ import { reveal } from 'animations/animations';
 
 const DesWrapper = styled.div`
   position: relative;
-  padding: 6rem 3rem;
-
-  @media screen and (max-width: 48rem) {
-    padding: 6rem 1rem;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 48rem) {
-    padding: 4rem 1rem 3rem;
-  }
-
-  @media screen and (max-width: 36rem) {
-    padding: 4rem 1rem 3rem;
+  padding: 10rem 3rem;
   }
 
   img {
@@ -34,53 +23,18 @@ const DesWrapper = styled.div`
     height: 13rem;
     opacity: 0.5;
     z-index: -1;
-
-    @media screen and (max-width: 48rem) {
-      width: 10rem;
-      height: 10rem;
-      left: 5rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      left: 3rem;
-    }
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: 400;
     text-align: center;
     line-height: 2;
     opacity: 0;
     transform: translateY(60px);
 
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 1.1rem;
-    }
-
-    @media screen and (max-width: 48rem) {
-      font-size: 1.1rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.9rem;
-    }
-
     span {
-      font-size: 1.5rem;
       font-weight: 700;
-
-      @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-        font-size: 1.2rem;
-      }
-
-      @media screen and (max-width: 48rem) {
-        font-size: 1.2rem;
-      }
-
-      @media screen and (max-width: 20rem) {
-        font-size: 1.05rem;
-      }
     }
   }
 `;
@@ -88,7 +42,7 @@ const DesWrapper = styled.div`
 const CardsWrapper = styled.div`
   width: 90%;
   height: auto;
-  padding: 3rem 0 6rem;
+  padding: 3rem 0 10rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -96,25 +50,8 @@ const CardsWrapper = styled.div`
   opacity: 0;
   transform: translateY(60px);
 
-  @media screen and (orientation: landscape) and (max-width: 48rem) {
-    flex-direction: row;
-    padding: 3rem 0;
-    width: 100%;
-  }
-
-  @media screen and (max-width: 48rem) {
-    padding: 1rem 0 6rem;
-  }
-
-  @media screen and (max-width: 36rem) {
-    padding: 0.5rem 0 4rem;
+  @media screen and (max-width: 576px) {
     flex-direction: column;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
-    flex-direction: row;
-    padding: 3rem 0;
-    width: 100%;
   }
 `;
 
@@ -122,11 +59,11 @@ const CardWrapper = styled.div`
   width: 20%;
   text-align: center;
   background-color: white;
-  padding: 1.5rem;
+  padding: 2rem;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 100%;
     margin-bottom: 1.5rem;
   }
@@ -136,53 +73,19 @@ const CardWrapper = styled.div`
   }
 
   img {
-    width: 28px;
-    height: 28px;
-
-    @media screen and (orientation: landscape) and (max-width: 48rem) {
-      width: 23px;
-      height: 23px;
-    }
-
-    @media screen and (max-width: 20rem) {
-      width: 20px;
-      height: 20px;
-    }
+    width: 3rem;
+    height: 3rem;
   }
 
   h3 {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     font-weight: 400;
     padding: 1.3rem 0 0.8rem;
-
-    @media screen and (orientation: landscape) and (max-width: 48rem) {
-      font-size: 1rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 1rem;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 36rem) {
-      font-size: 0.8rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.9rem;
-    }
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     line-height: 1.8;
-
-    @media screen and (orientation: landscape) and (max-width: 36rem) {
-      font-size: 0.75rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.8rem;
-    }
   }
 `;
 

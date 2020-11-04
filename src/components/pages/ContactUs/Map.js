@@ -9,27 +9,19 @@ import { reveal } from 'animations/animations';
 const MapWrapper = styled(Container)`
   display: flex;
   align-items: center;
-  padding: 6rem 6rem;
+  padding: 10rem 6rem;
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    padding: 6rem;
+  @media screen and (max-width: 768px) {
+    padding: 10rem 10rem;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 48rem) {
-    padding: 6rem 3rem;
-  }
-
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
-    padding: 4rem 3rem;
+    padding: 10rem 6rem;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     flex-direction: row;
-  }
-
-  @media screen and (max-width: 20rem) {
-    padding: 4rem 2rem;
   }
 `;
 
@@ -37,17 +29,13 @@ const MapText = styled.div`
   width: 50%;
   margin-left: 6rem;
 
-  @media screen and (max-width: 48rem) {
-    margin-left: 3rem;
-  }
-
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 100%;
     margin-left: 0;
     margin-top: 3rem;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     margin-left: 3rem;
   }
 
@@ -59,16 +47,11 @@ const MapText = styled.div`
 
   li {
     list-style-type: circle;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
     margin-left: 1.1rem;
-    font-size: 1rem;
 
-    @media screen and (max-width: 48rem) {
-      font-size: 0.9rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.7rem;
+    @media screen and (max-width: 576px) {
+      margin-left: 3rem;
     }
   }
 `;

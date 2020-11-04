@@ -9,7 +9,7 @@ import { reveal } from 'animations/animations';
 const Wrapper = styled(Container)`
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 6rem;
+  padding: 10rem 0;
 `;
 
 const ItemContainer = styled.div`
@@ -18,24 +18,23 @@ const ItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     width: 45%;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 90%;
     margin: 0 auto;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 768px) {
     width: 45%;
-    margin: 0 0 0 auto;
+    margin: 0 auto;
   }
 
   figure {
     width: 26%;
     height: 26%;
-
     opacity: 0;
     transform: translateY(60px);
 
@@ -49,18 +48,18 @@ const ItemContainer = styled.div`
     font-size: 1rem;
     margin-top: 1rem;
 
-    @media screen and (max-width: 36rem) {
+    @media screen and (max-width: 576px) {
       font-size: 0.85rem;
     }
   }
 `;
 
 const Title = styled(H3Category)`
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     text-align: center;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     text-align: right;
   }
 `;

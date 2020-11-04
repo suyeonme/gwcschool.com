@@ -14,56 +14,31 @@ const BgImg = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 6rem 0;
+  margin: 10rem 0;
 
-  @media screen and (max-width: 64rem) {
+  @media screen and (max-width: 1200px) {
     height: 30vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 64rem) {
-    height: 40vh;
+  @media screen and (orientation: landscape) and (max-width: 1024px) {
+    height: 50vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    height: 65vh;
-  }
-
-  @media screen and (max-width: 36rem) {
-    height: 40vh;
-    margin: 4rem 0;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 812px) {
     height: 65vh;
   }
 
   p {
+    font-size: 3rem;
     font-family: 'Song Myung';
-    font-size: 2.2rem;
     color: white;
     opacity: 0;
     transform: translateY(60px);
 
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 1.8rem;
-    }
-
-    @media screen and (max-width: 48rem) {
-      font-size: 1.8rem;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 48rem) {
-      font-size: 1.5rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 1.3rem;
+    @media screen and (max-width: 576px) {
+      font-size: 2.5rem;
       text-align: center;
-      padding: 0 1rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 1.1rem;
+      padding: 0 2rem;
     }
   }
 `;

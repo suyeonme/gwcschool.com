@@ -102,7 +102,7 @@ const Carousel = forwardRef((props, ref) => {
     const isLandscape = window.matchMedia('(orientation: landscape)').matches;
     const isPortrait = window.matchMedia('(orientation: portrait)').matches;
     const mobilePort = 320 <= vw && vw < 768;
-    const mobileLand = 568 <= vw && vw < 812;
+    const mobileLand = 576 <= vw && vw < 812;
     const tablet = 768 <= vw && vw < 1024;
 
     if (isPortrait && mobilePort) {

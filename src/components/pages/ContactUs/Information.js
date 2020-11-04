@@ -11,27 +11,16 @@ const Wrapper = styled(Container)`
   display: flex;
   align-items: center;
   height: auto;
-  padding: 6rem 3rem 3rem;
+  padding: 10rem 3rem 6rem;
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding: 10rem 6rem;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 48rem) {
+  @media screen and (orientation: landscape) and (max-width: 768px) {
     flex-direction: row;
-    padding: 6rem 0 3rem;
-  }
-
-  @media screen and (max-width: 36rem) {
-    padding: 4rem 3rem 1rem;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
-    padding: 4rem 0 1rem;
-  }
-
-  @media screen and (max-width: 20rem) {
-    padding: 4rem 2rem 1rem;
+    padding: 10rem 3rem;
   }
 `;
 
@@ -39,45 +28,31 @@ const ContentWrapper = styled.div`
   width: 50%;
   padding: 3rem;
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     padding: 0 3rem;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 48rem) {
+  @media screen and (max-width: 576px) {
+    padding: 0;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 768px) {
     padding: 3rem;
     width: 50%;
   }
 
-  @media screen and (max-width: 36rem) {
-    padding: 0;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
-    padding: 3rem;
-  }
-
   img {
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     margin-left: 1rem;
-
-    @media screen and (max-width: 48rem) {
-      width: 25px;
-      height: 25px;
-    }
-
-    @media screen and (max-width: 36rem) {
-      width: 18px;
-      height: 18px;
-    }
   }
 `;
 
 const Content = styled.div`
   transform: translateY(50px);
   opacity: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 `;
 
 const H3Title = styled(H3Category)`
@@ -90,15 +65,11 @@ const H3Title = styled(H3Category)`
 
 const Title = styled(H2Title)`
   line-height: 1.5;
-  margin-bottom: 5rem;
   color: #323d3b;
+  margin-bottom: 6rem;
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     text-align: center;
-  }
-
-  @media screen and (max-width: 36rem) {
-    margin-bottom: 4rem;
   }
 
   span {

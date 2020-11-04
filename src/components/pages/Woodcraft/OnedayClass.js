@@ -7,25 +7,13 @@ import { Container, H2Title } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
 const SubTitle = styled.h3`
-  font-size: 1.4rem;
+  font-size: 2.3rem;
   font-weight: 100;
   letter-spacing: 2px;
   text-align: center;
   margin-bottom: 1rem;
   opacity: 0;
   transform: translateY(60px);
-
-  @media screen and (max-width: 48rem) {
-    font-size: 1.15rem;
-  }
-
-  @media screen and (max-width: 36rem) {
-    font-size: 0.9rem;
-  }
-
-  @media screen and (max-width: 20rem) {
-    font-size: 0.8rem;
-  }
 `;
 
 const ImgWrapper = styled.div`
@@ -34,11 +22,11 @@ const ImgWrapper = styled.div`
   display: flex;
   justify-content: space-around;
 
-  @media screen and (max-width: 64rem) {
+  @media screen and (max-width: 1200px) {
     width: 85%;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 95%;
   }
 
@@ -55,33 +43,29 @@ const ImgWrapper = styled.div`
 
 const TextWrapper = styled.div`
   width: 100%;
-  padding: 0 10rem;
+  padding: 0 20rem;
 
-  @media screen and (max-width: 64rem) {
-    padding: 0 7rem;
+  @media screen and (max-width: 1200px) {
+    padding: 0 15rem;
   }
 
-  @media screen and (max-width: 48rem) {
-    padding: 0 5rem;
+  @media screen and (max-width: 768px) {
+    padding: 0 8rem;
   }
 
-  @media screen and (max-width: 36rem) {
-    padding: 0 2rem;
+  @media screen and (max-width: 576px) {
+    padding: 0;
   }
 
   p {
     text-align: center;
     padding: 0 3rem;
-    margin: 1rem 0 3rem;
+    margin: 3rem 0;
     opacity: 0;
     transform: translateY(60px);
 
-    @media screen and (max-width: 64rem) {
-      padding: 0 1rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      padding: 0;
+    @media screen and (max-width: 576px) {
+      margin: 3rem 0 6rem;
     }
   }
 
@@ -91,25 +75,15 @@ const TextWrapper = styled.div`
   }
 
   li {
-    font-size: 1rem;
     list-style-type: disc;
     margin-left: 1.1rem;
 
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 0.9rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 0.9rem;
-      line-height: 1.3;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.7rem;
+    @media screen and (max-width: 576px) {
+      margin-left: 5rem;
     }
 
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
   }
 `;

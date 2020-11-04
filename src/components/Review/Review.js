@@ -7,11 +7,7 @@ import { Container, H3Category } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
 const Wrapper = styled(Container)`
-  margin-bottom: 6rem;
-
-  @media screen and (max-width: 36rem) {
-    margin-bottom: 4rem;
-  }
+  margin-bottom: 10rem;
 `;
 
 const Row = styled.div`
@@ -23,19 +19,11 @@ const Row = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+  @media screen and (max-width: 768px) {
     width: 80%;
   }
 
-  @media screen and (max-width: 48rem) {
-    width: 80%;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 48rem) {
-    width: 90%;
-  }
-
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 `;
@@ -45,29 +33,21 @@ const ImgWrapper = styled(ImageWrapper)`
   height: 25%;
   margin: 1.5rem;
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     margin: 1rem;
     width: 35%;
     height: 35%;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     width: 25%;
     height: 25%;
   }
 `;
 
 const Label = styled.p`
-  font-size: 1rem;
+  font-size: 1.4rem;
   text-align: center;
-
-  @media screen and (max-width: 48rem) {
-    font-size: 0.8rem;
-  }
-
-  @media screen and (max-width: 20rem) {
-    font-size: 0.6rem;
-  }
 `;
 
 const Review = ({ arr, altTag }) => {

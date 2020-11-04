@@ -27,20 +27,20 @@ const Wrapper = styled.div`
   overflow: hidden;
   position: relative;
 
-  @media screen and (max-width: 68rem) {
+  @media screen and (max-width: 1200px) {
     min-height: 40vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 68rem) {
-    min-height: 75vh;
+  @media screen and (orientation: landscape) and (max-width: 1024px) {
+    min-height: 55vh;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 100%;
     min-height: 50vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 812px) {
     min-height: 85vh;
   }
 
@@ -58,41 +58,9 @@ const TextWrapper = styled.div`
   padding: 0 6rem;
   text-align: center;
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    padding: 0 2rem;
-  }
-
-  @media screen and (max-width: 48rem) {
-    padding: 0 2rem;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
-    padding: 0 6rem;
-  }
-
   h2 {
     font-family: 'Song Myung';
     font-size: 3rem;
-
-    @media screen and (max-width: 68rem) {
-      font-size: 2.2rem;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 1.8rem;
-    }
-
-    @media screen and (max-width: 48rem) {
-      font-size: 1.8rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 1.6rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 1.4rem;
-    }
   }
 
   h2,

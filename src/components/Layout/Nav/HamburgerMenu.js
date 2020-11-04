@@ -11,40 +11,20 @@ const Container = styled.div`
   border-radius: 50%;
   border: 3px solid #be7e64;
 
-  @media screen and (max-width: 36rem) {
+  @media (max-width: 575.98px) {
     right: 5%;
   }
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  width: 63px;
-  height: 63px;
+  width: 6.5rem;
+  height: 6.5rem;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    width: 55px;
-    height: 55px;
-  }
-
-  @media screen and (max-width: 48rem) {
-    width: 55px;
-    height: 55px;
-  }
-
-  @media screen and (max-width: 36rem) {
-    width: 45px;
-    height: 45px;
-  }
-
-  @media screen and (max-width: 20rem) {
-    width: 38px;
-    height: 38px;
-  }
 `;
 
 const Hamburger = styled.div`
@@ -54,16 +34,11 @@ const Hamburger = styled.div`
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 33px;
-    height: 5px;
+    width: 3rem;
+    height: 0.5rem;
     background-color: #be7e64;
     border-radius: 3rem;
     transition: all 0.3s ease-in;
-
-    @media screen and (max-width: 36rem) {
-      width: 25px;
-      height: 4px;
-    }
   }
 
   &::before,
@@ -77,29 +52,13 @@ const Hamburger = styled.div`
   }
 
   &::before {
-    top: ${(props) => (props.show ? 0 : '-0.7rem')};
+    top: ${(props) => (props.show ? 0 : '-1.1rem')};
     transform: ${(props) => props.show && `rotate(135deg)`};
-
-    @media screen and (max-width: 36rem) {
-      top: ${(props) => (props.show ? 0 : '-0.6rem')};
-    }
-
-    @media screen and (max-width: 20rem) {
-      top: ${(props) => (props.show ? 0 : '-0.55rem')};
-    }
   }
 
   &::after {
-    top: ${(props) => (props.show ? 0 : '0.7rem')};
+    top: ${(props) => (props.show ? 0 : '1.1rem')};
     transform: ${(props) => props.show && `rotate(-135deg)`};
-
-    @media screen and (max-width: 36rem) {
-      top: ${(props) => (props.show ? 0 : '0.6rem')};
-    }
-
-    @media screen and (max-width: 20rem) {
-      top: ${(props) => (props.show ? 0 : '0.55rem')};
-    }
   }
 `;
 

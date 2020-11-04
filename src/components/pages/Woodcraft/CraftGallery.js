@@ -7,11 +7,7 @@ import { Container, H2Title } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
 const Wrapper = styled(Container)`
-  padding: 6rem 0;
-
-  @media screen and (max-width: 36rem) {
-    padding: 4rem 0;
-  }
+  padding: 10rem 0;
 `;
 
 const ImgContainer = styled.div`
@@ -21,11 +17,11 @@ const ImgContainer = styled.div`
   flex-wrap: wrap;
   margin: 0 auto;
 
-  @media screen and (max-width: 64rem) {
+  @media screen and (max-width: 1200px) {
     width: 85%;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 95%;
   }
 

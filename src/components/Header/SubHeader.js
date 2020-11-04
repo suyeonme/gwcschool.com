@@ -20,59 +20,18 @@ const TextWrapper = styled.div`
   text-align: center;
 
   h1 {
-    font-size: 5.8rem;
+    font-size: 9rem;
     margin-bottom: 1.3rem;
     font-weight: 900;
 
-    @media screen and (max-width: 64rem) {
-      font-size: 4.8rem;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 3.8rem;
-    }
-
-    @media screen and (max-width: 48rem) {
-      font-size: 4rem;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 48rem) {
-      font-size: 3rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 3rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 2rem;
+    @media screen and (max-width: 576px) {
+      font-size: 7.5rem;
     }
   }
 
   h2 {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
     font-weight: 100;
-
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 1.3rem;
-    }
-
-    @media screen and (max-width: 48rem) {
-      font-size: 1.5rem;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 48rem) {
-      font-size: 1.3rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.9rem;
-    }
   }
 `;
 
@@ -104,12 +63,6 @@ const SubHeader = ({ path }) => {
   };
 
   let obj;
-  // if (path === '/about') obj = aboutHeader;
-  // if (path === '/barista') obj = baristaHeader;
-  // if (path === '/woodcraft') obj = woodHeader;
-  // if (path === '/facilities') obj = facilitiesHeader;
-  // if (path === '/contact-us') obj = contactHeader;
-  // const { filename, title, subTitle } = obj;
 
   switch (path) {
     case '/about':

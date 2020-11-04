@@ -9,32 +9,23 @@ const Wrapper = styled.div`
   width: 100%;
   height: auto;
   min-height: 100vh;
-  padding: 6rem 0;
+  padding: 10rem 0;
   display: flex;
   justify-content: ${(props) =>
     props.align === 'right' ? 'flex-start' : 'flex-end'};
 
-  @media screen and (max-width: 64rem) {
+  @media screen and (max-width: 1200px) {
     min-height: 50vh;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 64rem) {
-    min-height: 80vh;
-  }
-
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-    min-height: 50vh;
-    padding: 3rem 0;
-  }
-
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
     justify-content: center;
     min-height: 70vh;
-    padding: 4rem 0;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 1024px) {
+    min-height: 80vh;
     flex-direction: row;
     justify-content: ${(props) =>
       props.align === 'right' ? 'flex-start' : 'flex-end'};
@@ -44,7 +35,7 @@ const Wrapper = styled.div`
 const TextWrapper = styled.div`
   width: 45%;
   text-align: center;
-  padding: 5rem;
+  padding: 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,12 +44,10 @@ const TextWrapper = styled.div`
 
   @media screen and (max-width: 48rem) {
     width: 50%;
-    padding: 3.5rem;
   }
 
   @media screen and (max-width: 36rem) {
     width: 100%;
-    padding: 2rem;
     order: ${(props) => props.align === 'left' && 2};
     transform: translateX(0);
   }
@@ -67,7 +56,6 @@ const TextWrapper = styled.div`
     width: 50%;
     transform: ${(props) =>
       props.align === 'left' ? ' translateX(5%)' : 'translateX(-5%)'};
-    padding: 2.5rem;
     order: initial;
   }
 
@@ -77,50 +65,15 @@ const TextWrapper = styled.div`
   }
 
   h2 {
-    margin-bottom: 2rem;
-  }
-
-  h2 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
     color: #323d3b;
-
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 2.3rem;
-    }
-
-    @media screen and (max-width: 48rem) {
-      font-size: 2.3rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 2rem;
-    }
-
-    @media screen and (orientation: landscape) and (max-width: 36rem) {
-      font-size: 1.7rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 1.7rem;
-    }
+    margin-bottom: 3rem;
   }
 
   span {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     line-height: 2;
-
-    @media screen and (orientation: landscape) and (max-width: 50.75rem) {
-      font-size: 0.8rem;
-    }
-
-    @media screen and (max-width: 36rem) {
-      font-size: 0.8rem;
-    }
-
-    @media screen and (max-width: 20rem) {
-      font-size: 0.7rem;
-    }
   }
 `;
 
@@ -134,11 +87,11 @@ const ImgWrapper = styled.div`
   right: ${(props) => props.align === 'right' && '5%'};
   left: ${(props) => props.align === 'left' && '5%'};
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     width: 50%;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 90%;
     position: static;
     top: 0;
@@ -149,7 +102,7 @@ const ImgWrapper = styled.div`
     margin: 0 auto;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     width: 50%;
     position: absolute;
     top: 50%;
@@ -183,7 +136,7 @@ const Facility = ({ facility, setBgColor }) => {
         <TextWrapper align={align}>
           <h2>{title}</h2>
           <p>{des}</p>
-          {info1 && <span style={{ marginTop: '2rem' }}>{info1}</span>}
+          {info1 && <span style={{ marginTop: '3rem' }}>{info1}</span>}
           {info2 && <span>{info2}</span>}
         </TextWrapper>
         <ImgWrapper align={align}>

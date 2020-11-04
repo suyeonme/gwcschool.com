@@ -16,21 +16,13 @@ import { Container, H2Title, H3Category } from 'styles/styles';
 import { reveal } from 'animations/animations';
 
 const Wrapper = styled(Container)`
-  padding: 6rem 0;
-
-  @media screen and (max-width: 36rem) {
-    padding: 4rem 0;
-  }
-
-  @media screen and (max-width: 20rem) {
-    padding: 3rem 0;
-  }
+  padding: 10rem 0;
 `;
 
 const TextWrapper = styled.div`
   margin-bottom: 3rem;
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     margin-bottom: 0;
   }
 `;
