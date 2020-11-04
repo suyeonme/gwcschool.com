@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
-import gsap from 'gsap';
+import { reveal } from 'animations/animations';
 
 import BgImage from 'components/BgImage/BgImage';
 import { Container } from 'styles/styles';
@@ -42,22 +41,9 @@ const Description = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      gsap.to(textRef.current, {
-        y: '-50%',
-        opacity: 1,
-        duration: 1,
-        ease: 'power3.out',
-      });
-    }
-  }, [intersection]);
+    reveal(0, sectionRef.current, textRef.current);
+  }, []);
 
   return (
     <Wrapper ref={sectionRef}>

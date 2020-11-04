@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import img1 from 'assets/images/event-1.jpg';
 import img2 from 'assets/images/event-2.jpg';
@@ -39,17 +38,15 @@ const ImageSlide = () => {
   const subTitleRef = useRef(null);
   const carouselRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.2, [titleRef.current, subTitleRef.current, carouselRef.current]);
-    }
-  }, [intersection]);
+    reveal(
+      0.2,
+      sectionRef.current,
+      titleRef.current,
+      subTitleRef.current,
+      carouselRef.current,
+    );
+  }, []);
 
   return (
     <Wrapper ref={sectionRef}>

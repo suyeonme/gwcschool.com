@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { useIntersection } from 'react-use';
 
 import { baristaObj, handDripObj } from 'components/Course/CourseObj';
 import Course from 'components/Course/Course';
@@ -38,17 +37,9 @@ const Syllabus = () => {
   const titleRef = useRef(null);
   const tableRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.2, [titleRef.current, tableRef.current]);
-    }
-  }, [intersection]);
+    reveal(0.2, sectionRef.current, titleRef.current, tableRef.current);
+  }, []);
 
   return (
     <Container ref={sectionRef}>

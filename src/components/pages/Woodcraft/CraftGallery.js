@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import Image, { ImageWrapper } from 'components/Image/Image';
 import { Container, H2Title } from 'styles/styles';
@@ -42,17 +41,9 @@ const CraftGallery = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0, [titleRef.current]);
-    }
-  }, [intersection]);
+    reveal(0, sectionRef.current, titleRef.current);
+  }, []);
 
   const imgArr = [
     'woodcraft-1.jpg',

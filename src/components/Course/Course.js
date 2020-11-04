@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { useIntersection } from 'react-use';
 
 import {
   Wrapper,
@@ -22,30 +21,23 @@ const Course = ({ obj }) => {
   const subTitleRef = useRef(null);
   const leftImgRef = useRef(null);
   const rightImgRef = useRef(null);
-
   const textRef = useRef(null);
   const firListRef = useRef(null);
   const secListRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.2, [
-        subTitleRef.current,
-        titleRef.current,
-        rightImgRef.current,
-        leftImgRef.current,
-        textRef.current,
-        firListRef.current,
-        secListRef.current,
-      ]);
-    }
-  }, [intersection]);
+    reveal(
+      0.2,
+      sectionRef.current,
+      subTitleRef.current,
+      titleRef.current,
+      rightImgRef.current,
+      leftImgRef.current,
+      textRef.current,
+      firListRef.current,
+      secListRef.current,
+    );
+  }, []);
 
   if (align === 'right') {
     return (

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import Image from 'components/Image/Image';
+import { changeBgColor } from 'animations/animations';
 
 const Wrapper = styled.div`
   position: relative;
@@ -118,17 +118,10 @@ const Facility = ({ facility, setBgColor }) => {
   const { title, alt, img, des, info1, info2, align, bgColor } = facility;
   const sectionRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      setBgColor(bgColor);
-    }
-  }, [intersection, bgColor, setBgColor]);
+    // setBgColor(bgColor);
+    changeBgColor(sectionRef.current, sectionRef.current, bgColor);
+  }, [bgColor]);
 
   if (align === 'left') {
     return (

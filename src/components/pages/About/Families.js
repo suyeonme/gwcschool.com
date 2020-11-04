@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import Image from 'components/Image/Image';
 import { Container, H3Category } from 'styles/styles';
@@ -55,12 +54,14 @@ const ItemContainer = styled.div`
 `;
 
 const Title = styled(H3Category)`
+  margin-bottom: 2rem;
+
   @media screen and (max-width: 576px) {
     text-align: center;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 576px) {
-    text-align: right;
+  @media screen and (orientation: landscape) and (max-width: 768px) {
+    text-align: center;
   }
 `;
 
@@ -68,17 +69,9 @@ const Families = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.2, [titleRef.current, '#family']);
-    }
-  });
+    reveal(0.2, sectionRef.current, titleRef.current, '#family');
+  }, []);
 
   const imgArr = [
     { img: 'cat-1.jpg', name: '미 키' },

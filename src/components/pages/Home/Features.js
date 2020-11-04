@@ -1,11 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import Image from 'components/Image/Image';
 import { PrimaryBtn } from 'components/Button/Button';
 import { Container, H3Category } from 'styles/styles';
-import { reveal, slideImg } from 'animations/animations';
+import { revealWithImg } from 'animations/animations';
 
 const Wrapper = styled.div`
   position: relative;
@@ -129,23 +128,17 @@ const Feature = ({ feature }) => {
   const btnRef = useRef(null);
   const imgRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.4, [
-        categoryRef.current,
-        titleRef.current,
-        textRef.current,
-        btnRef.current,
-      ]);
-      slideImg(imgRef.current);
-    }
-  });
+    revealWithImg(
+      0.4,
+      sectionRef.current,
+      imgRef.current,
+      categoryRef.current,
+      titleRef.current,
+      textRef.current,
+      btnRef.current,
+    );
+  }, []);
 
   return (
     <Wrapper ref={sectionRef}>

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import Image, { ImageWrapper } from 'components/Image/Image';
 import { Container } from 'styles/styles';
@@ -85,17 +84,15 @@ const CTAItem = ({ course }) => {
   const textRef = useRef(null);
   const btnRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.4, [titleRef.current, textRef.current, btnRef.current]);
-    }
-  }, [intersection]);
+    reveal(
+      0.4,
+      sectionRef.current,
+      titleRef.current,
+      textRef.current,
+      btnRef.current,
+    );
+  }, []);
 
   return (
     <Wrapper bgImg={bgImg} ref={sectionRef}>

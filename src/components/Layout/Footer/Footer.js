@@ -55,7 +55,7 @@ const TextCol = styled.div`
 `;
 
 const Copyright = styled.p`
-  font-size: 0.6rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   text-align: center;
 

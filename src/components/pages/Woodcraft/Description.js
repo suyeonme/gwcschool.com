@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import bgImg from 'assets/images/wood-fixed-1.jpg';
 import { reveal } from 'animations/animations';
@@ -47,17 +46,9 @@ const Description = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.6,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.4, [titleRef.current]);
-    }
-  }, [intersection]);
+    reveal(0.4, sectionRef.current, titleRef.current);
+  }, []);
 
   return (
     <BgImg bgImg={bgImg} ref={sectionRef}>

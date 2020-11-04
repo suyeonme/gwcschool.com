@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import { Container, H3Category } from 'styles/styles';
 import { reveal } from 'animations/animations';
@@ -40,17 +39,9 @@ const VideoContainer = styled.div`
 const HomeVideo = () => {
   const sectionRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.4, '#video');
-    }
-  }, [intersection]);
+    reveal(0.4, sectionRef.current, '#video');
+  }, []);
 
   return (
     <Wrapper ref={sectionRef}>

@@ -57,6 +57,11 @@ const GlobalStyle = createGlobalStyle`
     color: black;
     background-color:#EEEBE5;
     overflow-x: hidden;
+
+    ${'' /* IE bug with min-height and flexbox */}
+    ${'' /* display: flex;
+    flex-direction: column; */}
+
   }
 
   img, video {

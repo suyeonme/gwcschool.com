@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import logo from 'assets/images/certificate-logo.png';
 import coffeeCup from 'assets/icons/coffee-cup.svg';
@@ -104,17 +103,15 @@ const Certificate = () => {
   const titleRef = useRef(null);
   const subTitleRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.4, [titleRef.current, subTitleRef.current, '#certificate']);
-    }
-  }, [intersection]);
+    reveal(
+      0.4,
+      sectionRef.current,
+      titleRef.current,
+      subTitleRef.current,
+      '#certificate',
+    );
+  }, []);
 
   const cards = [
     {

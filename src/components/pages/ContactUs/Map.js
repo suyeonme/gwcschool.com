@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import { Container, H3Category } from 'styles/styles';
 import KaKaoMap from 'components/KaKaoMap/KaKaoMap';
@@ -69,17 +68,9 @@ const Map = ({ arr }) => {
   const titleRef = useRef(null);
   const listRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.3, [titleRef.current, listRef.current]);
-    }
-  }, [intersection]);
+    reveal(0.3, sectionRef.current, titleRef.current, listRef.current);
+  }, []);
 
   return (
     <MapWrapper ref={sectionRef}>

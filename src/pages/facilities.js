@@ -7,8 +7,6 @@ const Container = styled.section`
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: ${(props) => props.bgColor};
-  transition: background 0.8s ease-in;
 `;
 
 const Facilities = () => {

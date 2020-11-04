@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import bgImg from 'assets/images/wood-fixed-2.jpg';
 import treeIcon from 'assets/icons/tree.svg';
@@ -17,12 +16,18 @@ const Wrapper = styled(Container)`
     ${(props) => `url(${props.bgImg})`};
   background-size: cover;
   background-position: center;
-  ${'' /* background-attachment: fixed; */}
   min-height: 90vh;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:after {
+    ${'' /* IE bug with flexbox and min-height */}
+    content: '';
+    min-height: inherit;
+    font-size: 0;
+  }
 
   @media screen and (max-width: 1200px) {
     min-height: 50vh;
@@ -145,17 +150,15 @@ const Benefits = () => {
   const titleRef = useRef(null);
   const subTitleRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.3, [titleRef.current, subTitleRef.current, '#benefits']);
-    }
-  }, [intersection]);
+    reveal(
+      0.3,
+      sectionRef.current,
+      titleRef.current,
+      subTitleRef.current,
+      '#benefits',
+    );
+  }, []);
 
   const cardsArr = [
     {

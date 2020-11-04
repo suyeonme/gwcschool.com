@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useIntersection } from 'react-use';
 
 import Image, { ImageWrapper } from 'components/Image/Image';
 import { Container, H2Title } from 'styles/styles';
@@ -91,17 +90,9 @@ const TextWrapper = styled.div`
 const OnedayClass = () => {
   const sectionRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  });
-
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      reveal(0.2, '#oneday-class');
-    }
-  }, [intersection]);
+    reveal(0.2, sectionRef.current, '#oneday-class');
+  }, []);
 
   const images = [
     { filename: 'oneday-1.jpg', alt: '목공예 원데이클래스 작품 1' },
