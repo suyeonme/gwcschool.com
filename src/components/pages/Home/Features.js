@@ -83,6 +83,7 @@ const TextContainer = styled.div`
 
   @media (max-width: 576px) {
     width: 100%;
+    padding: 3rem;
     position: static;
     transform: translateY(2.5rem);
   }

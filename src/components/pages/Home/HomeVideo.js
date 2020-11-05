@@ -13,7 +13,7 @@ const Wrapper = styled(Container)`
   }
 
   @media (max-width: 576px) {
-    padding: 10rem 5rem;
+    padding: 10rem 3rem;
   }
 `;
 

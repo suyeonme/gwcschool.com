@@ -131,7 +131,7 @@ const Information = ({ firArr, secArr }) => {
     } else {
       return (
         <>
-          <p>EVERYDAY/9AM-7AM</p>
+          <p>EVERYDAY / 9AM-7AM</p>
           <p>예약 필수</p>
         </>
       );

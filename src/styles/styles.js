@@ -24,6 +24,10 @@ export const H2Title = styled.h2`
   opacity: 0;
   transform: translateY(60px);
 
+  @media (max-width: 576px) {
+    font-size: 3.3rem;
+  }
+
   span {
     font-weight: 400;
   }
