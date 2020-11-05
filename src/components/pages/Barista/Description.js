@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { reveal } from 'animations/animations';
+import gsap from 'gsap';
 
 import BgImage from 'components/BgImage/BgImage';
 import { Container } from 'styles/styles';
@@ -42,7 +42,20 @@ const Description = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    reveal(0, sectionRef.current, textRef.current);
+    const tl = gsap.timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top center',
+      },
+    });
+
+    tl.to(textRef.current, {
+      y: '-50%',
+      opacity: 1,
+      duration: 1,
+      ease: 'power3.out',
+    });
   }, []);
 
   return (

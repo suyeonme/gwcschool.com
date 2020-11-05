@@ -19,7 +19,7 @@ const CourseWrapper = styled.section`
   height: auto;
   margin-top: 6rem;
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     margin-top: 4rem;
   }
 `;

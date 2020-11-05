@@ -19,11 +19,11 @@ const TextWrapper = styled.div`
   margin: 0 auto;
   padding: 6rem 0;
 
-  @media (max-width: 1199.98px) {
+  @media (max-width: 1200px) {
     width: 90%;
   }
 
-  @media (max-width: 767.98px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -33,7 +33,7 @@ const TextWrapper = styled.div`
 const TextCol = styled.div`
   width: 280px;
 
-  @media (max-width: 991.98px) {
+  @media (max-width: 992px) {
     &:not(:last-child) {
       margin-bottom: 5rem;
     }
@@ -60,7 +60,7 @@ const Copyright = styled.p`
   text-align: center;
 
   span {
-    @media (max-width: 567.98px) {
+    @media (max-width: 576px) {
       display: block;
     }
   }

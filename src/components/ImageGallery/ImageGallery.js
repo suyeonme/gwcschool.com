@@ -8,15 +8,15 @@ import { slideImg } from 'animations/animations';
 const Wrapper = styled(Container)`
   margin-top: 13rem;
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+  @media screen and (orientation: landscape) and (max-width: 812px) {
     margin-top: 8rem;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     margin-top: 8rem;
   }
 
-  @media screen and (max-width: 20rem) {
+  @media screen and (max-width: 320px) {
     margin-top: 6rem;
   }
 `;
@@ -33,20 +33,20 @@ const ImgWrapper = styled.div`
     margin-top: 10rem;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 50.75rem) {
+  @media screen and (orientation: landscape) and (max-width: 812px) {
     margin-bottom: 8rem;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 85%;
     margin-bottom: 8rem;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     width: 70%;
   }
 
-  @media screen and (max-width: 20rem) {
+  @media screen and (max-width: 320px) {
     margin-bottom: 6rem;
   }
 `;

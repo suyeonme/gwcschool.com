@@ -29,7 +29,7 @@ const Overlay = styled.div`
   height: 0px;
   z-index: 900;
 
-  @media (max-width: 767.98px) {
+  @media (max-width: 768px) {
     top: -45rem;
     right: -40rem;
   }
@@ -48,7 +48,7 @@ const Wrapper = styled.div`
   opacity: 0;
   overflow: auto;
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 576px) {
     flex-direction: column;
   }
 `;
@@ -60,22 +60,26 @@ const ItemsWrapper = styled.div`
   z-index: 800;
   background-color: #eeebe5;
 
+  @media (max-width: 576px) {
+    width: 100%;
+    height: 70%;
+  }
+
   ul {
     width: 100%;
     height: 100%;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: auto;
 
     @media screen and (max-width: 812px) and (orientation: landscape) {
       justify-content: initial;
     }
-  }
 
-  @media (max-width: 575.98px) {
-    width: 100%;
-    height: 65%;
+    @media (max-width: 576px) {
+      justify-content: initial;
+    }
   }
 `;
 
@@ -99,7 +103,7 @@ const Items = styled.ul`
     font-weight: 300;
     margin-left: 3rem;
 
-    @media (max-width: 991.98px) {
+    @media (max-width: 992px) {
       display: block;
       margin-left: 0;
       margin-top: 0.5rem;
@@ -122,9 +126,9 @@ const StyledLink = styled(Link).attrs({ activeClassName })`
 const BgContainer = styled(BgWrapper)`
   width: 40%;
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 576px) {
     width: 100%;
-    height: 35%;
+    height: 30%;
   }
 `;
 

@@ -42,17 +42,17 @@ const TextWrapper = styled.div`
   transform: ${(props) =>
     props.align === 'left' ? ' translateX(5%)' : 'translateX(-5%)'};
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     width: 50%;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 100%;
     order: ${(props) => props.align === 'left' && 2};
     transform: translateX(0);
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     width: 50%;
     transform: ${(props) =>
       props.align === 'left' ? ' translateX(5%)' : 'translateX(-5%)'};

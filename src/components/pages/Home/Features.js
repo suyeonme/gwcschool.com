@@ -71,7 +71,7 @@ const TextContainer = styled.div`
   right: ${(props) => props.align === 'left' && '13rem'};
   left: ${(props) => props.align === 'right' && '13rem'};
 
-  @media (max-width: 1199.98px) {
+  @media (max-width: 1200px) {
     right: ${(props) => props.align === 'left' && '5rem'};
     left: ${(props) => props.align === 'right' && '5rem'};
   }

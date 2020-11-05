@@ -8,11 +8,11 @@ const Wrapper = styled(Container)`
   padding: 10rem 25rem;
   background-color: #f7f3ec;
 
-  @media (max-width: 991.98px) {
+  @media (max-width: 992px) {
     padding: 10rem 15rem;
   }
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 576px) {
     padding: 10rem 5rem;
   }
 `;

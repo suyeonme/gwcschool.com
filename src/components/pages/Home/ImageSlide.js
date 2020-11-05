@@ -28,6 +28,10 @@ const TextWrapper = styled.div`
 
 const Title = styled(H2Title)`
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 576px) {
+    padding: 3rem;
+  }
 `;
 
 const ImageSlide = () => {

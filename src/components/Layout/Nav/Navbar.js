@@ -25,7 +25,7 @@ const LogoContainer = styled.div`
   left: 3%;
   transform: translateY(-50%);
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 576px) {
     left: 5%;
   }
 `;

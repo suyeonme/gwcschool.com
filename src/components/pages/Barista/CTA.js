@@ -9,7 +9,7 @@ import { reveal } from 'animations/animations';
 const CourseWrapper = styled(Container)`
   display: flex;
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
   }
 `;

@@ -23,15 +23,15 @@ const SliderContainer = styled.div`
     min-width: 100%;
   }
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 768px) {
     width: 33.333333%;
   }
 
-  @media screen and (max-width: 36rem) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 
-  @media screen and (orientation: landscape) and (max-width: 36rem) {
+  @media screen and (orientation: landscape) and (max-width: 576px) {
     width: 33.333333%;
   }
 `;
@@ -51,7 +51,7 @@ const Button = styled.button`
   right: ${(props) => props.direction === 'next' && '1%'};
   z-index: 200;
 
-  @media screen and (max-width: 20rem) {
+  @media screen and (max-width: 320px) {
     width: 40px;
     height: 40px;
   }
