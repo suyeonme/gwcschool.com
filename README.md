@@ -12,10 +12,8 @@ It is available at [https://www.gwcschool.com](https://www.gwcschool.com).
 ### Libraries
 
 - styled-components
-- gsap
-- intersection-observer polyfill
+- gsap & scrollTrigger
 - styled-reset
-- react-use
 - react-transition-group
 - react-helmet
 - smooth-scroll
@@ -25,7 +23,6 @@ It is available at [https://www.gwcschool.com](https://www.gwcschool.com).
 - gatsby-plugin-google-analytics
 - gatsby-plugin-html-attributes
 - gatsby-plugin-layout
-- gatsby-plugin-prefetch-google-fonts
 - gatsby-plugin-resolve-src
 - gatsby-plugin-robots-txt
 - gatsby-plugin-sitemap
