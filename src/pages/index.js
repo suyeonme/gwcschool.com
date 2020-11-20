@@ -1,9 +1,8 @@
 import React from 'react';
 
 import AboutSchool from 'components/pages/Home/AboutSchool';
-import HomeVideo from 'components/pages/Home/HomeVideo';
+import YoutubeVideo from 'components/YoutubeVideo/YoutubeVideo';
 import Features from 'components/pages/Home/Features';
-// import Carousel from 'components/Carousel/Carousel';
 import ImageSlide from 'components/pages/Home/ImageSlide';
 
 import { FixedImg } from 'styles/styles';
@@ -13,7 +12,16 @@ const Home = () => {
   return (
     <>
       <AboutSchool />
-      <HomeVideo />
+      <YoutubeVideo
+        title="곡성목공예&커피체험관"
+        subTitle="둘러보기"
+        src="https://www.youtube.com/embed/4r4Aw8HvFPQ"
+      />
+      <YoutubeVideo
+        title="목공예&바리스타"
+        subTitle="체험 후기"
+        src="https://www.youtube.com/embed/9NYM69IPVP8?start=499"
+      />
       <Features />
       <FixedImg bgImg={fixedImg} />
       <ImageSlide />
