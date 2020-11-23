@@ -15,6 +15,16 @@ export const Overlay = styled.div`
   background-color: #efebe6;
 `;
 
+export const BgOverlay = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.6;
+`;
+
 export const H2Title = styled.h2`
   font-size: 3.7rem;
   font-weight: 100;

@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import AboutSchool from 'components/pages/Home/AboutSchool';
 import YoutubeVideo from 'components/YoutubeVideo/YoutubeVideo';
 import Features from 'components/pages/Home/Features';
 import ImageSlide from 'components/pages/Home/ImageSlide';
+import Modal from 'components/Modal/Modal';
 
 import { FixedImg } from 'styles/styles';
 import fixedImg from 'assets/images/home-fixed.jpg';
 
 const Home = () => {
+  const [isClosed, setIsClosed] = useState(false);
+
   return (
     <>
+      {!isClosed && <Modal onClose={setIsClosed} />}
       <AboutSchool />
       <YoutubeVideo
         title="곡성목공예&커피체험관"

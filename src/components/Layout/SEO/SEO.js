@@ -56,8 +56,12 @@ const SEO = () => {
       <meta property="og:image" content={data.site.siteMetadata.image} />
       <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
       <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}`} />
-      <link
+      {/* <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap"
+        rel="stylesheet"
+      /> */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Dokdo&family=Montserrat:wght@300;700;900&display=swap"
         rel="stylesheet"
       />
       <title>{`${path} ${data.site.siteMetadata.title}`}</title>
