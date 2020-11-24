@@ -11,7 +11,12 @@ import fixedImg from 'assets/images/home-fixed.jpg';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
-  const HAS_VISITED_BEFORE = localStorage.getItem('hasVisitedBefore');
+  // let HAS_VISITED_BEFORE = localStorage.getItem('hasVisitedBefore');
+  let HAS_VISITED_BEFORE;
+
+  if (typeof window !== 'undefined') {
+    localStorage.getItem('hasVisitedBefore');
+  }
 
   useEffect(() => {
     const handleShowModal = () => {
