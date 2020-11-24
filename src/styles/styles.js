@@ -16,13 +16,14 @@ export const Overlay = styled.div`
 `;
 
 export const BgOverlay = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background-color: black;
   opacity: 0.6;
+  z-index: 400;
 `;
 
 export const H2Title = styled.h2`

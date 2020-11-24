@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import bgImg from 'assets/images/modal-bg.jpg';
 
 import { BgOverlay } from 'styles/styles';
-
-// loading - popup
-// Show only once day (localStorage or cookie)
-// Media query and cross browsing
+import ModalCloseBtn from 'components/Modal/ModalCloseBtn';
 
 const Wrapper = styled.div`
   background: blue;
-  width: 500px;
-  height: 600px;
+  width: 50rem;
+  height: 60rem;
   position: fixed;
-  top: 4%;
-  left: 2%;
-  z-index: 400;
-  border-radius: 7px;
+  top: 5%;
+  left: 5%;
+  z-index: 500;
+  border-radius: 5px;
   padding: 5rem;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   background: url(${bgImg});
@@ -25,6 +22,25 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+
+  @media (max-width: 576px) {
+    width: 90%;
+    min-height: 70vh;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 812px) {
+    position: absolute;
+    width: 50rem;
+    height: 60rem;
+    top: 5%;
+    left: 5%;
+    transform: translateY(0);
+  }
 `;
 
 const Header = styled.div`
@@ -73,20 +89,15 @@ const Body = styled.div`
 `;
 
 const Footer = styled.div`
-  display: inline-block;
+  width: 100%;
   position: absolute;
-  bottom: 1.3rem;
-  right: 1.5rem;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
-
-  input {
-    margin-right: 0.5rem;
-  }
-
-  label {
-    cursor: pointer;
-  }
+  justify-content: flex-end;
+  background: #779c8b;
+  padding: 1rem 0;
 `;
 
 const Modal = ({ onClose }) => {
@@ -113,14 +124,11 @@ const Modal = ({ onClose }) => {
           </ul>
         </Body>
         <Footer>
-          <input
-            type="checkbox"
-            id="close-btn"
-            name="close-btn"
-            value="close-btn"
-            onChange={onClose}
+          <ModalCloseBtn
+            id="close-modal"
+            onClose={onClose}
+            text="오늘 하루 열지 않기"
           />
-          <label for="close-btn">오늘 하루 열지 않기</label>
         </Footer>
       </Wrapper>
       <BgOverlay onClick={onClose} />
